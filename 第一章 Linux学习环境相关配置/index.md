@@ -16,7 +16,6 @@ Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [docume
 
 ------------------
 
-
 ## 本章主要是Linux下学习环境的相关配置， 包括学习的开发工具， 也包括系统本埠支持的软件替换或者修复的解决方案。
 应包括如下内容：
 

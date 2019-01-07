@@ -77,6 +77,9 @@ Gitbook可以生成HTML，因此它支持一些外部的JavaScript文件嵌入�
 
 ```
 $ npm install gitbook-plugin-disqus
+
+或者先写好book.json 然后执行
+gitbook install #推荐这种方法
 ```
 然后建立一个book.json文件，其格式如下：
 
@@ -91,6 +94,12 @@ $ npm install gitbook-plugin-disqus
 }
 ```
 把上面的 NAME-FROM-DISQUS 修改为你在Disqus上的项目名即可。
+
+要卸载的话（假如我要卸载的插件是：gitchinese-video），执行如下命令
+
+```bash
+npm uninstall gitchinese-video
+```
 
 再次运行命令：
 
