@@ -20,7 +20,7 @@ Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [docume
 ## 本章主要是Linux下学习环境的相关配置， 包括学习的开发工具， 也包括系统本埠支持的软件替换或者修复的解决方案。
 应包括如下内容：
 
-* [引言](./第一章 引言.md)
+* [引言](./第一章 Linux学习环境相关配置.md)
 * [Ubuntu18下有道词典的配置](./Ubuntu18下有道词典的配置.md)
 * [Ubuntu18 安装Gitbook](./Ubuntu18安装Gitbook.md)
 
