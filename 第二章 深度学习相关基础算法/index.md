@@ -21,3 +21,9 @@ date: 2018-11-10 22:55:03
 <!-- more -->
 
 ------------------
+
+# 优秀学者/资源
+
+## 学者、教授
+
+* [徐志强副教授(Associate Professor Richard Xu)](https://www.uts.edu.au/staff/yida.xu),其 **[github主页](https://github.com/roboticcam)**  an AI Professor in Machine Learning at UTS.

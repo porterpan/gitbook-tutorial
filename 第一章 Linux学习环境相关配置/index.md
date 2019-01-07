@@ -17,8 +17,15 @@ Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [docume
 ------------------
 
 ## 本章主要是Linux下学习环境的相关配置， 包括学习的开发工具， 也包括系统本埠支持的软件替换或者修复的解决方案。
-应包括如下内容：
+本站组织应包括如下内容：
 
 * [Ubuntu18下有道词典的配置](./Ubuntu18下有道词典的配置.md)
 * [Ubuntu18 安装Gitbook](./Ubuntu18安装Gitbook.md)
+
+
+----------
+
+# 优秀工具，资源
+
+## [LaTex 在线帮助教程](www.ctex.org/OnlineDocuments)
 
