@@ -69,7 +69,7 @@ Gitbook首先把你的Markdown文件编译为HTML文件，并根据SUMMARY.md生
 
 > 其中位于左侧书目顶部的Introduction一节就编译自README.md，而书目本身自编译自SUMMARY.md。你要在自己的网站上发布新书，只需把_book目录复制到服务器相应目录即可。至此Gitbook的基本用法就介绍完毕。
 
-# 3.2 Gitbook的插件支持
+## 3.2 Gitbook的插件支持
 
 Gitbook可以生成HTML，因此它支持一些外部的JavaScript文件嵌入到HTML中，例如Google统计、Disqus评论系统等。以下以页面中嵌入Disqus评论为例。
 
@@ -99,7 +99,7 @@ $ gitbook serve -p 8080 .
 ```
 并刷新浏览器，即可看到附加了Disqus评论的页面。
 
-# 3.3 生成图书
+## 3.3 生成图书
 
 当你在自己的电脑上编辑好图书之后，你可以使用Gitbook 
 的命令行进行本地预览：
@@ -119,7 +119,7 @@ $ mkdir /tmp/gitbook
 $ gitbook build --output=/tmp/gitbook
 ```
 
-# 3.4 输出PDF文件
+## 3.4 输出PDF文件
 
 输入为PDF文件，需要先使用NPM安装上gitbook pdf：
 
@@ -128,6 +128,8 @@ $ sudo npm install gitbook-pdf -g
 ```
 
 -----
+
+# 4 更多的gitbook 插件支持请访问 [gitbook官方插件库](https://plugins.gitbook.com/)
 
 [参考来源](https://blog.csdn.net/feosun/article/details/72806825)
 
