@@ -1,0 +1,133 @@
+# Ubuntu18 安装Gitbook 记录
+
+# 1. 安装nodejs
+
+* 进入[nodejs官网](https://nodejs.org/en/)，选择10.15.0 LTS下面的other Downloads.
+
+![FbSReA.png](https://s2.ax1x.com/2019/01/06/FbSReA.png)
+
+* 然后进入下载界面
+
+[![FbpJtP.md.png](https://s2.ax1x.com/2019/01/06/FbpJtP.md.png)](https://imgchr.com/i/FbpJtP)
+
+* 解压，开始安装
+> 安装就是直接把解压后的放到你想安装的位置，我们直接解压到
+
+/usr/local路径中。这就安装好了，不需要运行，直接执行下面步骤。
+
+```bash
+sudo ln -s /usr/local/node-v4.2.4-linux-x64/bin/node /usr/local/bin/node sudo ln -s /usr/local/node-v4.2.4-linux-x64/bin/npm /usr/local/bin/npm
+```
+至此nodejs安装完成
+
+------
+
+#2. 安装gitbook
+
+```bash
+npm install -g gitbook-cli
+```
+
+> 之后在终端输入以下命令，否则，你在终端执行 gitbook -V 会提示命令不存在。
+
+```bash
+sudo ln -s /usr/local/node-v4.2.4-linux-x64/bin/gitbook /usr/local/bin/gitbook
+gitbook -v # 输出安装后的版本信息
+```
+* 安装结束然后
+
+--------------
+
+# 3. Gitbook使用教程
+
+## 3.1 gitbook 命令
+
+```bash
+gitbook -V  检测安装成功 
+gitbook init  初始化 
+gitbook build  编译当前的生成网页，但是不启动本地服务器
+gitbook serve -p 8080 .  编译当前的生成网页，启动本地服务器
+gitbook serve .  启动本地服务器
+gitbook update  更新软件 
+```
+README.md是关于你的书的介绍，而SUMMARY.md中则包含了书目，即章节结构，它的格式大致是：
+
+```
+* [第1章](./绪论/c1.md) # 注意章的要顶格写,此处第一章全放在根目录的绪论文件夹中的
+ * [第1节](c1s1.md) # 注意节要有空格号
+ * [第2节](c1s2.md) # 注意节要有空格号
+* [第2章](c2.md) # 注意章的要顶格写
+```
+剩下的东西就很好理解了，你只需要编写相应章节即可。在编辑完README.md和SUMMARY.md后，你可以运行以下命令：
+
+```
+$ gitbook serve -p 8080 .
+```
+Gitbook首先把你的Markdown文件编译为HTML文件，并根据SUMMARY.md生成书的目录。所有生存的文件都保存在当前目录下的一个名为_book的子目录中。完成这些工作后，Gitbook会作为一个HTTP Server运行，并在8080端口监听HTTP请求。
+
+运行以上命令后，打开浏览器，在地址栏输入：http://localhost:8080即可看到你的书页了。
+
+> 其中位于左侧书目顶部的Introduction一节就编译自README.md，而书目本身自编译自SUMMARY.md。你要在自己的网站上发布新书，只需把_book目录复制到服务器相应目录即可。至此Gitbook的基本用法就介绍完毕。
+
+# 3.2 Gitbook的插件支持
+
+Gitbook可以生成HTML，因此它支持一些外部的JavaScript文件嵌入到HTML中，例如Google统计、Disqus评论系统等。以下以页面中嵌入Disqus评论为例。
+
+首先是安装Gitbook的Disqus插件。
+
+```
+$ npm install gitbook-plugin-disqus
+```
+然后建立一个book.json文件，其格式如下：
+
+```
+{
+  "plugins": ["disqus"],
+  "pluginsConfig": {
+    "disqus": {
+      "shortName": "NAME-FROM-DISQUS"
+    }
+  }
+}
+```
+把上面的 NAME-FROM-DISQUS 修改为你在Disqus上的项目名即可。
+
+再次运行命令：
+
+```bash
+$ gitbook serve -p 8080 .
+```
+并刷新浏览器，即可看到附加了Disqus评论的页面。
+
+# 3.3 生成图书
+
+当你在自己的电脑上编辑好图书之后，你可以使用Gitbook 
+的命令行进行本地预览：
+
+```
+$ gitbook serve .
+```
+然后浏览器中输入 http://localhost:4000 就可以预览生成的以网页形式组织的书籍。 
+这里你会发现，你在你的图书项目的目录中多了一个名为 
+_book的文件目录，而这个目录中的文件，即是生成的静态网站内容。 
+使用build参数生成到指定目录 
+与直接预览生成的静态网站文件不一样的是，使用这个命令， 
+你可以将内容输入到你所想要的目录中去：
+
+```
+$ mkdir /tmp/gitbook
+$ gitbook build --output=/tmp/gitbook
+```
+
+# 3.4 输出PDF文件
+
+输入为PDF文件，需要先使用NPM安装上gitbook pdf：
+
+```
+$ sudo npm install gitbook-pdf -g
+```
+
+-----
+
+[参考来源](https://blog.csdn.net/feosun/article/details/72806825)
+
