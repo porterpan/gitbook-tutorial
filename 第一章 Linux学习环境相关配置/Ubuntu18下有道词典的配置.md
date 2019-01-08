@@ -2,6 +2,21 @@
 
 ## Ubnutu18 安装有道词典
 
+* 若要成功安装Ubuntu18下的有道词典，请移步大牛的仓库，配置下就好
+
+[大牛Ubuntu16后都支持的有道词典安装包和安装方法](https://github.com/yomun/youdaodict_5.5),这个支持Qt5.5 到我的是Qt5.9也支持，貌似以后版本这个可能也支持的，移步去安装吧。
+
+> 提示，建议你不要开有道词典的划词，因为会卡死你，太占内存了，你ps下会发现好多的啊，全是ORC识别的进程**tesseract 进程**,就是这句话
+
+```bash
+#安装ORC插件，支持有道划词，桌面翻译功能
+apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-sim tesseract-ocr-chi-tra 
+```
+
+* 说实话，不知道怎么生成那么多进程，卡死了，所以我没装这个插件，也没用划词，划词我直接浏览器安装插件解决。仅供参考。
+
+----
+
 > 本来准备安装有道云笔记的，但是我的linux是ubuntu18的Qt是5.9 用不了啊，他的Qt是哪个版本的没弄清楚，好像是5.4的，结果就是我安装不上，做这个笔记就是为了想办法重新改写他的源码看看能不能好点支持。
 
 [文章参考来源](https://blog.csdn.net/wangxiao7474/article/details/61196238?utm_source=blogxgwz4)

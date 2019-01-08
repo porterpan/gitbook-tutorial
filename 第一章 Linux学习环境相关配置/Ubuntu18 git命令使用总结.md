@@ -1,6 +1,6 @@
 # git 相关命令学习
 
-##1. [git remote 命令用法](https://www.git-scm.com/docs/git-remote)
+## 一、[git remote 命令用法](https://www.git-scm.com/docs/git-remote)
 
 ```bash
 git remote [-v | --verbose]  #不带参数，列出已经存在的远程分支
@@ -18,7 +18,7 @@ git remote prune [-n | --dry-run] <name>…​
 git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)…​]
 ```
 
-##例程代码
+## 二、例程代码
 
 * 查看当前的远程库 
 
@@ -28,6 +28,19 @@ $ git remote -v
 
 $ git remote #不带参数，列出已经存在的远程分支
   origin
-```
 
+# 如果提示：error: 无法推送一些引用到 'https://github.com/porterpan/gitbook-tutorial.git'
+# 提示：更新被拒绝，因为您当前分支的最新提交落后于其对应的远程分支。
+# 提示：再次推送前，先与远程变更合并（如 'git pull ...'）。详见
+# 提示：'git push --help' 中的 'Note about fast-forwards' 小节。
+
+$ git fetch origin
+$ git merge origin/mastergit
+```
+## 三、正常git流程
+
+* 如果都是自己在开发的类，当然优先使用pull->commit->push，为什么我更倾向这种方式呢，因为这样会减少Git没有必要的merge。
+
+* 如果有冲突的情况下，先pull了会出现什么问题呢？
+如果你的判断失误，在本地修改与远程代码有冲突的情况下，先执行了git-pull，即使是这样也不用担心，git会给你一个错误提示，这时候你再去执行commit->pull->push也是没有问题的。
 
