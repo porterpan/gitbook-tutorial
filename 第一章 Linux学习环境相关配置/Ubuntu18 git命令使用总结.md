@@ -1,6 +1,10 @@
 # git 相关命令学习
 
+<<<<<<< HEAD
 ## 一、[git remote 命令用法](https://www.git-scm.com/docs/git-remote)
+=======
+## 1. [git remote 命令用法](https://www.git-scm.com/docs/git-remote)
+>>>>>>> f50577e1ba5169ecfdee53badbda3dcc64ffe9e8
 
 ```bash
 git remote [-v | --verbose]  #不带参数，列出已经存在的远程分支
@@ -18,7 +22,11 @@ git remote prune [-n | --dry-run] <name>…​
 git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)…​]
 ```
 
+<<<<<<< HEAD
 ## 二、例程代码
+=======
+## 例程代码
+>>>>>>> f50577e1ba5169ecfdee53badbda3dcc64ffe9e8
 
 * 查看当前的远程库 
 
@@ -37,7 +45,11 @@ $ git remote #不带参数，列出已经存在的远程分支
 $ git fetch origin
 $ git merge origin/mastergit
 ```
+<<<<<<< HEAD
 ## 三、正常git流程
+=======
+## 正常流程
+>>>>>>> f50577e1ba5169ecfdee53badbda3dcc64ffe9e8
 
 * 如果都是自己在开发的类，当然优先使用pull->commit->push，为什么我更倾向这种方式呢，因为这样会减少Git没有必要的merge。
 
