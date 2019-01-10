@@ -4,22 +4,11 @@
     "language": "zh",
     "plugins": [
         "disqus",
-        "mermaid",
-        "baidu",
-        "sitemap",
         "katex"
     ],
     "pluginsConfig": {
         "disqus": {
             "shortName": "mygitbook-1"
-        },
-
-        "baidu": {
-            "token": "04dea5917db2a99d40929e80efe18804"
-        },
-
-        "sitemap": {
-            "hostname": "http://baidu.com/"
         }
     }
 
