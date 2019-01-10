@@ -6,7 +6,7 @@
     * [1.2 Ubuntu18 安装Gitbook](./第一章 Linux学习环境相关配置/1.2 Ubuntu18安装Gitbook.md)
     * [1.3 Ubuntu18 git命令使用总结](./第一章 Linux学习环境相关配置/1.3 Ubuntu18 git命令使用总结.md)
     * [1.4 Latex 排版使用笔记](./第一章 Linux学习环境相关配置/1.4 Latex 排版使用笔记.md)
-    * [1.5 Ubuntu下安装高速下载工具](./第一章 Linux学习环境相关配置/1.5 Ubuntu下安装高速下载工具.md)
+    * [1.5 Ubuntu下常用工具软件配置安装](./第一章 Linux学习环境相关配置/1.5 Ubuntu下常用工具软件配置安装.md)
     * [1.6 win10+ubuntu双系统修复ubuntu启动引导](./第一章 Linux学习环境相关配置/1.6 win10+ubuntu双系统修复ubuntu启动引导.md)
     * [1.7 gitbook 插件等相关设置](./第一章 Linux学习环境相关配置/1.7 gitbook 插件等相关设置.md)
 
