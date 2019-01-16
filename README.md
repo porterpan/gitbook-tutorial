@@ -1,7 +1,6 @@
 # Introduction
 
-	This Book is edit by porter, Focus on DQN, 
-generally is some learnning notes such as learning ways and skill and so on. 
+This Book is edit by porter, Focus on DQN, generally is some Learnning notes such as learning ways and skill and so on. 
 
 **State:**
 
