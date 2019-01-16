@@ -20,7 +20,13 @@ Here recommend some excellent academic resources website：
 
 - [3] [小木虫](http://muchong.com/bbs/) ,Academic communication BBS.
 
+- [ilsvrc+coco2016](http://image-net.org/challenges/ilsvrc+coco2016) 可以查看各个大咖，然后了解他们最近研究的东西
 ---
+
+
+参考资料网站：
+
+- [Qt5在线帮助](http://doc.qt.io/qt-5/qboxlayout.html)
 
 updating......
 
