@@ -1,6 +1,6 @@
 # Introduction
 
-$$E$$diting by porter, Focus on DQN, is some Learnning notes generally, such as learning ways and skill and so on. 
+$$Editing$$ by porter, Focus on DQN, is some Learnning notes generally, such as learning ways and skill and so on. 
 
 **State:**
 
