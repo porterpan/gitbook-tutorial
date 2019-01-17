@@ -1,17 +1,17 @@
 # Introduction
 
-$$Editing$$ by porter, Focus on DQN, is some Learnning notes generally, such as learning ways and skill and so on. 
+$$These articles$$, Editing by Porter, Focus on DQN, are basically some Learnning notes generally about study skills and so on. 
 
 $$Welcome$$ to my website! If this is your very first visit. Check [my home page of gitbook](https://porter.gitbook.io/deep-learning-series/) or  [My other site: IODT](http://index.porterpan.top/) for more info. If you get any problems when reading, you can find the answer in [google](https://www.google.com) or you can ask me on ![Twitter](https://abs.twimg.com/favicons/favicon.ico):[by @zf_pertor](https://twitter.com/zf_pertor?lang=en) or you can contact me by $$Email$$: porterpan@163.com.  
 
 **State:**
 
-$$This$$ document is a notes about that summary of DQN knowledge from other document or books, there are many content may be inappropriate, Please check if it have any value to you to reference or cite.
+$$This$$ articles are notes about that summary of DQN from other document or books. There are many content may be inappropriate, Please check if it have any value to you to reference or cite.
 
 <!-- more -->
 
 
-$$Here$$ recommend some excellent academic resources website：
+$$Here$$ recommend you some excellent academic resources websites：
 
 ----
 
