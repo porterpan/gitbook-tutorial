@@ -6,7 +6,7 @@ $$Welcome$$ to my website! If this is your very first visit. Check [my home page
 
 **State:**
 
-$$This$$ articles are notes about that summary of DQN from other document or books. There are many content may be inappropriate, Please check if it have any value to you to reference or cite.
+$$This$$ website is my notes mainly about that summary of DQN from other document or books. There are many content may be inappropriate, Please check if it have any value to you to reference or cite.
 
 <!-- more -->
 
