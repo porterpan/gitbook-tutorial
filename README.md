@@ -1,15 +1,15 @@
 # Introduction
 
-$$E$$diting by porter, Focus on DQN, is some Learnning notes generally such as learning ways and skill and so on. 
+$$E$$diting by porter, Focus on DQN, is some Learnning notes generally, such as learning ways and skill and so on. 
 
 **State:**
 
 This document is a notes about that summary of DQN knowledge from other document or books, there are many content may be inappropriate, Please check if it have any value to you to reference or cite.
 
 
-you can contact me by Email: porterpan@163.com. 
+you can contact me by $$Email$$: porterpan@163.com. 
 
-Here recommend some excellent academic resources website：
+$$H$$ere recommend some excellent academic resources website：
 
 ----
 
