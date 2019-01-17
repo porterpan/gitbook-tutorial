@@ -2,7 +2,7 @@
 
 $$Editing$$ by porter, Focus on DQN, is some Learnning notes generally, such as learning ways and skill and so on. 
 
-$$Welcome$$ to my webpage! This is your very first visit. Check [home page of book](https://porter.gitbook.io/deep-learning-series/) or  [My site IODT](http://index.porterpan.top/) for more info. If you get any problems when reading, you can find the answer in [google](https://www.google.com) or you can ask me on ![Twitter](https://abs.twimg.com/favicons/favicon.ico):[by @zf_pertor](https://twitter.com/zf_pertor?lang=en) or you can contact me by $$Email$$: porterpan@163.com.  
+$$Welcome$$ to my website! If this is your very first visit. Check [my home page of gitbook](https://porter.gitbook.io/deep-learning-series/) or  [My other site: IODT](http://index.porterpan.top/) for more info. If you get any problems when reading, you can find the answer in [google](https://www.google.com) or you can ask me on ![Twitter](https://abs.twimg.com/favicons/favicon.ico):[by @zf_pertor](https://twitter.com/zf_pertor?lang=en) or you can contact me by $$Email$$: porterpan@163.com.  
 
 **State:**
 
