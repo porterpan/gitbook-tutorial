@@ -1,6 +1,6 @@
 # Introduction
 
-This Book is edit by porter, Focus on DQN, is some Learnning notes generally such as learning ways and skill and so on. 
+$$E$$diting by porter, Focus on DQN, is some Learnning notes generally such as learning ways and skill and so on. 
 
 **State:**
 
@@ -21,6 +21,7 @@ Here recommend some excellent academic resources website：
 
 - [ilsvrc+coco2016](http://image-net.org/challenges/ilsvrc+coco2016) 可以查看各个大咖，然后了解他们最近研究的东西
 ---
+
 
 
 参考资料网站：
