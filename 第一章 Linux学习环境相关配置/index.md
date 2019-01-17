@@ -10,7 +10,7 @@ date: 2018-11-10 22:55:03
 
 ## 摘要
 
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+Welcome to [My site IODT](http://index.porterpan.top/)! This is your very first visit. Check [home page of book](https://porter.gitbook.io/deep-learning-series/) for more info. If you get any problems when reading, you can find the answer in [google](https://www.google.com) or you can ask me on ![Twitter](https://abs.twimg.com/favicons/favicon.ico):[by @zf_pertor](https://twitter.com/zf_pertor?lang=en).
 
 <!-- more -->
 
