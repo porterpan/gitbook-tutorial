@@ -6,7 +6,7 @@ tags: [日记,总结]
 date: 2018-11-10 22:55:03
 ---
 
-<center> Edit By Porter, 2019年1月7日稿 </center>
+- [x] Edit By Porter, 聚水渊，聚少成多，涓涓长流。
 
 ## 摘要
  
