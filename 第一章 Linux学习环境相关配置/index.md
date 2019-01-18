@@ -6,11 +6,13 @@ tags: [日记,总结]
 date: 2018-11-10 22:55:03
 ---
 
-<center> Edit By Porter, 2019年1月7日稿 </center>
+<center> Edit By Porter, 聚水渊，聚少成多，涓涓长流。 </center>
 
 # 摘要
 
 Welcome to [My site IODT](http://index.porterpan.top/)! This is your very first visit. Check [home page of book](https://porter.gitbook.io/deep-learning-series/) for more info. If you get any problems when reading, you can find the answer in [google](https://www.google.com) or you can ask me on ![Twitter](https://abs.twimg.com/favicons/favicon.ico):[by @zf_pertor](https://twitter.com/zf_pertor?lang=en).
+
+文章同步于: [我的gitbook](https://porter.gitbook.io/)
 
 <!-- more -->
 
