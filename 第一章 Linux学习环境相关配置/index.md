@@ -1,5 +1,5 @@
 ---
-title: Hello World
+title: index
 categories:      
     summary    
 tags: [日记,总结]
