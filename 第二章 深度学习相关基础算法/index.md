@@ -2,7 +2,7 @@
 title: Hello World
 categories:      
     summary    
-tags: [日记,总结]
+tags: [Note,总结]
 date: 2018-11-10 22:55:03
 ---
 
