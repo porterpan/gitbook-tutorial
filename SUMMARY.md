@@ -23,3 +23,6 @@
     * [2.4 决策树](./第二章 深度学习相关基础算法/2.4  Decision tree.md)
 * [第三章 深度学习框架学习](./第三章 深度学习框架学习/index.md)
     * [3.1 PyTorch 学习](./第三章 深度学习框架学习/3.1 PyTorch 学习.md)
+
+* [附录](./Python 相关的知识/index,md)
+    * [Module篇使用__future__](./Python 相关的知识/Module篇使用__future__.md)
