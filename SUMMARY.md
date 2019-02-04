@@ -24,6 +24,8 @@
 * [第三章 深度学习框架学习](./第三章 深度学习框架学习/index.md)
     * [3.1 PyTorch 学习](./第三章 深度学习框架学习/3.1 PyTorch 学习.md)
 
-* [附录](./Python 相关的知识/index,md)
+* [附录](./附录/index,md)
     * Python 相关笔记
-        * [Module篇使用__future__](./Python 相关的知识/Module篇使用__future__.md)
+        * [Python 帮助文档检索方法](./附录/Python 帮助文档检索方法.md)
+        * [Module篇使用__future__](./附录/Module篇使用__future__.md)
+        
