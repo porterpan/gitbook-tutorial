@@ -576,7 +576,48 @@ $$
 Or using the templating syntax:
 
 {% math %}\int_{-\infty}^\infty g(x) dx{% endblock %}
-</code></pre>
+</code></pre><h3 id="&#x5B89;&#x88C5;&#x89C6;&#x5C4F;&#x64AD;&#x653E;&#x63D2;&#x4EF6;">&#x5B89;&#x88C5;&#x89C6;&#x5C4F;&#x64AD;&#x653E;&#x63D2;&#x4EF6;</h3>
+<p><a href="https://plugins.gitbook.com/plugin/chinese-video" target="_blank">chinese-video</a></p>
+<p>Install
+Add the below to your book.json file, then run gitbook install :</p>
+<p>{
+    &quot;plugins&quot;: [&quot;chinese-video&quot;]
+}
+Usage
+Currently, This plugin support:</p>
+<p>Bilibili
+Youku
+Iqiyi
+QQ
+Sohu
+Mgtv
+PPTV
+There are each methods which you should use to insert matched website&apos;s video.</p>
+<p>Tips:</p>
+<p>[xxx] is optional parameter. You can ignore it but don&apos;t ignore any @.
+The width x height, which is defined by you, is the largest size of the player and if you have a small screen to look through the page, Page will zoom the player with the scale of your width x height.
+Bilibili
+html5 https</p>
+<p><iframe plugin-width="[width" plugin-height="height]" name="bilibili-dc8347d6c7b62b13c4bfdff1c99e00619aa68937f9a31db4971871ee33a8a709" style="margin-top: 20px;margin-bottom: 20px;" src="https://player.bilibili.com/player.html?aid=avCode&amp;page=[section]" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+avCode is bilibili video&apos;s serial number. Just like this: <a href="https://www.bilibili.com/video/av" target="_blank">https://www.bilibili.com/video/av</a> 170001</p>
+<p>avCode should be a number. Don&apos;t attach &quot;av&quot; to it.</p>
+<p>section is matched video&apos;s sub video&apos;s serial number.</p>
+<p>width x height is player&apos;s size.</p>
+<p>Youku
+html5 flash https</p>
+<p><embed plugin-width="[width" plugin-height="height]" name="youku-flash-06775ef9468d585babf559706aeb24ba764fc50f133a7f77332b382475573066" src="https://player.youku.com/player.php/sid/videoCode/v.swf" allowfullscreen="true" quality="high" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
+mode is player&apos;s mode. js(html5) or flash.</p>
+<p>videoCode just like this: <a href="https://v.youku.com/v_show/id_" target="_blank">https://v.youku.com/v_show/id_</a> XNDU4MjQ3MzA0 .html</p>
+<p>width x height is player&apos;s size.</p>
+<p>Iqiyi
+html5 flash https(HTML5 player) http(Flash player)</p>
+<p>Iqiyi&apos;s parameter just like shit!!!</p>
+<p>Flash player
+<embed plugin-width="[width" plugin-height="height]" name="iqiyi-flash-f78181bba672720e8650e3039bf79d28e693768df5cca3c736852456a09f8c1b" style="margin-top: 20px;margin-bottom: 20px;" src="http://player.video.qiyi.com/parameter1/0/0/video.swf-albumId=albumId-tvId=tvId-isPurchase=0-cnId=8" allowfullscreen="true" quality="high" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
+flash is key word. Don&apos;t change it.</p>
+<p>You only can visit Iqiyi&apos;s video&apos;s Sharing page and copy its HTML to get these parameters. It just like this:</p>
+<p><iframe plugin-width="[640" plugin-height="480]" name="bilibili-3bbc2356f9c496ef02e87c980ca0abf1c089681380bac1f810c19f81036e6975" style="margin-top: 20px;margin-bottom: 20px;" src="https://player.bilibili.com/player.html?aid=170001&amp;page=[section]" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></p>
+<script>var fc=function(){var globalWidth=document.body.clientWidth-32;var value1Width=globalWidth;var value1=(document.getElementsByName("bilibili-dc8347d6c7b62b13c4bfdff1c99e00619aa68937f9a31db4971871ee33a8a709"))[0];if(value1Width>[width){value1Width=[width;};value1.style.width=value1Width+"px";value1.style.height=(height]/[width)*value1Width+"px";var value2Width=globalWidth;var value2=(document.getElementsByName("bilibili-3bbc2356f9c496ef02e87c980ca0abf1c089681380bac1f810c19f81036e6975"))[0];if(value2Width>[640){value2Width=[640;};value2.style.width=value2Width+"px";value2.style.height=(480]/[640)*value2Width+"px";var value3Width=globalWidth;var value3=(document.getElementsByName("youku-flash-06775ef9468d585babf559706aeb24ba764fc50f133a7f77332b382475573066"))[0];if(value3Width>[width){value3Width=[width;};value3.style.width=value3Width+"px";value3.style.height=(height]/[width)*value3Width+"px";var value4Width=globalWidth;var value4=(document.getElementsByName("iqiyi-flash-f78181bba672720e8650e3039bf79d28e693768df5cca3c736852456a09f8c1b"))[0];if(value4Width>[width){value4Width=[width;};value4.style.width=value4Width+"px";value4.style.height=(height]/[width)*value4Width+"px";};var oneSecond=1000*2;setInterval(fc,oneSecond);</script>
                                 
                                 </section>
                             
@@ -619,7 +660,7 @@ Or using the templating syntax:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.7 gitbook 插件等相关设置","categories":"summary","tags":["System Conf","Gitbook"],"date":"2018-07-20T22:55:03.000Z","level":"1.2.7","depth":2,"next":{"title":"1.8 深度学习环境搭建","level":"1.2.8","depth":2,"path":"第一章 Linux学习环境相关配置/1.8 深度学习环境搭建.md","ref":"./第一章 Linux学习环境相关配置/1.8 深度学习环境搭建.md","articles":[]},"previous":{"title":"1.6 win10+ubuntu双系统修复ubuntu启动引导","level":"1.2.6","depth":2,"path":"第一章 Linux学习环境相关配置/1.6 win10+ubuntu双系统修复ubuntu启动引导.md","ref":"./第一章 Linux学习环境相关配置/1.6 win10+ubuntu双系统修复ubuntu启动引导.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chinese-video"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"shortName":"mygitbook-1"},"chinese-video":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"深度学习","language":"zh","gitbook":"*","description":"学习笔记"},"file":{"path":"第一章 Linux学习环境相关配置/1.7 gitbook 插件等相关设置.md","mtime":"2019-01-21T15:15:43.995Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-06T11:54:43.833Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1.7 gitbook 插件等相关设置","categories":"summary","tags":["System Conf","Gitbook"],"date":"2018-07-20T22:55:03.000Z","level":"1.2.7","depth":2,"next":{"title":"1.8 深度学习环境搭建","level":"1.2.8","depth":2,"path":"第一章 Linux学习环境相关配置/1.8 深度学习环境搭建.md","ref":"./第一章 Linux学习环境相关配置/1.8 深度学习环境搭建.md","articles":[]},"previous":{"title":"1.6 win10+ubuntu双系统修复ubuntu启动引导","level":"1.2.6","depth":2,"path":"第一章 Linux学习环境相关配置/1.6 win10+ubuntu双系统修复ubuntu启动引导.md","ref":"./第一章 Linux学习环境相关配置/1.6 win10+ubuntu双系统修复ubuntu启动引导.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chinese-video"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"shortName":"mygitbook-1"},"chinese-video":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"深度学习","language":"zh","gitbook":"*","description":"学习笔记"},"file":{"path":"第一章 Linux学习环境相关配置/1.7 gitbook 插件等相关设置.md","mtime":"2019-02-06T12:06:05.623Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-06T12:06:36.009Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
