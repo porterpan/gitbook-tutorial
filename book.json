@@ -10,6 +10,7 @@
         "disqus": {
             "shortName": "mygitbook-1"
         }
-    }
+    },
+    "plugins": ["chinese-video"]
 
 }
