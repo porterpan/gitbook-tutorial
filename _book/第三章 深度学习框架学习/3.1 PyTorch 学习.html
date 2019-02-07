@@ -515,10 +515,105 @@
 </ul>
 <!-- more -->
 <p>&#x5E2E;&#x52A9;&#x6587;&#x6863;&#x89C1;<a href="https://pytorch.org/tutorials/" target="_blank">PyTorch&#x5B98;&#x7F51;</a></p>
-<p>&#x4E00;&#x3001;PyTorch &#x77E9;&#x9635;&#x76F8;&#x5173;&#x7684;&#x64CD;&#x4F5C;</p>
-<p><iframe plugin-width="[640" plugin-height="480]" name="bilibili-0ede49b481ac410816dbb604f907b53d5f1e5b6fbb12677aacf640e2bfd71441" style="margin-top: 20px;margin-bottom: 20px;" src="https://player.bilibili.com/player.html?aid=42802383&amp;page=[section]" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></p>
-<p>OK</p>
-<script>var fc=function(){var globalWidth=document.body.clientWidth-32;var value1Width=globalWidth;var value1=(document.getElementsByName("bilibili-0ede49b481ac410816dbb604f907b53d5f1e5b6fbb12677aacf640e2bfd71441"))[0];if(value1Width>[640){value1Width=[640;};value1.style.width=value1Width+"px";value1.style.height=(480]/[640)*value1Width+"px";};var oneSecond=1000*2;setInterval(fc,oneSecond);</script>
+<h1 id="&#x4E00;&#x3001;&#x5F20;&#x91CF;tensor&#x548C;&#x53D8;&#x91CF;variable">&#x4E00;&#x3001;&#x5F20;&#x91CF;(tensor)&#x548C;&#x53D8;&#x91CF;(Variable)</h1>
+<p>PyTorch&#x7684;&#x5B98;&#x65B9;&#x4ECB;&#x7ECD;&#x662F;&#x4E00;&#x4E2A;&#x62E5;&#x6709;&#x5F3A;&#x529B;GPU&#x52A0;&#x901F;&#x7684;&#x5F20;&#x91CF;&#x548C;&#x52A8;&#x6001;&#x6784;&#x5EFA;&#x7F51;&#x7EDC;&#x7684;&#x5E93;&#xFF0C;&#x5176;&#x4E3B;&#x8981;&#x6784;&#x5EFA;&#x662F;&#x5F20;&#x91CF;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x628A;PyTorch&#x5F53;&#x505A;Numpy&#x6765;&#x7528;&#xFF0C;Pytorch&#x7684;&#x5F88;&#x591A;&#x64CD;&#x4F5C;&#x597D;&#x6BD4;Numpy&#x90FD;&#x662F;&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5176;&#x80FD;&#x591F;&#x5728;GPU&#x4E0A;&#x8FD0;&#x884C;&#xFF0C;&#x6240;&#x4EE5;&#x6709;&#x7740;&#x6BD4;Numpy&#x5FEB;&#x5F88;&#x591A;&#x500D;&#x7684;&#x901F;&#x5EA6;&#x3002;</p>
+<pre><code class="lang-Python"><span class="hljs-keyword">import</span> torch
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+
+numpy_tensor = np.random.randn(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+
+pytorch_tensor1 = torch.Tensor(numpy_tensor)
+pytorch_tensor2 = torch.from_numpy(numpy_tensor)
+
+print(pytorch_tensor1)
+print(pytorch_tensor2)
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-Python">pytorch_tensor1:
+
+tensor([[ <span class="hljs-number">1.3511</span>,  <span class="hljs-number">0.2016</span>, <span class="hljs-number">-0.9728</span>,  <span class="hljs-number">0.7997</span>],
+        [<span class="hljs-number">-1.0706</span>, <span class="hljs-number">-0.0768</span>, <span class="hljs-number">-1.3627</span>, <span class="hljs-number">-0.8809</span>],
+        [<span class="hljs-number">-0.6040</span>, <span class="hljs-number">-0.0030</span>,  <span class="hljs-number">0.4871</span>,  <span class="hljs-number">0.6634</span>]])
+</code></pre>
+<pre><code class="lang-Python">pytorch_tensor2:
+
+tensor([[ <span class="hljs-number">1.3511</span>,  <span class="hljs-number">0.2016</span>, <span class="hljs-number">-0.9728</span>,  <span class="hljs-number">0.7997</span>],
+        [<span class="hljs-number">-1.0706</span>, <span class="hljs-number">-0.0768</span>, <span class="hljs-number">-1.3627</span>, <span class="hljs-number">-0.8809</span>],
+        [<span class="hljs-number">-0.6040</span>, <span class="hljs-number">-0.0030</span>,  <span class="hljs-number">0.4871</span>,  <span class="hljs-number">0.6634</span>]], dtype=torch.float64)
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x4EE5;&#x4E0A;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x76F4;&#x63A5;&#x5C06;Numpy ndarray&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;Pytorch Tensor&#x6570;&#x636E;&#x7C7B;&#x578B;,&#x540C;&#x65F6;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x65B9;&#x6CD5;&#x5C06;pytorch tensor&#x8F6C;&#x6362;&#x4E3A;numpy ndarray</p>
+<pre><code class="lang-Python"><span class="hljs-keyword">import</span> torch
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+
+numpy_tensor = np.random.randn(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+pytorch_tensor1 = torch.Tensor(numpy_tensor)
+pytorch_tensor2 = torch.from_numpy(numpy_tensor)
+
+<span class="hljs-comment"># &#x5982;&#x679C;pytorch tensor&#x5728;cpu&#x4E0A;</span>
+numpy_array1 = pytorch_tensor1.numpy()
+numpy_array2 = pytorch_tensor2.cpu().numpy()
+
+print(numpy_array1)
+print(numpy_array2)
+</code></pre>
+<pre><code class="lang-Python">numpy_array1:
+
+[[ <span class="hljs-number">0.9646071</span>   <span class="hljs-number">1.0680387</span>  <span class="hljs-number">-1.4145772</span>  <span class="hljs-number">-1.1733457</span> ]
+ [ <span class="hljs-number">0.14683424</span>  <span class="hljs-number">0.15183815</span>  <span class="hljs-number">0.3256755</span>   <span class="hljs-number">2.5129247</span> ]
+ [<span class="hljs-number">-1.0027096</span>   <span class="hljs-number">0.02551154</span> <span class="hljs-number">-0.60790646</span> <span class="hljs-number">-0.22400694</span>]]
+
+ numpy_array2:
+
+[[<span class="hljs-number">-2.09633392</span> <span class="hljs-number">-2.08986247</span>  <span class="hljs-number">0.02169762</span>  <span class="hljs-number">0.15833546</span>]
+ [ <span class="hljs-number">1.24929483</span> <span class="hljs-number">-1.3953018</span>   <span class="hljs-number">1.03153148</span> <span class="hljs-number">-0.06309232</span>]
+ [ <span class="hljs-number">0.24348084</span> <span class="hljs-number">-1.42512446</span>  <span class="hljs-number">1.45863934</span>  <span class="hljs-number">0.92882537</span>]]
+</code></pre>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;GPU&#x4E0A;&#x7684;Tensor&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x8F6C;&#x6362;&#x4E3A;Numpy ndarray&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;.cpu()&#x5148;&#x5C06;GPU&#x4E0A;&#x7684;Tensor&#x8F6C;&#x5230;CPU&#x4E0A; PyTorch Tensor &#x4F7F;&#x7528;GPU&#x52A0;&#x901F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x5C06;Tensor&#x653E;&#x5230;GPU&#x4E0A;.</p>
+<pre><code class="lang-Python"><span class="hljs-comment"># &#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x5B9A;&#x4E49;cuda&#x6570;&#x636E;&#x7C7B;&#x578B;</span>
+dtype = torch.cuda.FloatTensor
+gpu_tensor = torch.randn(<span class="hljs-number">10</span>,<span class="hljs-number">20</span>).type(dtype)
+
+<span class="hljs-comment"># &#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x5F0F;&#x66F4;&#x7B80;&#x5355;&#xFF0C;&#x63A8;&#x8350;&#x4F7F;&#x7528;</span>
+gpu_tensor = torch.randn(<span class="hljs-number">10</span>,<span class="hljs-number">20</span>).cuda(<span class="hljs-number">0</span>) <span class="hljs-comment"># &#x5C06;tensor&#x653E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;GPU&#x4E0A;</span>
+gpu_tensor = torch.randn(<span class="hljs-number">10</span>,<span class="hljs-number">20</span>).cuda(<span class="hljs-number">1</span>) <span class="hljs-comment"># &#x5C06;tensor&#x653E;&#x5230;&#x7B2C;&#x4E8C;&#x4E2A;GPU&#x4E0A;</span>
+</code></pre>
+<ul>
+<li><p>&#x4F7F;&#x7528;&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x5C06;tensor&#x653E;&#x5230;GPU&#x4E0A;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5C06;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x6210;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
+</li>
+<li><p>&#x800C;&#x4F7F;&#x7528;&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x5F0F;&#x80FD;&#x591F;&#x76F4;&#x63A5;&#x5C06;tensor&#x653E;&#x5230;GPU&#x4E0A;&#xFF0C;&#x7C7B;&#x578B;&#x8DDF;&#x4E4B;&#x524D;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;</p>
+</li>
+</ul>
+<blockquote>
+<p>&#x63A8;&#x8350;&#x5728;&#x5B9A;&#x4E49;tensor&#x7684;&#x65F6;&#x5019;&#x5C31;&#x660E;&#x786E;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x7136;&#x540E;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#x5C06;tensor&#x653E;&#x5230;GPU&#x4E0A;</p>
+</blockquote>
+<p>&#x6211;&#x7684;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-Python"><span class="hljs-keyword">import</span> torch
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+
+numpy_tensor = np.random.randn(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+pytorch_tensor1 = torch.Tensor(numpy_tensor)
+pytorch_tensor2 = torch.from_numpy(numpy_tensor)
+
+<span class="hljs-comment"># &#x5982;&#x679C;pytorch tensor&#x5728;cpu&#x4E0A;</span>
+numpy_array1 = pytorch_tensor1.numpy()
+numpy_array2 = pytorch_tensor2.cpu().numpy()
+
+print(numpy_array1)
+print(numpy_array2)
+
+print(<span class="hljs-string">&quot;&#x8F93;&#x51FA;&#x6570;&#x636E;&#x6A21;&#x5F0F;1&#xFF1A;&quot;</span>)
+<span class="hljs-comment"># &#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x5B9A;&#x4E49;cuda&#x6570;&#x636E;&#x7C7B;&#x578B;</span>
+dtype = torch.cuda.FloatTensor
+gpu_tensor1 = torch.randn(<span class="hljs-number">3</span>,<span class="hljs-number">4</span>).type(dtype)
+
+print(gpu_tensor1)
+
+gpu_tensor2 = torch.randn(<span class="hljs-number">3</span>,<span class="hljs-number">4</span>).cuda(<span class="hljs-number">0</span>) <span class="hljs-comment"># &#x5C06;tensor&#x653E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;GPU&#x4E0A;</span>
+
+print(<span class="hljs-string">&quot;&#x8F93;&#x51FA;&#x6570;&#x636E;&#x6A21;&#x5F0F;2&#xFF1A;&quot;</span>)
+print(gpu_tensor2)
+</code></pre>
+
                                 
                                 </section>
                             
@@ -561,7 +656,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.1 PyTorch 学习","categories":"Deep Learning","tags":["Deep Learning","PyTorch"],"date":"2018-11-10T22:55:03.000Z","level":"1.4.1","depth":2,"next":{"title":"附录","level":"1.5","depth":1,"path":"附录/index,md","ref":"./附录/index,md","articles":[{"title":"Python 相关笔记","level":"1.5.1","depth":2,"ref":"","articles":[{"title":"Python 帮助文档检索方法","level":"1.5.1.1","depth":3,"path":"附录/Python 帮助文档检索方法.md","ref":"./附录/Python 帮助文档检索方法.md","articles":[]},{"title":"Module篇使用future","level":"1.5.1.2","depth":3,"path":"附录/Module篇使用__future__.md","ref":"./附录/Module篇使用__future__.md","articles":[]}]}]},"previous":{"title":"第三章 深度学习框架学习","level":"1.4","depth":1,"path":"第三章 深度学习框架学习/index.md","ref":"./第三章 深度学习框架学习/index.md","articles":[{"title":"3.1 PyTorch 学习","level":"1.4.1","depth":2,"path":"第三章 深度学习框架学习/3.1 PyTorch 学习.md","ref":"./第三章 深度学习框架学习/3.1 PyTorch 学习.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chinese-video"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"shortName":"mygitbook-1"},"chinese-video":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"深度学习","language":"zh","gitbook":"*","description":"学习笔记"},"file":{"path":"第三章 深度学习框架学习/3.1 PyTorch 学习.md","mtime":"2019-02-06T12:08:56.339Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-06T12:09:04.613Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.1 PyTorch 学习","categories":"Deep Learning","tags":["Deep Learning","PyTorch"],"date":"2018-11-10T22:55:03.000Z","level":"1.4.1","depth":2,"next":{"title":"附录","level":"1.5","depth":1,"path":"附录/index,md","ref":"./附录/index,md","articles":[{"title":"Python 相关笔记","level":"1.5.1","depth":2,"ref":"","articles":[{"title":"Python 帮助文档检索方法","level":"1.5.1.1","depth":3,"path":"附录/Python 帮助文档检索方法.md","ref":"./附录/Python 帮助文档检索方法.md","articles":[]},{"title":"Module篇使用future","level":"1.5.1.2","depth":3,"path":"附录/Module篇使用__future__.md","ref":"./附录/Module篇使用__future__.md","articles":[]}]}]},"previous":{"title":"第三章 深度学习框架学习","level":"1.4","depth":1,"path":"第三章 深度学习框架学习/index.md","ref":"./第三章 深度学习框架学习/index.md","articles":[{"title":"3.1 PyTorch 学习","level":"1.4.1","depth":2,"path":"第三章 深度学习框架学习/3.1 PyTorch 学习.md","ref":"./第三章 深度学习框架学习/3.1 PyTorch 学习.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chinese-video"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"shortName":"mygitbook-1"},"chinese-video":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"深度学习","language":"zh","gitbook":"*","description":"学习笔记"},"file":{"path":"第三章 深度学习框架学习/3.1 PyTorch 学习.md","mtime":"2019-02-07T14:57:03.402Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-07T15:01:35.391Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
