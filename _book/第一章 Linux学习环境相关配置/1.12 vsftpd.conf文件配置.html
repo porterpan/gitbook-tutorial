@@ -1,0 +1,1065 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.12 vsftpd.conf文件配置 · 深度学习</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="1.13 mysql 笔记.html" />
+    
+    
+    <link rel="prev" href="1.11 sublime text3插件介绍.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    深耕系列之深度学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第一章 Linux学习环境相关配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1.1 Ubuntu18下有道词典的配置.html">
+            
+                <a href="1.1 Ubuntu18下有道词典的配置.html">
+            
+                    
+                    1.1 Ubuntu18下有道词典的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="1.2 Ubuntu18安装Gitbook.html">
+            
+                <a href="1.2 Ubuntu18安装Gitbook.html">
+            
+                    
+                    1.2 Ubuntu18 安装Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="1.3 Ubuntu18 git命令使用总结.html">
+            
+                <a href="1.3 Ubuntu18 git命令使用总结.html">
+            
+                    
+                    1.3 Ubuntu18 git命令使用总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="1.4 Latex 排版使用笔记.html">
+            
+                <a href="1.4 Latex 排版使用笔记.html">
+            
+                    
+                    1.4 Latex 排版使用笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="1.5 Ubuntu下常用工具软件配置安装.html">
+            
+                <a href="1.5 Ubuntu下常用工具软件配置安装.html">
+            
+                    
+                    1.5 Ubuntu下常用工具软件配置安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="1.6 win10+ubuntu双系统修复ubuntu启动引导.html">
+            
+                <a href="1.6 win10+ubuntu双系统修复ubuntu启动引导.html">
+            
+                    
+                    1.6 win10+ubuntu双系统修复ubuntu启动引导
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="1.7 gitbook 插件等相关设置.html">
+            
+                <a href="1.7 gitbook 插件等相关设置.html">
+            
+                    
+                    1.7 gitbook 插件等相关设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="1.8 深度学习环境搭建.html">
+            
+                <a href="1.8 深度学习环境搭建.html">
+            
+                    
+                    1.8 深度学习环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="1.9 hexo 实现本地图片加载.html">
+            
+                <a href="1.9 hexo 实现本地图片加载.html">
+            
+                    
+                    1.9 hexo 实现本地图片加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="1.10 hexo网页定制.html">
+            
+                <a href="1.10 hexo网页定制.html">
+            
+                    
+                    1.10 hexo网页定制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="1.11 sublime text3插件介绍.html">
+            
+                <a href="1.11 sublime text3插件介绍.html">
+            
+                    
+                    1.11 sublime text3插件介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.12" data-path="1.12 vsftpd.conf文件配置.html">
+            
+                <a href="1.12 vsftpd.conf文件配置.html">
+            
+                    
+                    1.12 vsftpd.conf文件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="1.13 mysql 笔记.html">
+            
+                <a href="1.13 mysql 笔记.html">
+            
+                    
+                    1.13 mysql 笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第二章 深度学习相关基础算法/">
+            
+                <a href="../第二章 深度学习相关基础算法/">
+            
+                    
+                    第二章 深度学习相关基础算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第二章 深度学习相关基础算法/2.1 马尔科夫链.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1 马尔科夫链.html">
+            
+                    
+                    2.1 马尔科夫链
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../第二章 深度学习相关基础算法/2.1.1 马尔科夫简单模型预测实战笔记.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1.1 马尔科夫简单模型预测实战笔记.html">
+            
+                    
+                    2.1.1 马尔科夫简单模型预测实战笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../第二章 深度学习相关基础算法/2.1.2 最大熵模型.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1.2 最大熵模型.html">
+            
+                    
+                    2.1.2 最大熵模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../第二章 深度学习相关基础算法/2.1.3 隐马尔科夫HMM.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1.3 隐马尔科夫HMM.html">
+            
+                    
+                    2.1.3 隐马尔科夫HMM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第二章 深度学习相关基础算法/2.2 矩阵相关基础知识.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.2 矩阵相关基础知识.html">
+            
+                    
+                    2.2 矩阵相关基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第二章 深度学习相关基础算法/2.3 线性回归.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.3 线性回归.html">
+            
+                    
+                    2.3 线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第二章 深度学习相关基础算法/2.4  Decision tree.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.4  Decision tree.html">
+            
+                    
+                    2.4 决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../第二章 深度学习相关基础算法/2.5 梯度下降和最小二乘法.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.5 梯度下降和最小二乘法.html">
+            
+                    
+                    2.5 梯度下降和最小二乘法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../第二章 深度学习相关基础算法/2.6 递归算法与迭代算法.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.6 递归算法与迭代算法.html">
+            
+                    
+                    2.6 递归算法与迭代算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../第三章 深度学习框架学习/">
+            
+                <a href="../第三章 深度学习框架学习/">
+            
+                    
+                    第三章 深度学习框架学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../第三章 深度学习框架学习/3.1 PyTorch 学习.html">
+            
+                <a href="../第三章 深度学习框架学习/3.1 PyTorch 学习.html">
+            
+                    
+                    3.1 PyTorch 学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../附录/index,md">
+            
+                <span>
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    Python 相关笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../附录/Python 帮助文档检索方法.html">
+            
+                <a href="../附录/Python 帮助文档检索方法.html">
+            
+                    
+                    Python 帮助文档检索方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../附录/Module篇使用__future__.html">
+            
+                <a href="../附录/Module篇使用__future__.html">
+            
+                    
+                    Module篇使用future
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.12 vsftpd.conf文件配置</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6458;&#x8981;">&#x6458;&#x8981;</h1>
+<ul>
+<li>[x] Edit By Porter, &#x79EF;&#x6C34;&#x6210;&#x6E0A;,&#x86DF;&#x9F99;&#x751F;&#x7109;&#x3002;</li>
+</ul>
+<!-- more -->
+<p>&#x540D;&#x79F0;
+vsftpd.conf - vsftpd&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+&#x63CF;&#x8FF0;</p>
+<p> vsftpd.conf&#x53EF;&#x7528;&#x4E8E;&#x63A7;&#x5236;vsftpd&#x884C;&#x4E3A;&#x7684;&#x5404;&#x4E2A;&#x65B9;&#x9762;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;vsftpd&#x5728;/etc/vsftpd/vsftpd.conf&#x4F4D;&#x7F6E;&#x67E5;&#x627E;&#x6B64;&#x6587;&#x4EF6;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E3A;vsftpd&#x6307;&#x5B9A;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#x6765;&#x8986;&#x76D6;&#x5B83;&#x3002;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#x662F;vsftpd&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x540D;&#x3002;&#x6B64;&#x884C;&#x4E3A;&#x5F88;&#x6709;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x60A8;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x4F7F;&#x7528;&#x9AD8;&#x7EA7;inetd&#xFF08;&#x5982; xinetd&#xFF09;&#x4EE5;&#x6BCF;&#x4E2A;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x4E3A;&#x57FA;&#x7840;&#x542F;&#x52A8;vsftpd&#x4EE5;&#x53CA;&#x4E0D;&#x540C;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;
+&#x683C;&#x5F0F;
+vsftpd.conf&#x7684;&#x683C;&#x5F0F;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x3002;&#x6BCF;&#x4E00;&#x884C;&#x90FD;&#x662F;&#x6CE8;&#x91CA;&#x6216;&#x6307;&#x4EE4;&#x3002;&#x6CE8;&#x91CA;&#x884C;&#x4EE5;&#xFF03;&#x5F00;&#x5934;&#x5E76;&#x88AB;&#x5FFD;&#x7565;&#x3002;&#x6307;&#x4EE4;&#x884C;&#x7684;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;
+&#x9009;&#x9879;=&#x503C;</p>
+<p>&#x91CD;&#x8981;&#x7684;&#x662F;&#x8981;&#x6CE8;&#x610F;&#x5728;&#x9009;&#x9879;&#xFF0C;=&#x548C;&#x503C;&#x4E4B;&#x95F4;&#x653E;&#x7F6E;&#x4EFB;&#x4F55;&#x7A7A;&#x683C;&#x662F;&#x9519;&#x8BEF;&#x7684;&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;&#x8BBE;&#x7F6E;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7F16;&#x8BD1;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x4FEE;&#x6539;&#x3002;</p>
+<p>&#x5E03;&#x5C14;&#x9009;&#x9879;
+&#x4E0B;&#x9762;&#x662F;&#x5E03;&#x5C14;&#x9009;&#x9879;&#x5217;&#x8868;&#x3002;&#x5E03;&#x5C14;&#x9009;&#x9879;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;YES &#x6216;NO&#x3002;
+allow_anon_ssl
+&#x4EC5;&#x5728;ssl_enable&#x5904;&#x4E8E;&#x6D3B;&#x52A8;&#x72B6;&#x6001;&#x65F6;&#x9002;&#x7528;&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;YES&#xFF0C;&#x5219;&#x5141;&#x8BB8;&#x533F;&#x540D;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x5B89;&#x5168;SSL&#x8FDE;&#x63A5;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>anon_mkdir_write_enable
+&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;YES&#xFF0C;&#x5219;&#x5141;&#x8BB8;&#x533F;&#x540D;&#x7528;&#x6237;&#x5728;&#x7279;&#x5B9A;&#x6761;&#x4EF6;&#x4E0B;&#x521B;&#x5EFA;&#x65B0;&#x76EE;&#x5F55;&#x3002;&#x4E3A;&#x6B64;&#xFF0C;&#x5FC5;&#x987B;&#x6FC0;&#x6D3B;&#x9009;&#x9879;write_enable&#xFF0C;&#x5E76;&#x4E14;&#x533F;&#x540D;ftp&#x7528;&#x6237;&#x5FC5;&#x987B;&#x5177;&#x6709;&#x7236;&#x76EE;&#x5F55;&#x7684;&#x5199;&#x6743;&#x9650;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>anon_other_write_enable
+&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;YES&#xFF0C;&#x5219;&#x5141;&#x8BB8;&#x533F;&#x540D;&#x7528;&#x6237;&#x6267;&#x884C;&#x9664;&#x4E0A;&#x8F7D;&#x548C;&#x521B;&#x5EFA;&#x76EE;&#x5F55;&#x4E4B;&#x5916;&#x7684;&#x5199;&#x5165;&#x64CD;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;&#x5220;&#x9664;&#x548C;&#x91CD;&#x547D;&#x540D;&#x3002;&#x901A;&#x5E38;&#x4E0D;&#x5EFA;&#x8BAE;&#x8FD9;&#x6837;&#x505A;&#xFF0C;&#x4F46;&#x5305;&#x62EC;&#x5B8C;&#x6574;&#x6027;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>anon_upload_enable
+&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;YES&#xFF0C;&#x5219;&#x5141;&#x8BB8;&#x533F;&#x540D;&#x7528;&#x6237;&#x5728;&#x7279;&#x5B9A;&#x6761;&#x4EF6;&#x4E0B;&#x4E0A;&#x8F7D;&#x6587;&#x4EF6;&#x3002;&#x4E3A;&#x6B64;&#xFF0C;&#x5FC5;&#x987B;&#x6FC0;&#x6D3B;&#x9009;&#x9879;write_enable&#xFF0C;&#x5E76;&#x4E14;&#x533F;&#x540D;ftp&#x7528;&#x6237;&#x5FC5;&#x987B;&#x5177;&#x6709;&#x6240;&#x9700;&#x4E0A;&#x8F7D;&#x4F4D;&#x7F6E;&#x7684;&#x5199;&#x5165;&#x6743;&#x9650;&#x3002;&#x865A;&#x62DF;&#x7528;&#x6237;&#x4E0A;&#x4F20;&#x4E5F;&#x9700;&#x8981;&#x6B64;&#x8BBE;&#x7F6E;; &#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x865A;&#x62DF;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x533F;&#x540D;&#xFF08;&#x5373;&#x6700;&#x5927;&#x9650;&#x5236;&#xFF09;&#x6743;&#x9650;&#x5904;&#x7406;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>anon_world_readable_only
+&#x542F;&#x7528;&#x540E;&#xFF0C;&#x5C06;&#x53EA;&#x5141;&#x8BB8;&#x533F;&#x540D;&#x7528;&#x6237;&#x4E0B;&#x8F7D;&#x4E16;&#x754C;&#x53EF;&#x8BFB;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x662F;&#x8BA4;&#x8BC6;&#x5230;ftp&#x7528;&#x6237;&#x53EF;&#x80FD;&#x62E5;&#x6709;&#x6587;&#x4EF6;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5728;&#x4E0A;&#x4F20;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>anonymous_enable
+&#x63A7;&#x5236;&#x662F;&#x5426;&#x5141;&#x8BB8;&#x533F;&#x540D;&#x767B;&#x5F55;&#x3002;&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x5219;&#x7528;&#x6237;&#x540D;ftp&#x548C;anonymous&#x90FD;&#x5C06;&#x88AB;&#x8BC6;&#x522B;&#x4E3A;&#x533F;&#x540D;&#x767B;&#x5F55;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>ascii_download_enable
+&#x542F;&#x7528;&#x540E;&#xFF0C;ASCII&#x6A21;&#x5F0F;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x5C06;&#x5728;&#x4E0B;&#x8F7D;&#x65F6;&#x53D7;&#x5230;&#x5C0A;&#x91CD;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>ascii_upload_enable
+&#x542F;&#x7528;&#x540E;&#xFF0C;&#x4E0A;&#x4F20;&#x65F6;&#x5C06;&#x9075;&#x5FAA;ASCII&#x6A21;&#x5F0F;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>async_abor_enable
+&#x542F;&#x7528;&#x540E;&#xFF0C;&#x5C06;&#x542F;&#x7528;&#x79F0;&#x4E3A;&#x201C;&#x5F02;&#x6B65;ABOR&#x201D;&#x7684;&#x7279;&#x6B8A;FTP&#x547D;&#x4EE4;&#x3002;&#x53EA;&#x6709;&#x4E0D;&#x660E;&#x667A;&#x7684;FTP&#x5BA2;&#x6237;&#x7AEF;&#x624D;&#x4F1A;&#x4F7F;&#x7528;&#x6B64;&#x529F;&#x80FD;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x6B64;&#x529F;&#x80FD;&#x96BE;&#x4EE5;&#x5904;&#x7406;&#xFF0C;&#x56E0;&#x6B64;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x7981;&#x7528;&#x3002;&#x9057;&#x61BE;&#x7684;&#x662F;&#xFF0C;&#x9664;&#x975E;&#x6B64;&#x529F;&#x80FD;&#x53EF;&#x7528;&#xFF0C;&#x5426;&#x5219;&#x67D0;&#x4E9B;FTP&#x5BA2;&#x6237;&#x7AEF;&#x5C06;&#x5728;&#x53D6;&#x6D88;&#x4F20;&#x8F93;&#x65F6;&#x6302;&#x8D77;&#xFF0C;&#x56E0;&#x6B64;&#x60A8;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x542F;&#x7528;&#x5B83;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>&#x80CC;&#x666F;
+&#x542F;&#x7528;&#x540E;&#xFF0C;vsftpd&#x4EE5;&#x201C;&#x76D1;&#x542C;&#x201D;&#x6A21;&#x5F0F;&#x542F;&#x52A8;&#xFF0C;vsftpd&#x5C06;&#x4E3A;&#x4FA6;&#x542C;&#x5668;&#x8FDB;&#x7A0B;&#x63D0;&#x4F9B;&#x80CC;&#x666F;&#x3002;&#x5373;&#x63A7;&#x5236;&#x5C06;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#x5230;&#x542F;&#x52A8;vsftpd&#x7684;shell&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>check_shell
+&#x6CE8;&#x610F;&#xFF01;&#x6B64;&#x9009;&#x9879;&#x4EC5;&#x5BF9;vsftpd&#x7684;&#x975E;PAM&#x6784;&#x5EFA;&#x6709;&#x6548;&#x3002;&#x5982;&#x679C;&#x7981;&#x7528;&#xFF0C;vsftpd&#x5C06;&#x4E0D;&#x4F1A;&#x68C0;&#x67E5;/ etc / shells&#x662F;&#x5426;&#x6709;&#x7528;&#x4E8E;&#x672C;&#x5730;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;shell&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>chmod_enable
+&#x542F;&#x7528;&#x540E;&#xFF0C;&#x5141;&#x8BB8;&#x4F7F;&#x7528;SITE CHMOD&#x547D;&#x4EE4;&#x3002;&#x6CE8;&#x610F;&#xFF01;&#x8FD9;&#x4EC5;&#x9002;&#x7528;&#x4E8E;&#x672C;&#x5730;&#x7528;&#x6237;&#x3002;&#x533F;&#x540D;&#x7528;&#x6237;&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x4F7F;&#x7528;SITE CHMOD&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>chown_uploads
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x5219;&#x6240;&#x6709;&#x533F;&#x540D;&#x4E0A;&#x8F7D;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x6743;&#x90FD;&#x5C06;&#x66F4;&#x6539;&#x4E3A;&#x8BBE;&#x7F6E;chown_username&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x7528;&#x6237;&#x3002;&#x4ECE;&#x7BA1;&#x7406;&#x65B9;&#x9762;&#xFF0C;&#x4E5F;&#x8BB8;&#x662F;&#x5B89;&#x5168;&#x65B9;&#x9762;&#x6765;&#x770B;&#xFF0C;&#x8FD9;&#x5F88;&#x6709;&#x7528;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>chroot_list_enable
+&#x5982;&#x679C;&#x6FC0;&#x6D3B;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x767B;&#x5F55;&#x65F6;&#x63D0;&#x4F9B;&#x5176;&#x4E3B;&#x76EE;&#x5F55;&#x4E2D;&#x653E;&#x7F6E;&#x5728;chroot&#xFF08;&#xFF09;jail&#x4E2D;&#x7684;&#x672C;&#x5730;&#x7528;&#x6237;&#x5217;&#x8868;&#x3002;&#x5982;&#x679C;chroot_local_user&#x8BBE;&#x7F6E;&#x4E3A;YES&#xFF0C;&#x5219;&#x542B;&#x4E49;&#x7565;&#x6709;&#x4E0D;&#x540C;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5217;&#x8868;&#x5C06;&#x6210;&#x4E3A;&#x4E0D;&#x88AB;&#x653E;&#x7F6E;&#x5728;chroot&#xFF08;&#xFF09;jail&#x4E2D;&#x7684;&#x7528;&#x6237;&#x5217;&#x8868;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5305;&#x542B;&#x6B64;&#x5217;&#x8868;&#x7684;&#x6587;&#x4EF6;&#x662F;/ etc / vsftpd / chroot_list&#xFF0C;&#x4F46;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;chroot_list_file&#x8BBE;&#x7F6E;&#x8986;&#x76D6;&#x5B83;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>chroot_local_user
+&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;YES&#xFF0C;&#x5219;&#x767B;&#x5F55;&#x540E;&#x672C;&#x5730;&#x7528;&#x6237;&#xFF08;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF09;&#x5C06;&#x653E;&#x7F6E;&#x5728;&#x5176;&#x4E3B;&#x76EE;&#x5F55;&#x4E2D;&#x7684;chroot&#xFF08;&#xFF09;jail&#x4E2D;&#x3002;&#x8B66;&#x544A;&#xFF1A;&#x6B64;&#x9009;&#x9879;&#x5177;&#x6709;&#x5B89;&#x5168;&#x9690;&#x60A3;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5728;&#x7528;&#x6237;&#x5177;&#x6709;&#x4E0A;&#x8F7D;&#x6743;&#x9650;&#x6216;shell&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x3002;&#x53EA;&#x6709;&#x5728;&#x60A8;&#x77E5;&#x9053;&#x81EA;&#x5DF1;&#x5728;&#x505A;&#x4EC0;&#x4E48;&#x65F6;&#x624D;&#x542F;&#x7528;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x4E9B;&#x5B89;&#x5168;&#x9690;&#x60A3;&#x4E0D;&#x662F;vsftpd&#x7279;&#x5B9A;&#x7684;&#x3002;&#x5B83;&#x4EEC;&#x9002;&#x7528;&#x4E8E;&#x6240;&#x6709;&#x63D0;&#x4F9B;&#x5C06;&#x672C;&#x5730;&#x7528;&#x6237;&#x653E;&#x5728;chroot&#xFF08;&#xFF09;jail&#x4E2D;&#x7684;FTP&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>connect_from_port_20
+&#x8FD9;&#x53EF;&#x4EE5;&#x63A7;&#x5236;PORT&#x6837;&#x5F0F;&#x6570;&#x636E;&#x8FDE;&#x63A5;&#x662F;&#x5426;&#x5728;&#x670D;&#x52A1;&#x5668;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x4F7F;&#x7528;&#x7AEF;&#x53E3;20&#xFF08;ftp-data&#xFF09;&#x3002;&#x51FA;&#x4E8E;&#x5B89;&#x5168;&#x539F;&#x56E0;&#xFF0C;&#x4E00;&#x4E9B;&#x5BA2;&#x6237;&#x53EF;&#x80FD;&#x4F1A;&#x575A;&#x6301;&#x8BA4;&#x4E3A;&#x662F;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x3002;&#x76F8;&#x53CD;&#xFF0C;&#x7981;&#x7528;&#x6B64;&#x9009;&#x9879;&#x53EF;&#x4F7F;vsftpd&#x4EE5;&#x8F83;&#x4F4E;&#x7684;&#x6743;&#x9650;&#x8FD0;&#x884C;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO&#xFF08;&#x4F46;&#x662F;&#x793A;&#x4F8B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x542F;&#x7528;&#x5B83;&#xFF09;</p>
+<p>debug_ssl
+&#x5982;&#x679C;&#x4E3A;true&#xFF0C;&#x5219;&#x5C06;OpenSSL&#x8FDE;&#x63A5;&#x8BCA;&#x65AD;&#x8F6C;&#x50A8;&#x5230;vsftpd&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x3002;&#xFF08;&#x5728;v2.0.6&#x4E2D;&#x6DFB;&#x52A0;&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>delete_failed_uploads
+&#x5982;&#x679C;&#x4E3A;true&#xFF0C;&#x5219;&#x5220;&#x9664;&#x4EFB;&#x4F55;&#x5931;&#x8D25;&#x7684;&#x4E0A;&#x8F7D;&#x6587;&#x4EF6;&#x3002;&#xFF08;&#x5728;v2.0.7&#x4E2D;&#x6DFB;&#x52A0;&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>deny_email_enable
+&#x5982;&#x679C;&#x6FC0;&#x6D3B;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x4F1A;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x533F;&#x540D;&#x5BC6;&#x7801;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x54CD;&#x5E94;&#x5217;&#x8868;&#xFF0C;&#x5BFC;&#x81F4;&#x767B;&#x5F55;&#x88AB;&#x62D2;&#x7EDD;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5305;&#x542B;&#x6B64;&#x5217;&#x8868;&#x7684;&#x6587;&#x4EF6;&#x662F;/ etc / vsftpd / banned_emails&#xFF0C;&#x4F46;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;banned_email_file&#x8BBE;&#x7F6E;&#x8986;&#x76D6;&#x5B83;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>dirlist_enable
+&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;NO&#xFF0C;&#x5219;&#x6240;&#x6709;&#x76EE;&#x5F55;&#x5217;&#x8868;&#x547D;&#x4EE4;&#x90FD;&#x5C06;&#x62D2;&#x7EDD;&#x6743;&#x9650;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>dirmessage_enable
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;FTP&#x670D;&#x52A1;&#x5668;&#x7684;&#x7528;&#x6237;&#x9996;&#x6B21;&#x8FDB;&#x5165;&#x65B0;&#x76EE;&#x5F55;&#x65F6;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x6D88;&#x606F;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F1A;&#x626B;&#x63CF;&#x76EE;&#x5F55;&#x4EE5;&#x67E5;&#x627E;&#x6587;&#x4EF6;.message&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x8BBE;&#x7F6E;message_file&#x8986;&#x76D6;&#x8BE5;&#x76EE;&#x5F55;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO&#xFF08;&#x4F46;&#x662F;&#x793A;&#x4F8B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x542F;&#x7528;&#x5B83;&#xFF09;</p>
+<p>download_enable
+&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;NO&#xFF0C;&#x5219;&#x6240;&#x6709;&#x4E0B;&#x8F7D;&#x8BF7;&#x6C42;&#x90FD;&#x5C06;&#x62D2;&#x7EDD;&#x6743;&#x9650;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>dual_log_enable
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x5219;&#x4F1A;&#x5E76;&#x884C;&#x751F;&#x6210;&#x4E24;&#x4E2A;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4E3A;/ var / log / xferlog&#x548C;/var/log/vsftpd.log&#x3002;&#x524D;&#x8005;&#x662F;&#x4E00;&#x4E2A;wu-ftpd&#x6837;&#x5F0F;&#x7684;&#x4F20;&#x8F93;&#x65E5;&#x5FD7;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6807;&#x51C6;&#x5DE5;&#x5177;&#x89E3;&#x6790;&#x3002;&#x540E;&#x8005;&#x662F;vsftpd&#x81EA;&#x5DF1;&#x7684;&#x6837;&#x5F0F;&#x65E5;&#x5FD7;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>force_dot_files
+&#x5982;&#x679C;&#x6FC0;&#x6D3B;&#xFF0C;&#x5219;&#x4EE5;&#x3002;&#x5F00;&#x5934;&#x7684;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;&#x3002;&#x5373;&#x4F7F;&#x5BA2;&#x6237;&#x7AEF;&#x672A;&#x4F7F;&#x7528;&#x201C;a&#x201D;&#x6807;&#x5FD7;&#xFF0C;&#x4E5F;&#x5C06;&#x663E;&#x793A;&#x5728;&#x76EE;&#x5F55;&#x5217;&#x8868;&#x4E2D;&#x3002;&#x6B64;&#x8986;&#x76D6;&#x4E0D;&#x5305;&#x62EC;&#x201C;&#x3002;&#x201D; &#x548C;&#x201C;..&#x201D;&#x6761;&#x76EE;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>force_anon_data_ssl
+&#x4EC5;&#x5728;&#x6FC0;&#x6D3B;ssl_enable&#x65F6;&#x9002;&#x7528;&#x3002;&#x5982;&#x679C;&#x6FC0;&#x6D3B;&#xFF0C;&#x5219;&#x5F3A;&#x5236;&#x6240;&#x6709;&#x533F;&#x540D;&#x767B;&#x5F55;&#x4F7F;&#x7528;&#x5B89;&#x5168;SSL&#x8FDE;&#x63A5;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;&#x6570;&#x636E;&#x8FDE;&#x63A5;&#x4E0A;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;&#x6570;&#x636E;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>force_anon_logins_ssl
+&#x4EC5;&#x5728;&#x6FC0;&#x6D3B;ssl_enable&#x65F6;&#x9002;&#x7528;&#x3002;&#x5982;&#x679C;&#x6FC0;&#x6D3B;&#xFF0C;&#x5219;&#x5F3A;&#x5236;&#x6240;&#x6709;&#x533F;&#x540D;&#x767B;&#x5F55;&#x4F7F;&#x7528;&#x5B89;&#x5168;SSL&#x8FDE;&#x63A5;&#x4EE5;&#x53D1;&#x9001;&#x5BC6;&#x7801;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>force_local_data_ssl
+&#x4EC5;&#x5728;&#x6FC0;&#x6D3B;ssl_enable&#x65F6;&#x9002;&#x7528;&#x3002;&#x5982;&#x679C;&#x6FC0;&#x6D3B;&#xFF0C;&#x5219;&#x5F3A;&#x5236;&#x6240;&#x6709;&#x975E;&#x533F;&#x540D;&#x767B;&#x5F55;&#x4F7F;&#x7528;&#x5B89;&#x5168;SSL&#x8FDE;&#x63A5;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;&#x6570;&#x636E;&#x8FDE;&#x63A5;&#x4E0A;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;&#x6570;&#x636E;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>force_local_logins_ssl
+&#x4EC5;&#x5728;&#x6FC0;&#x6D3B;ssl_enable&#x65F6;&#x9002;&#x7528;&#x3002;&#x5982;&#x679C;&#x6FC0;&#x6D3B;&#xFF0C;&#x5219;&#x5F3A;&#x5236;&#x6240;&#x6709;&#x975E;&#x533F;&#x540D;&#x767B;&#x5F55;&#x4F7F;&#x7528;&#x5B89;&#x5168;SSL&#x8FDE;&#x63A5;&#x4EE5;&#x53D1;&#x9001;&#x5BC6;&#x7801;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>guest_enable
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x5219;&#x6240;&#x6709;&#x975E;&#x533F;&#x540D;&#x767B;&#x5F55;&#x90FD;&#x88AB;&#x5F52;&#x7C7B;&#x4E3A;&#x201C;&#x8BBF;&#x5BA2;&#x201D;&#x767B;&#x5F55;&#x3002;guest &#x865A;&#x62DF;&#x673A;&#x767B;&#x5F55;&#x5C06;&#x91CD;&#x65B0;&#x6620;&#x5C04;&#x5230;guest_username&#x8BBE;&#x7F6E;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x7528;&#x6237;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>hide_ids
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x76EE;&#x5F55;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x7528;&#x6237;&#x548C;&#x7EC4;&#x4FE1;&#x606F;&#x5C06;&#x663E;&#x793A;&#x4E3A;&#x201C;ftp&#x201D;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>implicit_ssl
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x5219;SSL&#x63E1;&#x624B;&#x662F;&#x6240;&#x6709;&#x8FDE;&#x63A5;&#xFF08;FTPS&#x534F;&#x8BAE;&#xFF09;&#x7684;&#x9996;&#x8981;&#x4EFB;&#x52A1;&#x3002;&#x8981;&#x652F;&#x6301;&#x663E;&#x5F0F;SSL&#x548C;/&#x6216;&#x7EAF;&#x6587;&#x672C;&#xFF0C;&#x8FD8;&#x5E94;&#x8FD0;&#x884C;&#x5355;&#x72EC;&#x7684;vsftpd&#x4FA6;&#x542C;&#x5668;&#x8FDB;&#x7A0B;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>&#x542C;
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;vsftpd&#x5C06;&#x4EE5;&#x72EC;&#x7ACB;&#x6A21;&#x5F0F;&#x8FD0;&#x884C;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x4E0D;&#x80FD;&#x4ECE;&#x67D0;&#x79CD;&#x7C7B;&#x578B;&#x7684;inetd&#x8FD0;&#x884C;vsftpd&#x3002;&#x76F8;&#x53CD;&#xFF0C;vsftpd&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#x4E00;&#x6B21;&#x3002;&#x7136;&#x540E;&#xFF0C;vsftpd&#x5C06;&#x8D1F;&#x8D23;&#x76D1;&#x542C;&#x548C;&#x5904;&#x7406;&#x4F20;&#x5165;&#x7684;&#x8FDE;&#x63A5;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>listen_ipv6
+&#x4E0E;listen&#x53C2;&#x6570;&#x4E00;&#x6837;&#xFF0C;&#x9664;&#x4E86;vsftpd&#x5C06;&#x4FA6;&#x542C;IPv6&#x5957;&#x63A5;&#x5B57;&#x800C;&#x4E0D;&#x662F;IPv4&#x5957;&#x63A5;&#x5B57;&#x3002;&#x6B64;&#x53C2;&#x6570;&#x548C;listen&#x53C2;&#x6570;&#x662F;&#x4E92;&#x65A5;&#x7684;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>local_enable
+&#x63A7;&#x5236;&#x662F;&#x5426;&#x5141;&#x8BB8;&#x672C;&#x5730;&#x767B;&#x5F55;&#x3002;&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;/ etc / passwd&#x4E2D;&#x7684;&#x666E;&#x901A;&#x7528;&#x6237;&#x5E10;&#x6237;&#xFF08;&#x6216;PAM&#x914D;&#x7F6E;&#x5F15;&#x7528;&#x7684;&#x4EFB;&#x4F55;&#x4F4D;&#x7F6E;&#xFF09;&#x767B;&#x5F55;&#x3002;&#x5FC5;&#x987B;&#x542F;&#x7528;&#x6B64;&#x529F;&#x80FD;&#x624D;&#x80FD;&#x4F7F;&#x4EFB;&#x4F55;&#x975E;&#x533F;&#x540D;&#x767B;&#x5F55;&#x5DE5;&#x4F5C;&#xFF0C;&#x5305;&#x62EC;&#x865A;&#x62DF;&#x7528;&#x6237;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>lock_upload_files
+&#x542F;&#x7528;&#x540E;&#xFF0C;&#x6240;&#x6709;&#x4E0A;&#x8F7D;&#x90FD;&#x4F1A;&#x7EE7;&#x7EED;&#x5BF9;&#x4E0A;&#x8F7D;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x5199;&#x9501;&#x5B9A;&#x3002;&#x6240;&#x6709;&#x4E0B;&#x8F7D;&#x90FD;&#x7EE7;&#x7EED;&#x5BF9;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x5171;&#x4EAB;&#x8BFB;&#x9501;&#x5B9A;&#x3002;&#x8B66;&#x544A;&#xFF01;&#x5728;&#x542F;&#x7528;&#x6B64;&#x529F;&#x80FD;&#x4E4B;&#x524D;&#xFF0C;&#x8BF7;&#x6CE8;&#x610F;&#x6076;&#x610F;&#x9605;&#x8BFB;&#x5668;&#x53EF;&#x80FD;&#x4F1A;&#x4F7F;&#x60F3;&#x8981;&#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x7684;&#x4F5C;&#x8005;&#x611F;&#x5230;&#x9965;&#x997F;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>log_ftp_protocol
+&#x542F;&#x7528;&#x540E;&#xFF0C;&#x5C06;&#x8BB0;&#x5F55;&#x6240;&#x6709;FTP&#x8BF7;&#x6C42;&#x548C;&#x54CD;&#x5E94;&#xFF0C;&#x524D;&#x63D0;&#x662F;&#x672A;&#x542F;&#x7528;xferlog_std_format&#x9009;&#x9879;&#x3002;&#x5BF9;&#x8C03;&#x8BD5;&#x5F88;&#x6709;&#x7528;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>ls_recurse_enable
+&#x542F;&#x7528;&#x540E;&#xFF0C;&#x6B64;&#x8BBE;&#x7F6E;&#x5C06;&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x201C;ls -R&#x201D;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5C0F;&#x7684;&#x5B89;&#x5168;&#x98CE;&#x9669;&#xFF0C;&#x56E0;&#x4E3A;&#x5927;&#x578B;&#x7AD9;&#x70B9;&#x9876;&#x5C42;&#x7684;ls -R&#x53EF;&#x80FD;&#x4F1A;&#x6D88;&#x8017;&#x5927;&#x91CF;&#x8D44;&#x6E90;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>mdtm_write
+&#x542F;&#x7528;&#x540E;&#xFF0C;&#x6B64;&#x8BBE;&#x7F6E;&#x5C06;&#x5141;&#x8BB8;MDTM&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF08;&#x6839;&#x636E;&#x901A;&#x5E38;&#x7684;&#x8BBF;&#x95EE;&#x68C0;&#x67E5;&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>no_anon_password
+&#x542F;&#x7528;&#x540E;&#xFF0C;&#x8FD9;&#x4F1A;&#x963B;&#x6B62;vsftpd&#x8BF7;&#x6C42;&#x533F;&#x540D;&#x5BC6;&#x7801; - &#x533F;&#x540D;&#x7528;&#x6237;&#x5C06;&#x76F4;&#x63A5;&#x767B;&#x5F55;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>no_log_lock
+&#x542F;&#x7528;&#x540E;&#xFF0C;&#x8FD9;&#x4F1A;&#x963B;&#x6B62;vsftpd&#x5728;&#x5199;&#x5165;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x65F6;&#x8FDB;&#x884C;&#x6587;&#x4EF6;&#x9501;&#x5B9A;&#x3002;&#x901A;&#x5E38;&#x4E0D;&#x5E94;&#x542F;&#x7528;&#x6B64;&#x9009;&#x9879;&#x3002;&#x5B83;&#x7684;&#x5B58;&#x5728;&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x9519;&#x8BEF;&#xFF0C;&#x4F8B;&#x5982;Solaris / Veritas&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7EC4;&#x5408;&#xFF0C;&#x6709;&#x65F6;&#x4F1A;&#x51FA;&#x73B0;&#x8BD5;&#x56FE;&#x9501;&#x5B9A;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x7684;&#x6302;&#x8D77;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>one_process_model
+&#x5982;&#x679C;&#x60A8;&#x6709;Linux 2.4&#x5185;&#x6838;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x5B89;&#x5168;&#x6A21;&#x578B;&#xFF0C;&#x6BCF;&#x4E2A;&#x8FDE;&#x63A5;&#x53EA;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x3002;&#x5B83;&#x662F;&#x4E00;&#x79CD;&#x4E0D;&#x592A;&#x7EAF;&#x7CB9;&#x7684;&#x5B89;&#x5168;&#x6A21;&#x578B;&#xFF0C;&#x4F46;&#x4F1A;&#x63D0;&#x9AD8;&#x60A8;&#x7684;&#x6027;&#x80FD;&#x3002;&#x9664;&#x975E;&#x60A8;&#x77E5;&#x9053;&#x81EA;&#x5DF1;&#x5728;&#x505A;&#x4EC0;&#x4E48;&#xFF0C;&#x5E76;&#x4E14;&#x60A8;&#x7684;&#x7F51;&#x7AD9;&#x652F;&#x6301;&#x5927;&#x91CF;&#x540C;&#x65F6;&#x8FDE;&#x63A5;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x5426;&#x5219;&#x60A8;&#x771F;&#x7684;&#x4E0D;&#x60F3;&#x542F;&#x7528;&#x5B83;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>passwd_chroot_enable
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x5219;&#x4E0E;chroot_local_user&#x4E00;&#x8D77;&#xFF0C;&#x7136;&#x540E;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x6307;&#x5B9A;chroot&#xFF08;&#xFF09;jail&#x4F4D;&#x7F6E;&#x3002;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x7684;jail&#x90FD;&#x662F;&#x4ECE;/ etc / passwd&#x4E2D;&#x7684;&#x4E3B;&#x76EE;&#x5F55;&#x5B57;&#x7B26;&#x4E32;&#x6D3E;&#x751F;&#x7684;&#x3002;&#x4E3B;&#x76EE;&#x5F55;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x51FA;&#x73B0;/./&#x8868;&#x793A;jail&#x4F4D;&#x4E8E;&#x8DEF;&#x5F84;&#x4E2D;&#x7684;&#x7279;&#x5B9A;&#x4F4D;&#x7F6E;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>pasv_addr_resolve
+&#x5982;&#x679C;&#x8981;&#x5728;pasv_address&#x9009;&#x9879;&#x4E2D;&#x4F7F;&#x7528;&#x4E3B;&#x673A;&#x540D;&#xFF08;&#x800C;&#x4E0D;&#x662F;IP&#x5730;&#x5740;&#xFF09;&#xFF0C;&#x8BF7;&#x8BBE;&#x7F6E;&#x4E3A;YES &#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>pasv_enable
+&#x5982;&#x679C;&#x8981;&#x7981;&#x7528;PASV&#x83B7;&#x53D6;&#x6570;&#x636E;&#x8FDE;&#x63A5;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8BF7;&#x8BBE;&#x7F6E;&#x4E3A;NO&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>pasv_promiscuous
+&#x5982;&#x679C;&#x8981;&#x7981;&#x7528;PASV&#x5B89;&#x5168;&#x68C0;&#x67E5;&#xFF0C;&#x5219;&#x8BBE;&#x7F6E;&#x4E3A;YES&#xFF0C;&#x4EE5;&#x786E;&#x4FDD;&#x6570;&#x636E;&#x8FDE;&#x63A5;&#x6E90;&#x81EA;&#x4E0E;&#x63A7;&#x5236;&#x8FDE;&#x63A5;&#x76F8;&#x540C;&#x7684;IP&#x5730;&#x5740;&#x3002;&#x53EA;&#x6709;&#x5728;&#x4F60;&#x77E5;&#x9053;&#x81EA;&#x5DF1;&#x5728;&#x505A;&#x4EC0;&#x4E48;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x624D;&#x80FD;&#x542F;&#x7528; &#x5BF9;&#x6B64;&#x7684;&#x552F;&#x4E00;&#x5408;&#x6CD5;&#x7528;&#x9014;&#x662F;&#x91C7;&#x7528;&#x67D0;&#x79CD;&#x5F62;&#x5F0F;&#x7684;&#x5B89;&#x5168;&#x96A7;&#x9053;&#x65B9;&#x6848;&#xFF0C;&#x6216;&#x8005;&#x53EF;&#x80FD;&#x662F;&#x4E3A;&#x4E86;&#x4FC3;&#x8FDB;FXP&#x652F;&#x6301;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>port_enable
+&#x5982;&#x679C;&#x8981;&#x7981;&#x6B62;&#x4F7F;&#x7528;PORT&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x8FDE;&#x63A5;&#xFF0C;&#x8BF7;&#x8BBE;&#x7F6E;&#x4E3A;NO&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>port_promiscuous
+&#x5982;&#x679C;&#x8981;&#x7981;&#x7528;PORT&#x5B89;&#x5168;&#x68C0;&#x67E5;&#xFF0C;&#x5219;&#x8BBE;&#x7F6E;&#x4E3A;YES&#xFF0C;&#x4EE5;&#x786E;&#x4FDD;&#x4F20;&#x51FA;&#x6570;&#x636E;&#x8FDE;&#x63A5;&#x53EA;&#x80FD;&#x8FDE;&#x63A5;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#x3002;&#x53EA;&#x6709;&#x5728;&#x4F60;&#x77E5;&#x9053;&#x81EA;&#x5DF1;&#x5728;&#x505A;&#x4EC0;&#x4E48;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x624D;&#x80FD;&#x542F;&#x7528;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>require_cert
+&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;yes&#xFF0C;&#x5219;&#x9700;&#x8981;&#x6240;&#x6709;SSL&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#x6765;&#x63D0;&#x4F9B;&#x5BA2;&#x6237;&#x7AEF;&#x8BC1;&#x4E66;&#x3002;&#x5E94;&#x7528;&#x4E8E;&#x6B64;&#x8BC1;&#x4E66;&#x7684;&#x9A8C;&#x8BC1;&#x7A0B;&#x5EA6;&#x7531;validate_cert&#x63A7;&#x5236;&#xFF08;&#x5728;v2.0.6&#x4E2D;&#x6DFB;&#x52A0;&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>require_ssl_reuse
+&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;yes&#xFF0C;&#x5219;&#x9700;&#x8981;&#x6240;&#x6709;SSL&#x6570;&#x636E;&#x8FDE;&#x63A5;&#x4EE5;&#x5C55;&#x793A;SSL&#x4F1A;&#x8BDD;&#x91CD;&#x7528;&#xFF08;&#x8FD9;&#x8BC1;&#x660E;&#x5B83;&#x4EEC;&#x77E5;&#x9053;&#x4E0E;&#x63A7;&#x5236;&#x901A;&#x9053;&#x76F8;&#x540C;&#x7684;&#x4E3B;&#x5BC6;&#x94A5;&#xFF09;&#x3002;&#x867D;&#x7136;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5B89;&#x5168;&#x7684;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#xFF0C;&#x4F46;&#x5B83;&#x53EF;&#x80FD;&#x4F1A;&#x7834;&#x574F;&#x8BB8;&#x591A;FTP&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x56E0;&#x6B64;&#x60A8;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x7981;&#x7528;&#x5B83;&#x3002;&#x6709;&#x5173;&#x540E;&#x679C;&#x7684;&#x8BA8;&#x8BBA;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="http://scarybeastsecurity.blogspot.com/2009/02/vsftpd-210-released.html&#xFF08;&#x5728;v2.1.0&#x4E2D;&#x6DFB;&#x52A0;&#xFF09;&#x3002;" target="_blank">http://scarybeastsecurity.blogspot.com/2009/02/vsftpd-210-released.html&#xFF08;&#x5728;v2.1.0&#x4E2D;&#x6DFB;&#x52A0;&#xFF09;&#x3002;</a>
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>reverse_lookup_enable
+&#x5982;&#x679C;&#x5E0C;&#x671B;vsftpd&#x5728;pam&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x4E4B;&#x524D;&#x5C06;ip&#x5730;&#x5740;&#x8F6C;&#x6362;&#x4E3A;&#x4E3B;&#x673A;&#x540D;&#xFF0C;&#x5219;&#x8BBE;&#x7F6E;&#x4E3A;YES&#x3002;&#x5982;&#x679C;&#x60A8;&#x4F7F;&#x7528;&#x5305;&#x542B;&#x4E3B;&#x673A;&#x540D;&#x7684;pam_access&#xFF0C;&#x8FD9;&#x5C06;&#x975E;&#x5E38;&#x6709;&#x7528;&#x3002;&#x5982;&#x679C;&#x60A8;&#x5E0C;&#x671B;vsftpd&#x5728;&#x67D0;&#x4E9B;&#x4E3B;&#x673A;&#x540D;&#x7684;&#x53CD;&#x5411;&#x67E5;&#x627E;&#x53EF;&#x7528;&#x5E76;&#x4E14;&#x540D;&#x79F0;&#x670D;&#x52A1;&#x5668;&#x6682;&#x65F6;&#x4E0D;&#x54CD;&#x5E94;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x8FD0;&#x884C;&#xFF0C;&#x5219;&#x5E94;&#x5C06;&#x5176;&#x8BBE;&#x7F6E;&#x4E3A;NO&#x4EE5;&#x907F;&#x514D;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>run_as_launching_user
+&#x5982;&#x679C;&#x60A8;&#x5E0C;&#x671B;vsftpd&#x4F5C;&#x4E3A;&#x542F;&#x52A8;vsftpd&#x7684;&#x7528;&#x6237;&#x8FD0;&#x884C;&#xFF0C;&#x5219;&#x8BBE;&#x7F6E;&#x4E3A;YES&#x3002;&#x5728;&#x6839;&#x8BBF;&#x95EE;&#x4E0D;&#x53EF;&#x7528;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x5F88;&#x6709;&#x7528;&#x3002;&#x5927;&#x89C4;&#x6A21;&#x8B66;&#x544A;&#xFF01;&#x9664;&#x975E;&#x60A8;&#x5B8C;&#x5168;&#x77E5;&#x9053;&#x81EA;&#x5DF1;&#x5728;&#x505A;&#x4EC0;&#x4E48;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x8981;&#x542F;&#x7528;&#x6B64;&#x9009;&#x9879;&#xFF0C;&#x56E0;&#x4E3A;&#x5929;&#x771F;&#x5730;&#x4F7F;&#x7528;&#x6B64;&#x9009;&#x9879;&#x4F1A;&#x4EA7;&#x751F;&#x5927;&#x91CF;&#x5B89;&#x5168;&#x95EE;&#x9898;&#x3002;&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;&#x5F53;&#x8BBE;&#x7F6E;&#x6B64;&#x9009;&#x9879;&#x65F6;&#xFF0C;vsftpd&#x4E0D;&#x4F1A;/&#x4E0D;&#x80FD;&#x4F7F;&#x7528;chroot&#x6280;&#x672F;&#x6765;&#x9650;&#x5236;&#x6587;&#x4EF6;&#x8BBF;&#x95EE;&#xFF08;&#x5373;&#x4F7F;&#x7531;root&#x542F;&#x52A8;&#xFF09;&#x3002;&#x4E00;&#x4E2A;&#x7CDF;&#x7CD5;&#x7684;&#x66FF;&#x4EE3;&#x54C1;&#x53EF;&#x80FD;&#x662F;&#x4F7F;&#x7528;deny_file &#x8BBE;&#x7F6E;&#x5982;{/<em>,</em>..*}&#xFF0C;&#x4F46;&#x8FD9;&#x79CD;&#x53EF;&#x9760;&#x6027;&#x65E0;&#x6CD5;&#x4E0E;chroot&#x76F8;&#x6BD4;&#xFF0C;&#x4E0D;&#x5E94;&#x8BE5;&#x4F9D;&#x8D56;&#x3002;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x6B64;&#x9009;&#x9879;&#xFF0C;&#x5219;&#x9002;&#x7528;&#x5BF9;&#x5176;&#x4ED6;&#x9009;&#x9879;&#x7684;&#x8BB8;&#x591A;&#x9650;&#x5236;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x9700;&#x8981;&#x6743;&#x9650;&#x7684;&#x9009;&#x9879;&#xFF08;&#x4F8B;&#x5982;&#x975E;&#x533F;&#x540D;&#x767B;&#x5F55;&#xFF0C;&#x4E0A;&#x8F7D;&#x6240;&#x6709;&#x6743;&#x66F4;&#x6539;&#xFF0C;&#x4ECE;&#x7AEF;&#x53E3;20&#x8FDE;&#x63A5;&#x4EE5;&#x53CA;&#x5C0F;&#x4E8E;1024&#x7684;&#x4FA6;&#x542C;&#x7AEF;&#x53E3;&#xFF09;&#x9884;&#x8BA1;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#x3002;&#x5176;&#x4ED6;&#x9009;&#x9879;&#x53EF;&#x80FD;&#x4F1A;&#x53D7;&#x5230;&#x5F71;&#x54CD;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>secure_email_list_enable
+&#x5982;&#x679C;&#x60A8;&#x53EA;&#x60F3;&#x63A5;&#x53D7;&#x533F;&#x540D;&#x767B;&#x5F55;&#x7684;&#x6307;&#x5B9A;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x5BC6;&#x7801;&#x5217;&#x8868;&#xFF0C;&#x8BF7;&#x8BBE;&#x7F6E;&#x4E3A;YES&#x3002;&#x8FD9;&#x975E;&#x5E38;&#x6709;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4E0D;&#x9700;&#x8981;&#x865A;&#x62DF;&#x7528;&#x6237;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x9650;&#x5236;&#x5BF9;&#x4F4E;&#x5B89;&#x5168;&#x6027;&#x5185;&#x5BB9;&#x7684;&#x8BBF;&#x95EE;&#x3002;&#x542F;&#x7528;&#x540E;&#xFF0C;&#x5C06;&#x7981;&#x6B62;&#x533F;&#x540D;&#x767B;&#x5F55;&#xFF0C;&#x9664;&#x975E;&#x5728;email_password_file&#x8BBE;&#x7F6E;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x5217;&#x51FA;&#x4E86;&#x63D0;&#x4F9B;&#x7684;&#x5BC6;&#x7801;&#x3002;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x662F;&#x6BCF;&#x884C;&#x4E00;&#x4E2A;&#x5BC6;&#x7801;&#xFF0C;&#x6CA1;&#x6709;&#x989D;&#x5916;&#x7684;&#x7A7A;&#x683C;&#x3002;&#x9ED8;&#x8BA4;&#x6587;&#x4EF6;&#x540D;&#x662F;/ etc / vsftpd / email_passwords&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>session_support
+&#x8FD9;&#x53EF;&#x4EE5;&#x63A7;&#x5236;vsftpd&#x662F;&#x5426;&#x5C1D;&#x8BD5;&#x7EF4;&#x62A4;&#x767B;&#x5F55;&#x4F1A;&#x8BDD;&#x3002;&#x5982;&#x679C;vsftpd&#x6B63;&#x5728;&#x7EF4;&#x62A4;&#x4F1A;&#x8BDD;&#xFF0C;&#x5B83;&#x5C06;&#x5C1D;&#x8BD5;&#x66F4;&#x65B0;utmp&#x548C;wtmp&#x3002;&#x5982;&#x679C;&#x4F7F;&#x7528;PAM&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#xFF0C;&#x5B83;&#x4E5F;&#x4F1A;&#x6253;&#x5F00;pam_session&#xFF0C;&#x5E76;&#x4E14;&#x53EA;&#x6709;&#x5728;&#x6CE8;&#x9500;&#x65F6;&#x5173;&#x95ED;&#x5B83;&#x3002;&#x5982;&#x679C;&#x60A8;&#x4E0D;&#x9700;&#x8981;&#x4F1A;&#x8BDD;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x7981;&#x7528;&#x6B64;&#x529F;&#x80FD;&#xFF0C;&#x5E76;&#x5E0C;&#x671B;&#x4E3A;vsftpd&#x63D0;&#x4F9B;&#x66F4;&#x591A;&#x673A;&#x4F1A;&#x4EE5;&#x66F4;&#x5C11;&#x7684;&#x8FDB;&#x7A0B;&#x548C;/&#x6216;&#x66F4;&#x5C11;&#x7684;&#x6743;&#x9650;&#x8FD0;&#x884C;&#x3002;&#x6CE8; - utmp&#x548C;wtmp&#x652F;&#x6301;&#x4EC5;&#x5728;&#x542F;&#x7528;PAM&#x7684;&#x6784;&#x5EFA;&#x4E2D;&#x63D0;&#x4F9B;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>setproctitle_enable
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;vsftpd&#x5C06;&#x5C1D;&#x8BD5;&#x5728;&#x7CFB;&#x7EDF;&#x8FDB;&#x7A0B;&#x5217;&#x8868;&#x4E2D;&#x663E;&#x793A;&#x4F1A;&#x8BDD;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x62A5;&#x544A;&#x7684;&#x8FDB;&#x7A0B;&#x540D;&#x79F0;&#x5C06;&#x66F4;&#x6539;&#x4EE5;&#x53CD;&#x6620;vsftpd&#x4F1A;&#x8BDD;&#x6B63;&#x5728;&#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#xFF08;&#x7A7A;&#x95F2;&#xFF0C;&#x4E0B;&#x8F7D;&#x7B49;&#xFF09;&#x3002;&#x51FA;&#x4E8E;&#x5B89;&#x5168;&#x8003;&#x8651;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x5C06;&#x5176;&#x5173;&#x95ED;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>ssl_enable
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x5E76;&#x4E14;vsftpd&#x662F;&#x9488;&#x5BF9;OpenSSL&#x7F16;&#x8BD1;&#x7684;&#xFF0C;&#x5219;vsftpd&#x5C06;&#x901A;&#x8FC7;SSL&#x652F;&#x6301;&#x5B89;&#x5168;&#x8FDE;&#x63A5;&#x3002;&#x8FD9;&#x9002;&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x8FDE;&#x63A5;&#xFF08;&#x5305;&#x62EC;&#x767B;&#x5F55;&#xFF09;&#x4EE5;&#x53CA;&#x6570;&#x636E;&#x8FDE;&#x63A5;&#x3002;&#x60A8;&#x8FD8;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x652F;&#x6301;SSL&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x3002;&#x6CE8;&#x610F;&#xFF01;&#xFF01;&#x8BF7;&#x6CE8;&#x610F;&#x542F;&#x7528;&#x6B64;&#x9009;&#x9879;&#x3002;&#x53EA;&#x6709;&#x5728;&#x9700;&#x8981;&#x65F6;&#x624D;&#x542F;&#x7528;&#x5B83;&#x3002;vsftpd&#x65E0;&#x6CD5;&#x4FDD;&#x8BC1;OpenSSL&#x5E93;&#x7684;&#x5B89;&#x5168;&#x6027;&#x3002;&#x901A;&#x8FC7;&#x542F;&#x7528;&#x6B64;&#x9009;&#x9879;&#xFF0C;&#x60A8;&#x58F0;&#x660E;&#x60A8;&#x4FE1;&#x4EFB;&#x5DF2;&#x5B89;&#x88C5;&#x7684;OpenSSL&#x5E93;&#x7684;&#x5B89;&#x5168;&#x6027;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>ssl_request_cert
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;vsftpd&#x4F1A;&#x8981;&#x6C42;&#xFF08;&#x4F46;&#x4E0D;&#x4E00;&#x5B9A;&#x9700;&#x8981;;&#x89C1; require_cert&#xFF09;&#x4E00;&#x4E2A;&#x8BC1;&#x4E66;&#x4E0A;&#x7684;&#x4F20;&#x5165; SSL &#x8FDE;&#x63A5;&#x3002;&#x901A;&#x5E38;&#x8FD9;&#x4E0D;&#x5E94;&#x8BE5;&#x9020;&#x6210;&#x4EFB;&#x4F55;&#x9EBB;&#x70E6;&#xFF0C;&#x4F46;IBM zOS&#x4F3C;&#x4E4E;&#x6709;&#x95EE;&#x9898;&#x3002;&#xFF08;v2.0.7&#x4E2D;&#x7684;&#x65B0;&#x529F;&#x80FD;&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>ssl_sslv2
+&#x4EC5;&#x5728;&#x6FC0;&#x6D3B;ssl_enable&#x65F6;&#x9002;&#x7528;&#x3002;&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x6B64;&#x9009;&#x9879;&#x5C06;&#x5141;&#x8BB8;SSL v2&#x534F;&#x8BAE;&#x8FDE;&#x63A5;&#x3002;TLS v1&#x8FDE;&#x63A5;&#x662F;&#x9996;&#x9009;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>ssl_sslv3
+&#x4EC5;&#x5728;&#x6FC0;&#x6D3B;ssl_enable&#x65F6;&#x9002;&#x7528;&#x3002;&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x6B64;&#x9009;&#x9879;&#x5C06;&#x5141;&#x8BB8;SSL v3&#x534F;&#x8BAE;&#x8FDE;&#x63A5;&#x3002;TLS v1&#x8FDE;&#x63A5;&#x662F;&#x9996;&#x9009;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>ssl_tlsv1
+&#x4EC5;&#x5728;&#x6FC0;&#x6D3B;ssl_enable&#x65F6;&#x9002;&#x7528;&#x3002;&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x6B64;&#x9009;&#x9879;&#x5C06;&#x5141;&#x8BB8;TLS v1&#x534F;&#x8BAE;&#x8FDE;&#x63A5;&#x3002;TLS v1&#x8FDE;&#x63A5;&#x662F;&#x9996;&#x9009;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>strict_ssl_read_eof
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x901A;&#x8FC7;SSL&#x7EC8;&#x6B62;SSL&#x6570;&#x636E;&#x4E0A;&#x8F7D;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5957;&#x63A5;&#x5B57;&#x4E0A;&#x7684;EOF&#x3002;&#x9700;&#x8981;&#x6B64;&#x9009;&#x9879;&#x4EE5;&#x786E;&#x4FDD;&#x653B;&#x51FB;&#x8005;&#x672A;&#x4F7F;&#x7528;&#x4F2A;&#x9020;&#x7684;TCP FIN&#x8FC7;&#x65E9;&#x7EC8;&#x6B62;&#x4E0A;&#x8F7D;&#x3002;&#x4E0D;&#x5E78;&#x7684;&#x662F;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x5B83;&#x6CA1;&#x6709;&#x542F;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x5F88;&#x5C11;&#x6709;&#x5BA2;&#x6237;&#x7AEF;&#x80FD;&#x591F;&#x6B63;&#x786E;&#x4F7F;&#x7528;&#x5B83;&#x3002;&#xFF08;v2.0.7&#x4E2D;&#x7684;&#x65B0;&#x529F;&#x80FD;&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>strict_ssl_write_shutdown
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x901A;&#x8FC7;SSL&#x7EC8;&#x6B62;SSL&#x6570;&#x636E;&#x4E0B;&#x8F7D;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5957;&#x63A5;&#x5B57;&#x4E0A;&#x7684;EOF&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x8FD9;&#x662F;&#x5173;&#x95ED;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x65E0;&#x6CD5;&#x627E;&#x5230;&#x6267;&#x884C;&#x6B64;&#x64CD;&#x4F5C;&#x7684;&#x5355;&#x4E2A;FTP&#x5BA2;&#x6237;&#x7AEF;&#x3002;&#x8FD9;&#x662F;&#x6B21;&#x8981;&#x7684;&#x3002;&#x5B83;&#x5F71;&#x54CD;&#x7684;&#x662F;&#x6211;&#x4EEC;&#x5224;&#x65AD;&#x5BA2;&#x6237;&#x662F;&#x5426;&#x786E;&#x8BA4;&#x5B8C;&#x5168;&#x6536;&#x5230;&#x8BE5;&#x6587;&#x4EF6;&#x7684;&#x80FD;&#x529B;&#x3002;&#x5373;&#x4F7F;&#x6CA1;&#x6709;&#x6B64;&#x9009;&#x9879;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x4E5F;&#x80FD;&#x591F;&#x68C0;&#x67E5;&#x4E0B;&#x8F7D;&#x7684;&#x5B8C;&#x6574;&#x6027;&#x3002;&#xFF08;v2.0.7&#x4E2D;&#x7684;&#x65B0;&#x529F;&#x80FD;&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>syslog_enable
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x8F6C;&#x5230;/var/log/vsftpd.log&#x7684;&#x4EFB;&#x4F55;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x90FD;&#x5C06;&#x8F6C;&#x5230;&#x7CFB;&#x7EDF;&#x65E5;&#x5FD7;&#x3002;&#x8BB0;&#x5F55;&#x5728;FTPD&#x5DE5;&#x5177;&#x4E0B;&#x5B8C;&#x6210;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>tcp_wrappers&#x7684;
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x5E76;&#x4E14;vsftpd&#x662F;&#x4F7F;&#x7528;tcp_wrappers&#x652F;&#x6301;&#x7F16;&#x8BD1;&#x7684;&#xFF0C;&#x5219;&#x4F20;&#x5165;&#x8FDE;&#x63A5;&#x5C06;&#x901A;&#x8FC7;tcp_wrappers&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#x63D0;&#x4F9B;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x57FA;&#x4E8E;&#x6BCF;&#x4E2A;IP&#x7684;&#x914D;&#x7F6E;&#x673A;&#x5236;&#x3002;&#x5982;&#x679C;tcp_wrappers&#x8BBE;&#x7F6E;VSFTPD_LOAD_CONF&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x5219;vsftpd&#x4F1A;&#x8BDD;&#x5C06;&#x5C1D;&#x8BD5;&#x52A0;&#x8F7D;&#x6B64;&#x53D8;&#x91CF;&#x4E2D;&#x6307;&#x5B9A;&#x7684;vsftpd&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>text_userdb_names
+&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6570;&#x5B57;ID&#x663E;&#x793A;&#x5728;&#x76EE;&#x5F55;&#x5217;&#x8868;&#x7684;&#x7528;&#x6237;&#x548C;&#x7EC4;&#x5B57;&#x6BB5;&#x4E2D;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x542F;&#x7528;&#x6B64;&#x53C2;&#x6570;&#x6765;&#x83B7;&#x53D6;&#x6587;&#x672C;&#x540D;&#x79F0;&#x3002;&#x51FA;&#x4E8E;&#x6027;&#x80FD;&#x539F;&#x56E0;&#xFF0C;&#x5B83;&#x9ED8;&#x8BA4;&#x662F;&#x5173;&#x95ED;&#x7684;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>tilde<em>user_enable
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;vsftpd&#x5C06;&#x5C1D;&#x8BD5;&#x89E3;&#x6790;&#x8DEF;&#x5F84;&#x540D;&#xFF0C;&#x4F8B;&#x5982;~chris / pics&#xFF0C;&#x5373;&#x4EE3;&#x5B57;&#x53F7;&#x540E;&#x8DDF;&#x7528;&#x6237;&#x540D;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;vsftpd&#x5C06;&#x59CB;&#x7EC8;&#x89E3;&#x6790;&#x8DEF;&#x5F84;&#x540D;&#x301C;&#x548C;&#x301C;/ something&#xFF08;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x301C;&#x89E3;&#x6790;&#x4E3A;&#x521D;&#x59CB;&#x767B;&#x5F55;&#x76EE;&#x5F55;&#xFF09;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x53EA;&#x6709;&#x5728;_current</em> chroot&#xFF08;&#xFF09;jail&#x4E2D;&#x627E;&#x5230;&#x6587;&#x4EF6;/ etc / passwd&#x65F6;&#xFF0C;&#x301C;&#x7528;&#x6237;&#x8DEF;&#x5F84;&#x624D;&#x4F1A;&#x89E3;&#x6790; &#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>use_localtime
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;vsftpd&#x5C06;&#x663E;&#x793A;&#x5F53;&#x524D;&#x65F6;&#x533A;&#x4E2D;&#x5305;&#x542B;&#x65F6;&#x95F4;&#x7684;&#x76EE;&#x5F55;&#x5217;&#x8868;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;&#x663E;&#x793A;GMT&#x3002;MDTM FTP&#x547D;&#x4EE4;&#x8FD4;&#x56DE;&#x7684;&#x65F6;&#x95F4;&#x4E5F;&#x53D7;&#x6B64;&#x9009;&#x9879;&#x7684;&#x5F71;&#x54CD;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>use_sendfile
+&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x5728;&#x5E73;&#x53F0;&#x4E0A;&#x4F7F;&#x7528;sendfile&#xFF08;&#xFF09;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x7684;&#x76F8;&#x5BF9;&#x597D;&#x5904;&#x7684;&#x5185;&#x90E8;&#x8BBE;&#x7F6E;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>userlist_deny
+&#x5982;&#x679C;&#x6FC0;&#x6D3B;userlist_enable&#xFF0C;&#x5219;&#x68C0;&#x67E5;&#x6B64;&#x9009;&#x9879;&#x3002;&#x5982;&#x679C;&#x5C06;&#x6B64;&#x8BBE;&#x7F6E;&#x8BBE;&#x7F6E;&#x4E3A;NO&#xFF0C;&#x5219;&#x5C06;&#x62D2;&#x7EDD;&#x7528;&#x6237;&#x767B;&#x5F55;&#xFF0C;&#x9664;&#x975E;&#x5B83;&#x4EEC;&#x660E;&#x786E;&#x5217;&#x5728;userlist_file&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x62D2;&#x7EDD;&#x767B;&#x5F55;&#x65F6;&#xFF0C;&#x5C06;&#x5728;&#x8981;&#x6C42;&#x7528;&#x6237;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x4E4B;&#x524D;&#x53D1;&#x51FA;&#x62D2;&#x7EDD;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>userlist_enable
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;vsftpd&#x5C06;&#x4ECE;userlist_file&#x7ED9;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x52A0;&#x8F7D;&#x7528;&#x6237;&#x540D;&#x5217;&#x8868;&#x3002;&#x5982;&#x679C;&#x7528;&#x6237;&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;&#x6B64;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x540D;&#x79F0;&#x767B;&#x5F55;&#xFF0C;&#x5219;&#x5728;&#x8981;&#x6C42;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x4E4B;&#x524D;&#xFF0C;&#x4ED6;&#x4EEC;&#x5C06;&#x88AB;&#x62D2;&#x7EDD;&#x3002;&#x8FD9;&#x53EF;&#x80FD;&#x6709;&#x52A9;&#x4E8E;&#x9632;&#x6B62;&#x4F20;&#x8F93;&#x660E;&#x6587;&#x5BC6;&#x7801;&#x3002;&#x53E6;&#x8BF7;&#x53C2;&#x89C1; userlist_deny&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>validate_cert
+&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;yes&#xFF0C;&#x5219;&#x6536;&#x5230;&#x7684;&#x6240;&#x6709;SSL&#x5BA2;&#x6237;&#x7AEF;&#x8BC1;&#x4E66;&#x90FD;&#x5FC5;&#x987B;&#x9A8C;&#x8BC1;OK&#x3002;&#x81EA;&#x7B7E;&#x540D;&#x8BC1;&#x4E66;&#x4E0D;&#x6784;&#x6210;OK&#x9A8C;&#x8BC1;&#x3002;&#xFF08;v2.0.6&#x4E2D;&#x7684;&#x65B0;&#x529F;&#x80FD;&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>userlist_log
+&#x5982;&#x679C;&#x6FC0;&#x6D3B;userlist_enable&#xFF0C;&#x5219;&#x68C0;&#x67E5;&#x6B64;&#x9009;&#x9879;&#x3002;&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x5C06;&#x8BB0;&#x5F55;&#x57FA;&#x4E8E;&#x7528;&#x6237;&#x5217;&#x8868;&#x7684;&#x6BCF;&#x4E2A;&#x767B;&#x5F55;&#x62D2;&#x7EDD;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>virtual_use_local_privs
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x865A;&#x62DF;&#x7528;&#x6237;&#x5C06;&#x4F7F;&#x7528;&#x4E0E;&#x672C;&#x5730;&#x7528;&#x6237;&#x76F8;&#x540C;&#x7684;&#x6743;&#x9650;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x865A;&#x62DF;&#x7528;&#x6237;&#x5C06;&#x4F7F;&#x7528;&#x4E0E;&#x533F;&#x540D;&#x7528;&#x6237;&#x76F8;&#x540C;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x8FD9;&#x5F80;&#x5F80;&#x66F4;&#x5177;&#x9650;&#x5236;&#x6027;&#xFF08;&#x7279;&#x522B;&#x662F;&#x5728;&#x5199;&#x8BBF;&#x95EE;&#x65B9;&#x9762;&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>WRITE_ENABLE
+&#x8FD9;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x662F;&#x5426;&#x5141;&#x8BB8;&#x4EFB;&#x4F55;&#x66F4;&#x6539;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;FTP&#x547D;&#x4EE4;&#x3002;&#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x662F;&#xFF1A;STOR&#xFF0C;DELE&#xFF0C;RNFR&#xFF0C;RNTO&#xFF0C;MKD&#xFF0C;RMD&#xFF0C;APPE&#x548C;SITE&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>xferlog_enable
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x5C06;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#xFF0C;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x4E0A;&#x8F7D;&#x548C;&#x4E0B;&#x8F7D;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6B64;&#x6587;&#x4EF6;&#x5C06;&#x653E;&#x5728;/var/log/vsftpd.log&#x4E2D;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x8BBE;&#x7F6E;vsftpd_log_file&#x8986;&#x76D6;&#x6B64;&#x4F4D;&#x7F6E;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO&#xFF08;&#x4F46;&#x662F;&#x793A;&#x4F8B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x542F;&#x7528;&#x5B83;&#xFF09;</p>
+<p>xferlog_std_format
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x4F20;&#x8F93;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x5C06;&#x4EE5;&#x6807;&#x51C6;xferlog&#x683C;&#x5F0F;&#x5199;&#x5165;&#xFF0C;&#x5982;wu-ftpd&#x6240;&#x4F7F;&#x7528;&#x3002;&#x8FD9;&#x5F88;&#x6709;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x60A8;&#x53EF;&#x4EE5;&#x91CD;&#x7528;&#x73B0;&#x6709;&#x7684;&#x4F20;&#x8F93;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#x751F;&#x6210;&#x5668; &#x4F46;&#x662F;&#xFF0C;&#x9ED8;&#x8BA4;&#x683C;&#x5F0F;&#x66F4;&#x5177;&#x53EF;&#x8BFB;&#x6027;&#x3002;&#x6B64;&#x6837;&#x5F0F;&#x7684;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x7684;&#x7F3A;&#x7701;&#x4F4D;&#x7F6E;&#x662F;/ var / log / xferlog&#xFF0C;&#x4F46;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;xferlog_file&#x8BBE;&#x7F6E;&#x8FDB;&#x884C;&#x66F4;&#x6539;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;NO</p>
+<p>isolate_network
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;CLONE_NEWNET&#x9694;&#x79BB;&#x4E0D;&#x53D7;&#x4FE1;&#x4EFB;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x4EE5;&#x4FBF;&#x5B83;&#x4EEC;&#x4E0D;&#x80FD;&#x6267;&#x884C;&#x4EFB;&#x610F;connect&#xFF08;&#xFF09;&#xFF0C;&#x800C;&#x662F;&#x5FC5;&#x987B;&#x5411;&#x7279;&#x6743;&#x8FDB;&#x7A0B;&#x8BF7;&#x6C42;&#x5957;&#x63A5;&#x5B57;&#xFF08;&#x5FC5;&#x987B;&#x7981;&#x7528;port_promiscuous&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>&#x9694;&#x79BB;
+&#x5982;&#x679C;&#x542F;&#x7528;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;CLONE_NEWPID&#x548C;CLONE_NEWIPC&#x5C06;&#x8FDB;&#x7A0B;&#x9694;&#x79BB;&#x5230;&#x5176;ipc&#x548C;pid&#x540D;&#x79F0;&#x7A7A;&#x95F4;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5206;&#x79BB;&#x7684;&#x6D41;&#x7A0B;&#x4E0D;&#x80FD;&#x76F8;&#x4E92;&#x4EA4;&#x4E92;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x662F;</p>
+<p>&#x6570;&#x5B57;&#x9009;&#x9879;
+&#x4EE5;&#x4E0B;&#x662F;&#x6570;&#x5B57;&#x9009;&#x9879;&#x5217;&#x8868;&#x3002;&#x5FC5;&#x987B;&#x5C06;&#x6570;&#x5B57;&#x9009;&#x9879;&#x8BBE;&#x7F6E;&#x4E3A;&#x975E;&#x8D1F;&#x6574;&#x6570;&#x3002;&#x652F;&#x6301;&#x516B;&#x8FDB;&#x5236;&#x6570;&#xFF0C;&#x4EE5;&#x65B9;&#x4FBF;umask&#x9009;&#x9879;&#x3002;&#x8981;&#x6307;&#x5B9A;&#x516B;&#x8FDB;&#x5236;&#x6570;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;0&#x4F5C;&#x4E3A;&#x6570;&#x5B57;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x3002;
+accept_timeout
+&#x8FDC;&#x7A0B;&#x5BA2;&#x6237;&#x7AEF;&#x4E0E;PASV&#x6837;&#x5F0F;&#x6570;&#x636E;&#x8FDE;&#x63A5;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#x7684;&#x8D85;&#x65F6;&#xFF08;&#x4EE5;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;60</p>
+<p>anon_max_rate
+&#x533F;&#x540D;&#x5BA2;&#x6237;&#x7AEF;&#x5141;&#x8BB8;&#x7684;&#x6700;&#x5927;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x901F;&#x7387;&#xFF08;&#x4EE5;&#x5B57;&#x8282;/&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;0&#xFF08;&#x65E0;&#x9650;&#x5236;&#xFF09;</p>
+<p>anon_umask
+&#x4E3A;&#x533F;&#x540D;&#x7528;&#x6237;&#x8BBE;&#x7F6E;&#x7528;&#x4E8E;&#x6587;&#x4EF6;&#x521B;&#x5EFA;&#x7684;umask&#x7684;&#x503C;&#x3002;&#x6CE8;&#x610F;&#xFF01;&#x5982;&#x679C;&#x8981;&#x6307;&#x5B9A;&#x516B;&#x8FDB;&#x5236;&#x503C;&#xFF0C;&#x8BF7;&#x8BB0;&#x4F4F;&#x201C;0&#x201D;&#x524D;&#x7F00;&#xFF0C;&#x5426;&#x5219;&#x8BE5;&#x503C;&#x5C06;&#x88AB;&#x89C6;&#x4E3A;&#x57FA;&#x6570;&#x4E3A;10&#x7684;&#x6574;&#x6570;&#xFF01;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;077</p>
+<p>chown_upload_mode
+&#x8981;&#x5F3A;&#x5236;&#x8FDB;&#x884C;chown&#xFF08;&#xFF09;ed&#x533F;&#x540D;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x6A21;&#x5F0F;&#x3002;&#xFF08;&#x5728;v2.0.6&#x4E2D;&#x6DFB;&#x52A0;&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;0600</p>
+<p>connect_timeout
+&#x8FDC;&#x7A0B;&#x5BA2;&#x6237;&#x7AEF;&#x54CD;&#x5E94;PORT&#x6837;&#x5F0F;&#x6570;&#x636E;&#x8FDE;&#x63A5;&#x7684;&#x8D85;&#x65F6;&#xFF08;&#x4EE5;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;60</p>
+<p>data_connection_timeout
+&#x8D85;&#x65F6;&#xFF08;&#x4EE5;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#xFF09;&#xFF0C;&#x5927;&#x81F4;&#x662F;&#x6211;&#x4EEC;&#x5141;&#x8BB8;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x505C;&#x6B62;&#x800C;&#x6CA1;&#x6709;&#x8FDB;&#x5EA6;&#x7684;&#x6700;&#x957F;&#x65F6;&#x95F4;&#x3002;&#x5982;&#x679C;&#x8D85;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;&#x5219;&#x542F;&#x52A8;&#x8FDC;&#x7A0B;&#x5BA2;&#x6237;&#x7AEF;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;300</p>
+<p>delay_failed_login
+&#x62A5;&#x544A;&#x767B;&#x5F55;&#x5931;&#x8D25;&#x4E4B;&#x524D;&#x6682;&#x505C;&#x7684;&#x79D2;&#x6570;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;1</p>
+<p>delay_successful_login
+&#x5141;&#x8BB8;&#x6210;&#x529F;&#x767B;&#x5F55;&#x4E4B;&#x524D;&#x6682;&#x505C;&#x7684;&#x79D2;&#x6570;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;0</p>
+<p>file_open_mode
+&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x4E0A;&#x8F7D;&#x6587;&#x4EF6;&#x7684;&#x6743;&#x9650;&#x3002;Umasks&#x5E94;&#x7528;&#x4E8E;&#x6B64;&#x503C;&#x4E4B;&#x4E0A;&#x3002;&#x5982;&#x679C;&#x60A8;&#x5E0C;&#x671B;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x53EF;&#x6267;&#x884C;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x66F4;&#x6539;&#x4E3A;0777&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;0666</p>
+<p>ftp_data_port
+PORT&#x6837;&#x5F0F;&#x8FDE;&#x63A5;&#x6E90;&#x81EA;&#x7684;&#x7AEF;&#x53E3;&#xFF08;&#x53EA;&#x8981;&#x547D;&#x540D;&#x4E0D;&#x4F73;&#x7684;connect_from_port_20&#x5DF2;&#x542F;&#x7528;&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;20</p>
+<p>idle_session_timeout
+&#x8D85;&#x65F6;&#xFF08;&#x4EE5;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#xFF09;&#xFF0C;&#x5373;&#x8FDC;&#x7A0B;&#x5BA2;&#x6237;&#x7AEF;&#x5728;FTP&#x547D;&#x4EE4;&#x4E4B;&#x95F4;&#x53EF;&#x80FD;&#x82B1;&#x8D39;&#x7684;&#x6700;&#x957F;&#x65F6;&#x95F4;&#x3002;&#x5982;&#x679C;&#x8D85;&#x65F6;&#x89E6;&#x53D1;&#xFF0C;&#x5219;&#x542F;&#x52A8;&#x8FDC;&#x7A0B;&#x5BA2;&#x6237;&#x7AEF;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;300</p>
+<p>listen_port
+&#x5982;&#x679C;vsftpd&#x5904;&#x4E8E;&#x72EC;&#x7ACB;&#x6A21;&#x5F0F;&#xFF0C;&#x5219;&#x5B83;&#x5C06;&#x4FA6;&#x542C;&#x4F20;&#x5165;FTP&#x8FDE;&#x63A5;&#x7684;&#x7AEF;&#x53E3;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;21</p>
+<p>local_max_rate
+&#x672C;&#x5730;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7528;&#x6237;&#x5141;&#x8BB8;&#x7684;&#x6700;&#x5927;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x901F;&#x7387;&#xFF08;&#x4EE5;&#x5B57;&#x8282;/&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;0&#xFF08;&#x65E0;&#x9650;&#x5236;&#xFF09;</p>
+<p>local_umask
+&#x4E3A;&#x672C;&#x5730;&#x7528;&#x6237;&#x8BBE;&#x7F6E;&#x7528;&#x4E8E;&#x6587;&#x4EF6;&#x521B;&#x5EFA;&#x7684;umask&#x7684;&#x503C;&#x3002;&#x6CE8;&#x610F;&#xFF01;&#x5982;&#x679C;&#x8981;&#x6307;&#x5B9A;&#x516B;&#x8FDB;&#x5236;&#x503C;&#xFF0C;&#x8BF7;&#x8BB0;&#x4F4F;&#x201C;0&#x201D;&#x524D;&#x7F00;&#xFF0C;&#x5426;&#x5219;&#x8BE5;&#x503C;&#x5C06;&#x88AB;&#x89C6;&#x4E3A;&#x57FA;&#x6570;&#x4E3A;10&#x7684;&#x6574;&#x6570;&#xFF01;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;077</p>
+<p>max_clients
+&#x5982;&#x679C;vsftpd&#x5904;&#x4E8E;&#x72EC;&#x7ACB;&#x6A21;&#x5F0F;&#xFF0C;&#x5219;&#x8FD9;&#x662F;&#x53EF;&#x4EE5;&#x8FDE;&#x63A5;&#x7684;&#x6700;&#x5927;&#x5BA2;&#x6237;&#x7AEF;&#x6570;&#x3002;&#x8FDE;&#x63A5;&#x7684;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x5BA2;&#x6237;&#x7AEF;&#x90FD;&#x5C06;&#x6536;&#x5230;&#x9519;&#x8BEF;&#x6D88;&#x606F;&#x3002;&#x503C;0&#x5173;&#x95ED;&#x9650;&#x5236;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;2000</p>
+<p>max_login_fails
+&#x5728;&#x6B64;&#x591A;&#x6B21;&#x767B;&#x5F55;&#x5931;&#x8D25;&#x540E;&#xFF0C;&#x4F1A;&#x8BDD;&#x88AB;&#x7EC8;&#x6B62;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;3</p>
+<p>max_per_ip
+&#x5982;&#x679C;vsftpd&#x5904;&#x4E8E;&#x72EC;&#x7ACB;&#x6A21;&#x5F0F;&#xFF0C;&#x5219;&#x8FD9;&#x662F;&#x53EF;&#x4EE5;&#x4ECE;&#x540C;&#x4E00;&#x6E90;Internet&#x5730;&#x5740;&#x8FDE;&#x63A5;&#x7684;&#x6700;&#x5927;&#x5BA2;&#x6237;&#x7AEF;&#x6570;&#x3002;&#x5982;&#x679C;&#x5BA2;&#x6237;&#x7AEF;&#x8D85;&#x8FC7;&#x6B64;&#x9650;&#x5236;&#xFF0C;&#x5219;&#x4F1A;&#x6536;&#x5230;&#x9519;&#x8BEF;&#x6D88;&#x606F;&#x3002;&#x503C;0&#x5173;&#x95ED;&#x9650;&#x5236;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;50</p>
+<p>pasv_max_port
+&#x4E3A;PASV&#x6837;&#x5F0F;&#x6570;&#x636E;&#x8FDE;&#x63A5;&#x5206;&#x914D;&#x7684;&#x6700;&#x5927;&#x7AEF;&#x53E3;&#x3002;&#x53EF;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x7A84;&#x7AEF;&#x53E3;&#x8303;&#x56F4;&#x4EE5;&#x534F;&#x52A9;&#x9632;&#x706B;&#x5899;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;0&#xFF08;&#x4F7F;&#x7528;&#x4EFB;&#x4F55;&#x7AEF;&#x53E3;&#xFF09;</p>
+<p>pasv_min_port
+&#x4E3A;PASV&#x6837;&#x5F0F;&#x6570;&#x636E;&#x8FDE;&#x63A5;&#x5206;&#x914D;&#x7684;&#x6700;&#x5C0F;&#x7AEF;&#x53E3;&#x3002;&#x53EF;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x7A84;&#x7AEF;&#x53E3;&#x8303;&#x56F4;&#x4EE5;&#x534F;&#x52A9;&#x9632;&#x706B;&#x5899;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;0&#xFF08;&#x4F7F;&#x7528;&#x4EFB;&#x4F55;&#x7AEF;&#x53E3;&#xFF09;</p>
+<p>trans_chunk_size
+&#x60A8;&#x53EF;&#x80FD;&#x4E0D;&#x60F3;&#x66F4;&#x6539;&#x6B64;&#x8BBE;&#x7F6E;&#xFF0C;&#x4F46;&#x8BF7;&#x5C1D;&#x8BD5;&#x5C06;&#x5176;&#x8BBE;&#x7F6E;&#x4E3A;8192&#xFF0C;&#x4EE5;&#x83B7;&#x5F97;&#x66F4;&#x52A0;&#x5E73;&#x6ED1;&#x7684;&#x5E26;&#x5BBD;&#x9650;&#x5236;&#x5668;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;0&#xFF08;&#x8BA9;vsftpd&#x9009;&#x62E9;&#x5408;&#x7406;&#x7684;&#x8BBE;&#x7F6E;&#xFF09;</p>
+<p>&#x5B57;&#x7B26;&#x4E32;&#x9009;&#x9879;
+&#x4EE5;&#x4E0B;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x9009;&#x9879;&#x5217;&#x8868;&#x3002;
+anon_root
+&#x6B64;&#x9009;&#x9879;&#x8868;&#x793A;vsftpd&#x5728;&#x533F;&#x540D;&#x767B;&#x5F55;&#x540E;&#x5C1D;&#x8BD5;&#x66F4;&#x6539;&#x7684;&#x76EE;&#x5F55;&#x3002;&#x5931;&#x8D25;&#x88AB;&#x9ED8;&#x9ED8;&#x5730;&#x5FFD;&#x7565;&#x4E86;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;:(&#x65E0;&#xFF09;</p>
+<p>banned_email_file
+&#x6B64;&#x9009;&#x9879;&#x662F;&#x5305;&#x542B;&#x4E0D;&#x5141;&#x8BB8;&#x7684;&#x533F;&#x540D;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x5BC6;&#x7801;&#x5217;&#x8868;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#x3002;&#x5982;&#x679C;&#x542F;&#x7528;&#x4E86;&#x9009;&#x9879;deny_email_enable&#xFF0C;&#x5219;&#x4F1A;&#x67E5;&#x8BE2;&#x6B64;&#x6587;&#x4EF6; &#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;/ etc / vsftpd / banned_emails</p>
+<p>banner_file
+&#x6B64;&#x9009;&#x9879;&#x662F;&#x5305;&#x542B;&#x8981;&#x5728;&#x6709;&#x4EBA;&#x8FDE;&#x63A5;&#x5230;&#x670D;&#x52A1;&#x5668;&#x65F6;&#x663E;&#x793A;&#x7684;&#x6587;&#x672C;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#xFF0C;&#x5B83;&#x5C06;&#x8986;&#x76D6;ftpd_banner&#x9009;&#x9879;&#x63D0;&#x4F9B;&#x7684;&#x6807;&#x9898;&#x5B57;&#x7B26;&#x4E32; &#x3002;
+&#x9ED8;&#x8BA4;&#x503C;:(&#x65E0;&#xFF09;</p>
+<p>ca_certs_file
+&#x6B64;&#x9009;&#x9879;&#x662F;&#x7528;&#x4E8E;&#x52A0;&#x8F7D;&#x8BC1;&#x4E66;&#x9881;&#x53D1;&#x673A;&#x6784;&#x8BC1;&#x4E66;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x7528;&#x4E8E;&#x9A8C;&#x8BC1;&#x5BA2;&#x6237;&#x7AEF;&#x8BC1;&#x4E66;&#x3002;&#x52A0;&#x8F7D;&#x7684;&#x8BC1;&#x4E66;&#x4E5F;&#x4F1A;&#x901A;&#x544A;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x4EE5;&#x6EE1;&#x8DB3;TLSv1.0&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x4F8B;&#x5982;z / OS FTP&#x5BA2;&#x6237;&#x7AEF;&#x3002;&#x9057;&#x61BE;&#x7684;&#x662F;&#xFF0C;&#x7531;&#x4E8E;vsftpd&#x4F7F;&#x7528;&#x53D7;&#x9650;&#x5236;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7A7A;&#x95F4;&#xFF08;chroot&#xFF09;&#xFF0C;&#x56E0;&#x6B64;&#x672A;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;SSL CA&#x8BC1;&#x4E66;&#x8DEF;&#x5F84;&#x3002;&#xFF08;&#x5728;v2.0.6&#x4E2D;&#x6DFB;&#x52A0;&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;:(&#x65E0;&#xFF09;</p>
+<p>chown_username
+&#x8FD9;&#x662F;&#x83B7;&#x5F97;&#x533F;&#x540D;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x6240;&#x6709;&#x6743;&#x7684;&#x7528;&#x6237;&#x7684;&#x540D;&#x79F0;&#x3002;&#x4EC5;&#x5F53;&#x8BBE;&#x7F6E;&#x4E86;&#x53E6;&#x4E00;&#x4E2A;&#x9009;&#x9879;chown_uploads&#x65F6;&#xFF0C;&#x6B64;&#x9009;&#x9879;&#x624D;&#x6709;&#x610F;&#x4E49;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;root</p>
+<p>chroot_list_file
+&#x8BE5;&#x9009;&#x9879;&#x662F;&#x5305;&#x542B;&#x672C;&#x5730;&#x7528;&#x6237;&#x5217;&#x8868;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x8BE5;&#x5217;&#x8868;&#x5C06;&#x653E;&#x7F6E;&#x5728;&#x5176;&#x4E3B;&#x76EE;&#x5F55;&#x4E2D;&#x7684;chroot&#xFF08;&#xFF09;jail&#x4E2D;&#x3002;&#x4EC5;&#x5F53;&#x542F;&#x7528;&#x4E86;&#x9009;&#x9879;chroot_list_enable&#x65F6;&#xFF0C;&#x6B64;&#x9009;&#x9879;&#x624D;&#x6709;&#x610F;&#x4E49;&#x3002;&#x5982;&#x679C;&#x542F;&#x7528;&#x4E86;&#x9009;&#x9879;chroot_local_user&#xFF0C;&#x5219;&#x5217;&#x8868;&#x6587;&#x4EF6;&#x5C06;&#x6210;&#x4E3A;&#x4E0D;&#x653E;&#x7F6E;&#x5728;chroot&#xFF08;&#xFF09;jail&#x4E2D;&#x7684;&#x7528;&#x6237;&#x5217;&#x8868;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;/etvsftpd.confc/vsftpd.chroot_list</p>
+<p>cmds_allowed
+&#x6B64;&#x9009;&#x9879;&#x6307;&#x5B9A;&#x5141;&#x8BB8;&#x7684;FTP&#x547D;&#x4EE4;&#x7684;&#x9017;&#x53F7;&#x5206;&#x9694;&#x5217;&#x8868;&#xFF08;&#x767B;&#x5F55;&#x540E;.USER&#xFF0C;PASS&#x548C;QUIT&#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x59CB;&#x7EC8;&#x5141;&#x8BB8;&#x5728;&#x767B;&#x5F55;&#x524D;&#x4F7F;&#x7528;&#xFF09;&#x3002;&#x5176;&#x4ED6;&#x547D;&#x4EE4;&#x88AB;&#x62D2;&#x7EDD;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x79CD;&#x771F;&#x6B63;&#x9501;&#x5B9A;FTP&#x670D;&#x52A1;&#x5668;&#x7684;&#x5F3A;&#x5927;&#x65B9;&#x6CD5;&#x3002;&#x793A;&#x4F8B;&#xFF1A;cmds_allowed = PASV&#xFF0C;RETR&#xFF0C;QUIT
+&#x9ED8;&#x8BA4;&#x503C;:(&#x65E0;&#xFF09;</p>
+<p>cmds_denied
+&#x6B64;&#x9009;&#x9879;&#x6307;&#x5B9A;&#x4EE5;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#x62D2;&#x7EDD;FTP&#x547D;&#x4EE4;&#x5217;&#x8868;&#xFF08;&#x767B;&#x5F55;&#x540E;&#x3002;&#x59CB;&#x7EC8;&#x5141;&#x8BB8;&#x767B;&#x5F55;&#x524D;&#x4F7F;&#x7528;USER&#xFF0C;PASS&#xFF0C;QUIT&#x7B49;&#xFF09;&#x3002;&#x5982;&#x679C;&#x6B64;&#x547D;&#x4EE4;&#x548C;cmds_allowed&#x4E0A;&#x90FD;&#x51FA;&#x73B0;&#x547D;&#x4EE4;&#xFF0C;&#x5219;&#x62D2;&#x7EDD;&#x4F18;&#x5148;&#x3002;&#xFF08;&#x5728;v2.1.0&#x4E2D;&#x6DFB;&#x52A0;&#xFF09;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;:(&#x65E0;&#xFF09;</p>
+<p>deny_file
+&#x6B64;&#x9009;&#x9879;&#x53EF;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x540D;&#xFF08;&#x548C;&#x76EE;&#x5F55;&#x540D;&#x79F0;&#x7B49;&#xFF09;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x8FD9;&#x4E9B;&#x6A21;&#x5F0F;&#x4E0D;&#x5E94;&#x4EE5;&#x4EFB;&#x4F55;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#x3002;&#x53D7;&#x5F71;&#x54CD;&#x7684;&#x9879;&#x76EE;&#x4E0D;&#x4F1A;&#x88AB;&#x9690;&#x85CF;&#xFF0C;&#x4F46;&#x4EFB;&#x4F55;&#x5C1D;&#x8BD5;&#x5BF9;&#x5B83;&#x4EEC;&#x505A;&#x4EFB;&#x4F55;&#x4E8B;&#x60C5;&#xFF08;&#x4E0B;&#x8F7D;&#xFF0C;&#x66F4;&#x6539;&#x5230;&#x76EE;&#x5F55;&#xFF0C;&#x5F71;&#x54CD;&#x76EE;&#x5F55;&#x5185;&#x7684;&#x67D0;&#x4E9B;&#x5185;&#x5BB9;&#x7B49;&#xFF09;&#x90FD;&#x5C06;&#x88AB;&#x62D2;&#x7EDD;&#x3002;&#x6B64;&#x9009;&#x9879;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x4E0D;&#x5E94;&#x7528;&#x4E8E;&#x4E25;&#x683C;&#x7684;&#x8BBF;&#x95EE;&#x63A7;&#x5236; - &#x5E94;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x6743;&#x9650;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x6B64;&#x9009;&#x9879;&#x5728;&#x67D0;&#x4E9B;&#x865A;&#x62DF;&#x7528;&#x6237;&#x8BBE;&#x7F6E;&#x4E2D;&#x53EF;&#x80FD;&#x5F88;&#x6709;&#x7528;&#x3002;&#x7279;&#x522B;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x540D;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5404;&#x79CD;&#x540D;&#x79F0;&#x8BBF;&#x95EE;&#xFF08;&#x53EF;&#x80FD;&#x662F;&#x7531;&#x4E8E;&#x7B26;&#x53F7;&#x94FE;&#x63A5;&#x6216;&#x786C;&#x94FE;&#x63A5;&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x5FC5;&#x987B;&#x6CE8;&#x610F;&#x62D2;&#x7EDD;&#x8BBF;&#x95EE;&#x6240;&#x6709;&#x540D;&#x79F0;&#x3002;&#x5982;&#x679C;&#x9879;&#x76EE;&#x7684;&#x540D;&#x79F0;&#x5305;&#x542B;hide_file&#x7ED9;&#x51FA;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6216;&#x8005;&#x5B83;&#x4EEC;&#x4E0E;hide_file&#x6307;&#x5B9A;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#xFF0C;&#x5219;&#x5C06;&#x62D2;&#x7EDD;&#x8BBF;&#x95EE;&#x9879;&#x76EE;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;vsftpd&apos; &#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x4EE3;&#x7801;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5B83;&#x662F;&#x5B8C;&#x6574;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x529F;&#x80FD;&#x7684;&#x5B50;&#x96C6;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x60A8;&#x9700;&#x8981;&#x4ED4;&#x7EC6;&#x800C;&#x8BE6;&#x5C3D;&#x5730;&#x6D4B;&#x8BD5;&#x6B64;&#x9009;&#x9879;&#x7684;&#x4EFB;&#x4F55;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x5E76;&#x4E14;&#x7531;&#x4E8E;&#x5176;&#x66F4;&#x9AD8;&#x7684;&#x53EF;&#x9760;&#x6027;&#xFF0C;&#x5EFA;&#x8BAE;&#x60A8;&#x5BF9;&#x4EFB;&#x4F55;&#x91CD;&#x8981;&#x7684;&#x5B89;&#x5168;&#x7B56;&#x7565;&#x4F7F;&#x7528;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6743;&#x9650;&#x3002;&#x652F;&#x6301;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x8BED;&#x6CD5;&#x662F;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;<em> ,? &#x548C;unnested {&#xFF0C;}&#x8FD0;&#x7B97;&#x7B26;&#x3002;&#x4EC5;&#x5728;&#x8DEF;&#x5F84;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E0A;&#x652F;&#x6301;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#xFF0C;&#x4F8B;&#x5982;a / b /&#xFF1F;&#x652F;&#x6301;&#xFF0C;&#x4F46;/&#xFF1F;/ c&#x4E0D;&#x652F;&#x6301;&#x3002;&#x793A;&#x4F8B;&#xFF1A;deny_file = {</em>&#x3002;mp3&#xFF0C;<em>&#x3002;mov&#xFF0C;.private} &#x5E76;&#x4E14;&#x7531;&#x4E8E;&#x5176;&#x66F4;&#x9AD8;&#x7684;&#x53EF;&#x9760;&#x6027;&#xFF0C;&#x5EFA;&#x8BAE;&#x60A8;&#x5BF9;&#x4EFB;&#x4F55;&#x91CD;&#x8981;&#x7684;&#x5B89;&#x5168;&#x7B56;&#x7565;&#x4F7F;&#x7528;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6743;&#x9650;&#x3002;&#x652F;&#x6301;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x8BED;&#x6CD5;&#x662F;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;</em> ,? &#x548C;unnested {&#xFF0C;}&#x8FD0;&#x7B97;&#x7B26;&#x3002;&#x4EC5;&#x5728;&#x8DEF;&#x5F84;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E0A;&#x652F;&#x6301;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#xFF0C;&#x4F8B;&#x5982;a / b /&#xFF1F;&#x652F;&#x6301;&#xFF0C;&#x4F46;/&#xFF1F;/ c&#x4E0D;&#x652F;&#x6301;&#x3002;&#x793A;&#x4F8B;&#xFF1A;deny_file = {<em>&#x3002;mp3&#xFF0C;</em>&#x3002;mov&#xFF0C;.private} &#x5E76;&#x4E14;&#x7531;&#x4E8E;&#x5176;&#x66F4;&#x9AD8;&#x7684;&#x53EF;&#x9760;&#x6027;&#xFF0C;&#x5EFA;&#x8BAE;&#x60A8;&#x5BF9;&#x4EFB;&#x4F55;&#x91CD;&#x8981;&#x7684;&#x5B89;&#x5168;&#x7B56;&#x7565;&#x4F7F;&#x7528;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6743;&#x9650;&#x3002;&#x652F;&#x6301;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x8BED;&#x6CD5;&#x662F;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;<em> ,? &#x548C;unnested {&#xFF0C;}&#x8FD0;&#x7B97;&#x7B26;&#x3002;&#x4EC5;&#x5728;&#x8DEF;&#x5F84;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E0A;&#x652F;&#x6301;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#xFF0C;&#x4F8B;&#x5982;a / b /&#xFF1F;&#x652F;&#x6301;&#xFF0C;&#x4F46;/&#xFF1F;/ c&#x4E0D;&#x652F;&#x6301;&#x3002;&#x793A;&#x4F8B;&#xFF1A;deny_file = {</em>&#x3002;mp3&#xFF0C;*&#x3002;mov&#xFF0C;.private}
+&#x9ED8;&#x8BA4;&#x503C;:(&#x65E0;&#xFF09;</p>
+<p>dsa_cert_file
+&#x6B64;&#x9009;&#x9879;&#x6307;&#x5B9A;&#x7528;&#x4E8E;SSL&#x52A0;&#x5BC6;&#x8FDE;&#x63A5;&#x7684;DSA&#x8BC1;&#x4E66;&#x7684;&#x4F4D;&#x7F6E;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;:(&#x65E0; - RSA&#x8BC1;&#x4E66;&#x5C31;&#x8DB3;&#x591F;&#x4E86;&#xFF09;</p>
+<p>dsa_private_key_file
+&#x6B64;&#x9009;&#x9879;&#x6307;&#x5B9A;&#x7528;&#x4E8E;SSL&#x52A0;&#x5BC6;&#x8FDE;&#x63A5;&#x7684;DSA&#x79C1;&#x94A5;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x672A;&#x8BBE;&#x7F6E;&#x6B64;&#x9009;&#x9879;&#xFF0C;&#x5219;&#x9884;&#x671F;&#x79C1;&#x94A5;&#x4E0E;&#x8BC1;&#x4E66;&#x4F4D;&#x4E8E;&#x540C;&#x4E00;&#x6587;&#x4EF6;&#x4E2D;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;:(&#x65E0;&#xFF09;</p>
+<p>email_password_file
+&#x6B64;&#x9009;&#x9879;&#x53EF;&#x7528;&#x4E8E;&#x63D0;&#x4F9B;secure_email_list_enable&#x8BBE;&#x7F6E;&#x4F7F;&#x7528;&#x7684;&#x5907;&#x7528;&#x6587;&#x4EF6;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;/ etc / vsftpd / email_passwords</p>
+<p>ftp_username
+&#x8FD9;&#x662F;&#x6211;&#x4EEC;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x533F;&#x540D;FTP&#x7684;&#x7528;&#x6237;&#x7684;&#x540D;&#x79F0;&#x3002;&#x8BE5;&#x7528;&#x6237;&#x7684;&#x4E3B;&#x76EE;&#x5F55;&#x662F;&#x533F;&#x540D;FTP&#x533A;&#x57DF;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;ftp</p>
+<p>ftpd_banner
+&#x6B64;&#x5B57;&#x7B26;&#x4E32;&#x9009;&#x9879;&#x5141;&#x8BB8;&#x60A8;&#x5728;&#x9996;&#x6B21;&#x8FDB;&#x5165;&#x8FDE;&#x63A5;&#x65F6;&#x8986;&#x76D6;vsftpd&#x663E;&#x793A;&#x7684;&#x95EE;&#x5019;&#x8BED;&#x6A2A;&#x5E45;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;:(&#x65E0; - &#x663E;&#x793A;&#x9ED8;&#x8BA4;&#x7684;vsftpd&#x6A2A;&#x5E45;&#xFF09;</p>
+<p>guest_username
+&#x6709;&#x5173;guest&#x865A;&#x62DF;&#x673A;&#x767B;&#x5F55;&#x7684;&#x8BF4;&#x660E;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;boolean&#x8BBE;&#x7F6E;guest_enable&#x3002;&#x6B64;&#x8BBE;&#x7F6E;&#x662F;&#x8BBF;&#x5BA2;&#x7528;&#x6237;&#x6620;&#x5C04;&#x5230;&#x7684;&#x771F;&#x5B9E;&#x7528;&#x6237;&#x540D;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;ftp</p>
+<p>hide_file
+&#x6B64;&#x9009;&#x9879;&#x53EF;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x540D;&#xFF08;&#x548C;&#x76EE;&#x5F55;&#x540D;&#x79F0;&#x7B49;&#xFF09;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x8FD9;&#x4E9B;&#x6A21;&#x5F0F;&#x5E94;&#x8BE5;&#x4ECE;&#x76EE;&#x5F55;&#x5217;&#x8868;&#x4E2D;&#x9690;&#x85CF;&#x3002;&#x5C3D;&#x7BA1;&#x88AB;&#x9690;&#x85CF;&#xFF0C;&#x4F46;&#x662F;&#x77E5;&#x9053;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x7684;&#x540D;&#x79F0;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x5B8C;&#x5168;&#x8BBF;&#x95EE;&#x6587;&#x4EF6;/&#x76EE;&#x5F55;&#x7B49;&#x3002;&#x5982;&#x679C;&#x9879;&#x76EE;&#x7684;&#x540D;&#x79F0;&#x5305;&#x542B;hide_file&#x7ED9;&#x51FA;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6216;&#x8005;&#x5B83;&#x4EEC;&#x4E0E;hide_file&#x6307;&#x5B9A;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#xFF0C;&#x5219;&#x5C06;&#x9690;&#x85CF;&#x9879;&#x76EE;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;vsftpd&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x4EE3;&#x7801;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5B83;&#x662F;&#x5B8C;&#x6574;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x529F;&#x80FD;&#x7684;&#x5B50;&#x96C6;&#x3002;&#x6709;&#x5173;&#x5177;&#x4F53;&#x652F;&#x6301;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x8BED;&#x6CD5;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;deny_file&#x3002;&#x793A;&#x4F8B;&#xFF1A;hide_file = {<em>&#x3002;mp3&#xFF0C;.hidden&#xFF0C;hide </em>&#xFF0C;h&#xFF1F;}
+&#x9ED8;&#x8BA4;&#x503C;:(&#x65E0;&#xFF09;</p>
+<p>listen_address
+&#x5982;&#x679C;vsftpd&#x5904;&#x4E8E;&#x72EC;&#x7ACB;&#x6A21;&#x5F0F;&#xFF0C;&#x5219;&#x6B64;&#x8BBE;&#x7F6E;&#x53EF;&#x80FD;&#x4F1A;&#x8986;&#x76D6;&#xFF08;&#x6240;&#x6709;&#x672C;&#x5730;&#x63A5;&#x53E3;&#x7684;&#xFF09;&#x9ED8;&#x8BA4;&#x4FA6;&#x542C;&#x5730;&#x5740;&#x3002;&#x63D0;&#x4F9B;&#x6570;&#x5B57;IP&#x5730;&#x5740;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;:(&#x65E0;&#xFF09;</p>
+<p>listen_address6
+&#x4E0E;listen_address&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x6307;&#x5B9A;IPv6&#x4FA6;&#x542C;&#x5668;&#x7684;&#x9ED8;&#x8BA4;&#x4FA6;&#x542C;&#x5730;&#x5740;&#xFF08;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86;listen_ipv6&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x8BE5;&#x5730;&#x5740;&#xFF09;&#x3002;&#x683C;&#x5F0F;&#x662F;&#x6807;&#x51C6;IPv6&#x5730;&#x5740;&#x683C;&#x5F0F;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;:(&#x65E0;&#xFF09;</p>
+<p>local_root
+&#x6B64;&#x9009;&#x9879;&#x8868;&#x793A;vsftpd&#x5728;&#x672C;&#x5730;&#xFF08;&#x5373;&#x975E;&#x533F;&#x540D;&#xFF09;&#x767B;&#x5F55;&#x540E;&#x5C1D;&#x8BD5;&#x66F4;&#x6539;&#x7684;&#x76EE;&#x5F55;&#x3002;&#x5931;&#x8D25;&#x88AB;&#x9ED8;&#x9ED8;&#x5730;&#x5FFD;&#x7565;&#x4E86;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;:(&#x65E0;&#xFF09;</p>
+<p>message_file
+&#x6B64;&#x9009;&#x9879;&#x662F;&#x8F93;&#x5165;&#x65B0;&#x76EE;&#x5F55;&#x65F6;&#x6211;&#x4EEC;&#x67E5;&#x627E;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#x3002;&#x5185;&#x5BB9;&#x663E;&#x793A;&#x7ED9;&#x8FDC;&#x7A0B;&#x7528;&#x6237;&#x3002;&#x4EC5;&#x5F53;&#x542F;&#x7528;&#x4E86;&#x9009;&#x9879;dirmessage_enable&#x65F6;&#xFF0C;&#x6B64;&#x9009;&#x9879;&#x624D;&#x6709;&#x610F;&#x4E49;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;.message</p>
+<p>nopriv_user
+&#x8FD9;&#x662F;vsftpd&#x5728;&#x5B8C;&#x5168;&#x6CA1;&#x6709;&#x7279;&#x6743;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528;&#x7684;&#x7528;&#x6237;&#x540D;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x5E94;&#x8BE5;&#x662F;&#x4E13;&#x7528;&#x7528;&#x6237;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4EFB;&#x4F55;&#x4EBA;&#x3002;&#x5728;&#x5927;&#x591A;&#x6570;&#x673A;&#x5668;&#x4E0A;&#xFF0C;&#x7528;&#x6237;&#x6CA1;&#x6709;&#x503E;&#x5411;&#x4E8E;&#x4F7F;&#x7528;&#x5F88;&#x591A;&#x91CD;&#x8981;&#x7684;&#x4E1C;&#x897F;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;&#x6CA1;&#x4EBA;</p>
+<p>pam_service_name
+&#x6B64;&#x5B57;&#x7B26;&#x4E32;&#x662F;vsftpd&#x5C06;&#x4F7F;&#x7528;&#x7684;PAM&#x670D;&#x52A1;&#x7684;&#x540D;&#x79F0;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;ftp</p>
+<p>pasv_address&#x8BBE;&#x7F6E;
+&#x4F7F;&#x7528;&#x6B64;&#x9009;&#x9879;&#x53EF;&#x8986;&#x76D6;vsftpd&#x5C06;&#x54CD;&#x5E94;PASV&#x547D;&#x4EE4;&#x800C;&#x901A;&#x544A;&#x7684;IP&#x5730;&#x5740;&#x3002;&#x63D0;&#x4F9B;&#x6570;&#x5B57;IP&#x5730;&#x5740;&#xFF0C;&#x9664;&#x975E; &#x542F;&#x7528;&#x4E86;pasv_addr_resolve&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x5728;&#x542F;&#x52A8;&#x65F6;&#x4E3A;&#x60A8;&#x89E3;&#x6790;&#x7684;DNS&#x4E3B;&#x673A;&#x540D;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;:(&#x65E0; - &#x5730;&#x5740;&#x6765;&#x81EA;&#x4F20;&#x5165;&#x7684;&#x8FDE;&#x63A5;&#x5957;&#x63A5;&#x5B57;&#xFF09;</p>
+<p>rsa_cert_file
+&#x6B64;&#x9009;&#x9879;&#x6307;&#x5B9A;&#x7528;&#x4E8E;SSL&#x52A0;&#x5BC6;&#x8FDE;&#x63A5;&#x7684;RSA&#x8BC1;&#x4E66;&#x7684;&#x4F4D;&#x7F6E;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;/usr/share/ssl/certs/vsftpd.pem</p>
+<p>rsa_private_key_file
+&#x6B64;&#x9009;&#x9879;&#x6307;&#x5B9A;&#x7528;&#x4E8E;SSL&#x52A0;&#x5BC6;&#x8FDE;&#x63A5;&#x7684;RSA&#x79C1;&#x94A5;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x672A;&#x8BBE;&#x7F6E;&#x6B64;&#x9009;&#x9879;&#xFF0C;&#x5219;&#x9884;&#x671F;&#x79C1;&#x94A5;&#x4E0E;&#x8BC1;&#x4E66;&#x4F4D;&#x4E8E;&#x540C;&#x4E00;&#x6587;&#x4EF6;&#x4E2D;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;:(&#x65E0;&#xFF09;</p>
+<p>secure_chroot_dir
+&#x6B64;&#x9009;&#x9879;&#x5E94;&#x8BE5;&#x662F;&#x7A7A;&#x76EE;&#x5F55;&#x7684;&#x540D;&#x79F0;&#x3002;&#x6B64;&#x5916;&#xFF0C;ftp&#x7528;&#x6237;&#x4E0D;&#x5E94;&#x8BE5;&#x5199;&#x5165;&#x8BE5;&#x76EE;&#x5F55;&#x3002;&#x6B64;&#x76EE;&#x5F55;&#x6709;&#x65F6;&#x7528;&#x4F5C;&#x5B89;&#x5168;chroot&#xFF08;&#xFF09;jail&#xFF0C;vsftpd&#x4E0D;&#x9700;&#x8981;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x8BBF;&#x95EE;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;/ usr / share / empty</p>
+<p>&#x7684;ssl_ciphers
+&#x6B64;&#x9009;&#x9879;&#x53EF;&#x7528;&#x4E8E;&#x9009;&#x62E9;vsftpd&#x5141;&#x8BB8;&#x52A0;&#x5BC6;SSL&#x8FDE;&#x63A5;&#x7684;SSL&#x5BC6;&#x7801;&#x3002;&#x6709;&#x5173;&#x66F4;&#x591A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x89C1;&#x5BC6;&#x7801;&#x624B;&#x518C;&#x9875;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x9650;&#x5236;&#x5BC6;&#x7801;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x79CD;&#x6709;&#x7528;&#x7684;&#x5B89;&#x5168;&#x9884;&#x9632;&#x63AA;&#x65BD;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x53EF;&#x4EE5;&#x9632;&#x6B62;&#x6076;&#x610F;&#x8FDC;&#x7A0B;&#x65B9;&#x5F3A;&#x5236;&#x4F7F;&#x7528;&#x5DF2;&#x53D1;&#x73B0;&#x95EE;&#x9898;&#x7684;&#x5BC6;&#x7801;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;DES-CBC3-SHA</p>
+<p>user_config_dir
+&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x5F3A;&#x5927;&#x7684;&#x9009;&#x9879;&#x5141;&#x8BB8;&#x57FA;&#x4E8E;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x8986;&#x76D6;&#x624B;&#x518C;&#x9875;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x4EFB;&#x4F55;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x3002;&#x7528;&#x6CD5;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x6700;&#x597D;&#x7528;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x6765;&#x8BF4;&#x660E;&#x3002;&#x5982;&#x679C;&#x5C06;user_config_dir&#x8BBE;&#x7F6E;&#x4E3A;/ etc / vsftpd / user_conf&#x7136;&#x540E;&#x4EE5;&#x7528;&#x6237;&#x201C;chris&#x201D;&#x8EAB;&#x4EFD;&#x767B;&#x5F55;&#xFF0C;&#x5219;vsftpd&#x5C06;&#x5728;&#x4F1A;&#x8BDD;&#x671F;&#x95F4;&#x5E94;&#x7528;&#x6587;&#x4EF6;/ etc / vsftpd / user_conf / chris&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;&#x3002;&#x6B64;&#x6587;&#x4EF6;&#x7684;&#x683C;&#x5F0F;&#x8BE6;&#x89C1;&#x672C;&#x624B;&#x518C;&#x9875;&#xFF01;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x5E76;&#x975E;&#x6240;&#x6709;&#x8BBE;&#x7F6E;&#x90FD;&#x662F;&#x57FA;&#x4E8E;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x6709;&#x6548;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8BB8;&#x591A;&#x8BBE;&#x7F6E;&#x4EC5;&#x5728;&#x7528;&#x6237;&#x4F1A;&#x8BDD;&#x542F;&#x52A8;&#x4E4B;&#x524D;&#x3002;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x7684;&#x4EFB;&#x4F55;&#x884C;&#x4E3A;&#x7684;&#x8BBE;&#x7F6E;&#x793A;&#x4F8B;&#x5305;&#x62EC;listen_address&#xFF0C;banner_file&#xFF0C;max_per_ip&#xFF0C;max_clients&#xFF0C;xferlog_file&#x7B49;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;:(&#x65E0;&#xFF09;</p>
+<p>user_sub_token
+&#x6B64;&#x9009;&#x9879;&#x4E0E;&#x865A;&#x62DF;&#x7528;&#x6237;&#x7ED3;&#x5408;&#x4F7F;&#x7528;&#x975E;&#x5E38;&#x6709;&#x7528;&#x3002;&#x5B83;&#x7528;&#x4E8E;&#x6839;&#x636E;&#x6A21;&#x677F;&#x4E3A;&#x6BCF;&#x4E2A;&#x865A;&#x62DF;&#x7528;&#x6237;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E3B;&#x76EE;&#x5F55;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x901A;&#x8FC7;guest_username&#x6307;&#x5B9A;&#x7684;&#x771F;&#x5B9E;&#x7528;&#x6237;&#x7684;&#x4E3B;&#x76EE;&#x5F55;&#x662F;/ home / virtual / $ USER&#xFF0C;&#x5E76;&#x4E14;user_sub_token&#x8BBE;&#x7F6E;&#x4E3A; $ USER&#xFF0C;&#x90A3;&#x4E48;&#x5F53;&#x865A;&#x62DF;&#x7528;&#x6237;fred&#x767B;&#x5F55;&#x65F6;&#xFF0C;&#x4ED6;&#x5C06;&#x7ED3;&#x675F;&#xFF08;&#x901A;&#x5E38;&#x662F;chroot&#xFF08;&#xFF09;&apos;ed &#xFF09;&#x5728;&#x76EE;&#x5F55;/ home / virtual / fred&#x4E2D;&#x3002;&#x5982;&#x679C;local_root&#x5305;&#x542B;user_sub_token&#xFF0C;&#x5219;&#x6B64;&#x9009;&#x9879;&#x4E5F;&#x4F1A;&#x751F;&#x6548;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;:(&#x65E0;&#xFF09;</p>
+<p>userlist_file
+&#x6B64;&#x9009;&#x9879;&#x662F;userlist_enable&#x9009;&#x9879;&#x5904;&#x4E8E;&#x6D3B;&#x52A8;&#x72B6;&#x6001;&#x65F6;&#x52A0;&#x8F7D;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;/ etc / vsftpd / user_list</p>
+<p>vsftpd_log_file
+&#x6B64;&#x9009;&#x9879;&#x662F;&#x6211;&#x4EEC;&#x7F16;&#x5199;vsftpd&#x6837;&#x5F0F;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#x3002;&#x4EC5;&#x5F53;&#x8BBE;&#x7F6E;&#x4E86;&#x9009;&#x9879;xferlog_enable&#x5E76;&#x4E14;&#x672A;&#x8BBE;&#x7F6E;xferlog_std_format&#x65F6;&#xFF0C; &#x624D;&#x4F1A;&#x5199;&#x5165;&#x6B64;&#x65E5;&#x5FD7;&#x3002;&#x6216;&#x8005;&#xFF0C;&#x5982;&#x679C;&#x5DF2;&#x8BBE;&#x7F6E;&#x9009;&#x9879;dual_log_enable&#xFF0C;&#x5219;&#x4F1A;&#x5199;&#x5165;&#x3002;&#x53E6;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x56E0;&#x7D20; - &#x5982;&#x679C;&#x60A8;&#x8BBE;&#x7F6E;&#x4E86;syslog_enable&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x5199;&#x5165;&#x6B64;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x662F;&#x5C06;&#x8F93;&#x51FA;&#x53D1;&#x9001;&#x5230;&#x7CFB;&#x7EDF;&#x65E5;&#x5FD7;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;/var/log/vsftpd.log</p>
+<p>xferlog_file
+&#x6B64;&#x9009;&#x9879;&#x662F;&#x6211;&#x4EEC;&#x7F16;&#x5199;wu-ftpd&#x6837;&#x5F0F;&#x4F20;&#x8F93;&#x65E5;&#x5FD7;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#x3002;&#x4EC5;&#x5F53; &#x8BBE;&#x7F6E;&#x4E86;xferlog_enable&#x9009;&#x9879;&#x4EE5;&#x53CA;xferlog_std_format&#x65F6;&#x624D;&#x4F1A;&#x5199;&#x5165;&#x4F20;&#x8F93;&#x65E5;&#x5FD7;&#x3002;&#x6216;&#x8005;&#xFF0C;&#x5982;&#x679C;&#x5DF2;&#x8BBE;&#x7F6E;&#x9009;&#x9879;dual_log_enable&#xFF0C;&#x5219;&#x4F1A;&#x5199;&#x5165;&#x3002;
+&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;/ var / log / xferlog</p>
+<p>&#x4F5C;&#x8005;
+scarybeasts@gmail.com</p>
+<p><a href="https://linux.die.net/man/5/vsftpd.conf" target="_blank">&#x82F1;&#x6587;&#x53C2;&#x8003;&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1.11 sublime text3插件介绍.html" class="navigation navigation-prev " aria-label="Previous page: 1.11 sublime text3插件介绍">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="1.13 mysql 笔记.html" class="navigation navigation-next " aria-label="Next page: 1.13 mysql 笔记">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.12 vsftpd.conf文件配置","categories":"summary","tags":["vsftpd"],"date":"2019-02-13T17:55:03.000Z","level":"1.2.12","depth":2,"next":{"title":"1.13 mysql 笔记","level":"1.2.13","depth":2,"path":"第一章 Linux学习环境相关配置/1.13 mysql 笔记.md","ref":"./第一章 Linux学习环境相关配置/1.13 mysql 笔记.md","articles":[]},"previous":{"title":"1.11 sublime text3插件介绍","level":"1.2.11","depth":2,"path":"第一章 Linux学习环境相关配置/1.11 sublime text3插件介绍.md","ref":"./第一章 Linux学习环境相关配置/1.11 sublime text3插件介绍.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chinese-video"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"shortName":"mygitbook-1"},"chinese-video":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"深度学习","language":"zh","gitbook":"*","description":"学习笔记"},"file":{"path":"第一章 Linux学习环境相关配置/1.12 vsftpd.conf文件配置.md","mtime":"2019-02-14T06:22:03.905Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-23T01:43:05.535Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
