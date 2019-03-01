@@ -1,0 +1,711 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.14 ubuntu16_18安装peek工具录制gif · 深度学习</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../第二章 深度学习相关基础算法/" />
+    
+    
+    <link rel="prev" href="1.13 mysql 笔记.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    深耕系列之深度学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第一章 Linux学习环境相关配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1.1 Ubuntu18下有道词典的配置.html">
+            
+                <a href="1.1 Ubuntu18下有道词典的配置.html">
+            
+                    
+                    1.1 Ubuntu18下有道词典的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="1.2 Ubuntu18安装Gitbook.html">
+            
+                <a href="1.2 Ubuntu18安装Gitbook.html">
+            
+                    
+                    1.2 Ubuntu18 安装Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="1.3 Ubuntu18 git命令使用总结.html">
+            
+                <a href="1.3 Ubuntu18 git命令使用总结.html">
+            
+                    
+                    1.3 Ubuntu18 git命令使用总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="1.4 Latex 排版使用笔记.html">
+            
+                <a href="1.4 Latex 排版使用笔记.html">
+            
+                    
+                    1.4 Latex 排版使用笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="1.5 Ubuntu下常用工具软件配置安装.html">
+            
+                <a href="1.5 Ubuntu下常用工具软件配置安装.html">
+            
+                    
+                    1.5 Ubuntu下常用工具软件配置安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="1.6 win10+ubuntu双系统修复ubuntu启动引导.html">
+            
+                <a href="1.6 win10+ubuntu双系统修复ubuntu启动引导.html">
+            
+                    
+                    1.6 win10+ubuntu双系统修复ubuntu启动引导
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="1.7 gitbook 插件等相关设置.html">
+            
+                <a href="1.7 gitbook 插件等相关设置.html">
+            
+                    
+                    1.7 gitbook 插件等相关设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="1.8 深度学习环境搭建.html">
+            
+                <a href="1.8 深度学习环境搭建.html">
+            
+                    
+                    1.8 深度学习环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="1.9 hexo 实现本地图片加载.html">
+            
+                <a href="1.9 hexo 实现本地图片加载.html">
+            
+                    
+                    1.9 hexo 实现本地图片加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="1.10 hexo网页定制.html">
+            
+                <a href="1.10 hexo网页定制.html">
+            
+                    
+                    1.10 hexo网页定制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="1.11 sublime text3插件介绍.html">
+            
+                <a href="1.11 sublime text3插件介绍.html">
+            
+                    
+                    1.11 sublime text3插件介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="1.12 vsftpd.conf文件配置.html">
+            
+                <a href="1.12 vsftpd.conf文件配置.html">
+            
+                    
+                    1.12 vsftpd.conf文件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="1.13 mysql 笔记.html">
+            
+                <a href="1.13 mysql 笔记.html">
+            
+                    
+                    1.13 mysql 笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.14" data-path="1.14 ubuntu16_18安装peek工具录制gif.html">
+            
+                <a href="1.14 ubuntu16_18安装peek工具录制gif.html">
+            
+                    
+                    1.14 ubuntu16_18安装peek工具录制gif
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第二章 深度学习相关基础算法/">
+            
+                <a href="../第二章 深度学习相关基础算法/">
+            
+                    
+                    第二章 深度学习相关基础算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第二章 深度学习相关基础算法/2.1 马尔科夫链.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1 马尔科夫链.html">
+            
+                    
+                    2.1 马尔科夫链
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../第二章 深度学习相关基础算法/2.1.1 马尔科夫简单模型预测实战笔记.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1.1 马尔科夫简单模型预测实战笔记.html">
+            
+                    
+                    2.1.1 马尔科夫简单模型预测实战笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../第二章 深度学习相关基础算法/2.1.2 最大熵模型.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1.2 最大熵模型.html">
+            
+                    
+                    2.1.2 最大熵模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../第二章 深度学习相关基础算法/2.1.3 隐马尔科夫HMM.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1.3 隐马尔科夫HMM.html">
+            
+                    
+                    2.1.3 隐马尔科夫HMM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第二章 深度学习相关基础算法/2.2 矩阵相关基础知识.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.2 矩阵相关基础知识.html">
+            
+                    
+                    2.2 矩阵相关基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第二章 深度学习相关基础算法/2.3 线性回归.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.3 线性回归.html">
+            
+                    
+                    2.3 线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第二章 深度学习相关基础算法/2.4  Decision tree.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.4  Decision tree.html">
+            
+                    
+                    2.4 决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../第二章 深度学习相关基础算法/2.5 梯度下降和最小二乘法.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.5 梯度下降和最小二乘法.html">
+            
+                    
+                    2.5 梯度下降和最小二乘法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../第二章 深度学习相关基础算法/2.6 递归算法与迭代算法.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.6 递归算法与迭代算法.html">
+            
+                    
+                    2.6 递归算法与迭代算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../第三章 深度学习框架学习/">
+            
+                <a href="../第三章 深度学习框架学习/">
+            
+                    
+                    第三章 深度学习框架学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../第三章 深度学习框架学习/3.1 PyTorch 学习.html">
+            
+                <a href="../第三章 深度学习框架学习/3.1 PyTorch 学习.html">
+            
+                    
+                    3.1 PyTorch 学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../第三章 深度学习框架学习/3.1.2 Pytorch 之MNIST手写字识别分类.html">
+            
+                <a href="../第三章 深度学习框架学习/3.1.2 Pytorch 之MNIST手写字识别分类.html">
+            
+                    
+                    3.1.2 Pytorch 之MNIST手写字识别分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../附录/index,md">
+            
+                <span>
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    Python 相关笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../附录/Python 帮助文档检索方法.html">
+            
+                <a href="../附录/Python 帮助文档检索方法.html">
+            
+                    
+                    Python 帮助文档检索方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../附录/Module篇使用__future__.html">
+            
+                <a href="../附录/Module篇使用__future__.html">
+            
+                    
+                    Module篇使用future
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.14 ubuntu16_18安装peek工具录制gif</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6458;&#x8981;">&#x6458;&#x8981;</h1>
+<p>&#x5728;&#x5199;&#x4E00;&#x4E9B;&#x535A;&#x5BA2;&#x6587;&#x7AE0;&#x4E2D;&#xFF0C;&#x4E00;&#x822C;&#x7684;png&#xFF0C;jpg&#x683C;&#x5F0F;&#x7684;&#x56FE;&#x7247;&#x5F80;&#x5F80;&#x6EE1;&#x8DB3;&#x4E0D;&#x4E86;&#x590D;&#x6742;&#x7684;&#x6F14;&#x793A;&#x8FC7;&#x7A0B;&#xFF0C;&#x8FD9;&#x65F6;peek&#x8F6F;&#x4EF6;&#x5C31;&#x80FD;&#x5F88;&#x597D;&#x7684;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x5B8C;&#x6210;gif&#x6587;&#x4EF6;&#x7684;&#x5236;&#x4F5C;&#xFF0C;&#x5E76;&#x4E14;peek&#x8FD8;&#x662F;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;gif&#x5236;&#x4F5C;&#x8F6F;&#x4EF6;&#xFF0C;&#x503C;&#x5F97;&#x63A8;&#x8350;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x6839;&#x636E;&#x5B98;&#x65B9;&#x7684;ubuntu&#x5B89;&#x88C5;&#x6B65;&#x9AA4;&#xFF0C;&#x53D1;&#x73B0;&#x786E;&#x5B9E;&#x80FD;&#x591F;&#x5B89;&#x88C5;&#xFF0C;&#x4F46;&#x662F;&#x5BB9;&#x6613;&#x51FA;&#x95EE;&#x9898;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x628A;&#x6211;&#x7684;&#x5B89;&#x88C5;&#x65B9;&#x6CD5;&#x5199;&#x51FA;&#x6765;&#xFF0C;&#x4F9B;&#x5B89;&#x88C5;&#x540E;&#x5F55;&#x5236;&#x4FDD;&#x5B58;&#x5C31;&#x6B7B;&#x673A;&#x7684;&#x670B;&#x53CB;&#x53C2;&#x8003;&#x3002;</p>
+<ul>
+<li>[x] Edit By Porter, &#x79EF;&#x6C34;&#x6210;&#x6E0A;,&#x86DF;&#x9F99;&#x751F;&#x7109;&#x3002;</li>
+</ul>
+<!-- more -->
+<h1 id="&#x4E00;&#x3001;&#x5B89;&#x88C5;">&#x4E00;&#x3001;&#x5B89;&#x88C5;</h1>
+<ul>
+<li><p>&#x83B7;&#x53D6;deb&#x5305;&#xFF1A;</p>
+<pre><code class="lang-bash">wget https://github.com/phw/peek/releases/download/v0.7.2/peek-0.7.2-Linux.deb
+</code></pre>
+</li>
+<li><p>&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#xFF1A;</p>
+</li>
+</ul>
+<pre><code class="lang-bash">sudo apt install libsdl1.2debian ffmpeg libavdevice-ffmpeg56
+</code></pre>
+<ul>
+<li>&#x5B89;&#x88C5;peek&#xFF1A;</li>
+</ul>
+<pre><code class="lang-bash">sudo dpkg -i peek-0.7.2-Linux.deb
+</code></pre>
+<h1 id="&#x4E8C;&#x3001;&#x4F7F;&#x7528;&#x6F14;&#x793A;">&#x4E8C;&#x3001;&#x4F7F;&#x7528;&#x6F14;&#x793A;</h1>
+<p><img src="image1/Peek_yanshi.gif" alt="peek &#x8F6F;&#x4EF6;&#x5B89;&#x88C5;&#x6F14;&#x793A;&#x6548;&#x679C;"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1.13 mysql 笔记.html" class="navigation navigation-prev " aria-label="Previous page: 1.13 mysql 笔记">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../第二章 深度学习相关基础算法/" class="navigation navigation-next " aria-label="Next page: 第二章 深度学习相关基础算法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.14 ubuntu16_18安装peek工具录制gif","categories":"summary","tags":["peek"],"date":"2019-02-13T17:55:03.000Z","level":"1.2.14","depth":2,"next":{"title":"第二章 深度学习相关基础算法","level":"1.3","depth":1,"path":"第二章 深度学习相关基础算法/index.md","ref":"./第二章 深度学习相关基础算法/index.md","articles":[{"title":"2.1 马尔科夫链","level":"1.3.1","depth":2,"path":"第二章 深度学习相关基础算法/2.1 马尔科夫链.md","ref":"./第二章 深度学习相关基础算法/2.1 马尔科夫链.md","articles":[{"title":"2.1.1 马尔科夫简单模型预测实战笔记","level":"1.3.1.1","depth":3,"path":"第二章 深度学习相关基础算法/2.1.1 马尔科夫简单模型预测实战笔记.md","ref":"./第二章 深度学习相关基础算法/2.1.1 马尔科夫简单模型预测实战笔记.md","articles":[]},{"title":"2.1.2 最大熵模型","level":"1.3.1.2","depth":3,"path":"第二章 深度学习相关基础算法/2.1.2 最大熵模型.md","ref":"./第二章 深度学习相关基础算法/2.1.2 最大熵模型.md","articles":[]},{"title":"2.1.3 隐马尔科夫HMM","level":"1.3.1.3","depth":3,"path":"第二章 深度学习相关基础算法/2.1.3 隐马尔科夫HMM.md","ref":"./第二章 深度学习相关基础算法/2.1.3 隐马尔科夫HMM.md","articles":[]}]},{"title":"2.2 矩阵相关基础知识","level":"1.3.2","depth":2,"path":"第二章 深度学习相关基础算法/2.2 矩阵相关基础知识.md","ref":"./第二章 深度学习相关基础算法/2.2 矩阵相关基础知识.md","articles":[]},{"title":"2.3 线性回归","level":"1.3.3","depth":2,"path":"第二章 深度学习相关基础算法/2.3 线性回归.md","ref":"./第二章 深度学习相关基础算法/2.3 线性回归.md","articles":[]},{"title":"2.4 决策树","level":"1.3.4","depth":2,"path":"第二章 深度学习相关基础算法/2.4  Decision tree.md","ref":"./第二章 深度学习相关基础算法/2.4  Decision tree.md","articles":[]},{"title":"2.5 梯度下降和最小二乘法","level":"1.3.5","depth":2,"path":"第二章 深度学习相关基础算法/2.5 梯度下降和最小二乘法.md","ref":"./第二章 深度学习相关基础算法/2.5 梯度下降和最小二乘法.md","articles":[]},{"title":"2.6 递归算法与迭代算法","level":"1.3.6","depth":2,"path":"第二章 深度学习相关基础算法/2.6 递归算法与迭代算法.md","ref":"./第二章 深度学习相关基础算法/2.6 递归算法与迭代算法.md","articles":[]}]},"previous":{"title":"1.13 mysql 笔记","level":"1.2.13","depth":2,"path":"第一章 Linux学习环境相关配置/1.13 mysql 笔记.md","ref":"./第一章 Linux学习环境相关配置/1.13 mysql 笔记.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chinese-video"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"shortName":"mygitbook-1"},"chinese-video":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"深度学习","language":"zh","gitbook":"*","description":"学习笔记"},"file":{"path":"第一章 Linux学习环境相关配置/1.14 ubuntu16_18安装peek工具录制gif.md","mtime":"2019-02-28T06:29:20.080Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-01T01:37:35.723Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

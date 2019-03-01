@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../附录/index,md" />
+    <link rel="next" href="3.1.2 Pytorch 之MNIST手写字识别分类.html" />
     
     
     <link rel="prev" href="./" />
@@ -285,6 +285,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.2.14" data-path="../第一章 Linux学习环境相关配置/1.14 ubuntu16_18安装peek工具录制gif.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.14 ubuntu16_18安装peek工具录制gif.html">
+            
+                    
+                    1.14 ubuntu16_18安装peek工具录制gif
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -456,6 +469,25 @@
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="3.1.2 Pytorch 之MNIST手写字识别分类.html">
+            
+                <a href="3.1.2 Pytorch 之MNIST手写字识别分类.html">
+            
+                    
+                    3.1.2 Pytorch 之MNIST手写字识别分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -678,8 +710,141 @@ gpu_tensor2 = torch.randn(<span class="hljs-number">3</span>,<span class="hljs-n
 print(<span class="hljs-string">&quot;&#x8F93;&#x51FA;&#x6570;&#x636E;&#x6A21;&#x5F0F;2&#xFF1A;&quot;</span>)
 print(gpu_tensor2)
 </code></pre>
-<h2 id="&#x4E8C;&#x3001;&#x68AF;&#x5EA6;&#x7B97;&#x6CD5;">&#x4E8C;&#x3001;&#x68AF;&#x5EA6;&#x7B97;&#x6CD5;</h2>
-<p><a href="https://github.com/porterpan/DeepLearningTutorials" target="_blank">https://github.com/porterpan/DeepLearningTutorials</a></p>
+<h2 id="&#x4E8C;&#x3001;torch&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;">&#x4E8C;&#x3001;Torch&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</h2>
+<p>2.1 torch.Tensor</p>
+<p>torch.Tensor&#x662F;&#x4E00;&#x79CD;&#x5305;&#x542B;&#x5355;&#x4E00;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5143;&#x7D20;&#x7684;&#x591A;&#x7EF4;&#x77E9;&#x9635;&#x3002;</p>
+<p>Torch&#x5B9A;&#x4E49;&#x4E86;<a href="https://pytorch-cn.readthedocs.io/zh/latest/package_references/Tensor/" target="_blank">&#x4E03;&#x79CD;CPU tensor&#x7C7B;&#x578B;&#x548C;&#x516B;&#x79CD;GPU tensor&#x7C7B;&#x578B;</a>&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>Data tyoe</th>
+<th>CPU tensor</th>
+<th>GPU tensor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>32-bit floating point</td>
+<td>torch.FloatTensor</td>
+<td>torch.cuda.FloatTensor</td>
+</tr>
+<tr>
+<td>64-bit floating point</td>
+<td>torch.DoubleTensor</td>
+<td>torch.cuda.DoubleTensor</td>
+</tr>
+<tr>
+<td>16-bit floating point</td>
+<td>N/A</td>
+<td>torch.cuda.HalfTensor</td>
+</tr>
+<tr>
+<td>8-bit integer (unsigned)</td>
+<td>torch.ByteTensor</td>
+<td>torch.cuda.ByteTensor</td>
+</tr>
+<tr>
+<td>8-bit integer (signed)</td>
+<td>torch.CharTensor</td>
+<td>torch.cuda.CharTensor</td>
+</tr>
+<tr>
+<td>16-bit integer (signed)</td>
+<td>torch.ShortTensor</td>
+<td>torch.cuda.ShortTensor</td>
+</tr>
+<tr>
+<td>32-bit integer (signed)</td>
+<td>torch.IntTensor</td>
+<td>torch.cuda.IntTensor</td>
+</tr>
+<tr>
+<td>64-bit integer (signed)</td>
+<td>torch.LongTensor</td>
+<td>torch.cuda.LongTensor</td>
+</tr>
+</tbody>
+</table>
+<p>torch.Tensor&#x662F;&#x9ED8;&#x8BA4;&#x7684;tensor&#x7C7B;&#x578B;&#xFF08;torch.FlaotTensor&#xFF09;&#x7684;&#x7B80;&#x79F0;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x5F20;&#x91CF;tensor&#x53EF;&#x4EE5;&#x4ECE;Python&#x7684;list&#x6216;&#x5E8F;&#x5217;&#x6784;&#x5EFA;&#xFF1A;</p>
+<pre><code class="lang-Python"><span class="hljs-meta">&gt;&gt;&gt; </span>torch.FloatTensor([[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]])
+<span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span>
+<span class="hljs-number">4</span> <span class="hljs-number">5</span> <span class="hljs-number">6</span>
+[torch.FloatTensor of size <span class="hljs-number">2</span>x3]
+</code></pre>
+<p>&#x4E00;&#x4E2A;&#x7A7A;&#x5F20;&#x91CF;tensor&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x89C4;&#x5B9A;&#x5176;&#x5927;&#x5C0F;&#x6765;&#x6784;&#x5EFA;&#xFF1A;</p>
+<pre><code class="lang-Python"><span class="hljs-meta">&gt;&gt;&gt; </span>torch.IntTensor(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>).zero_()
+<span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>
+<span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>
+[torch.IntTensor of size <span class="hljs-number">2</span>x4]
+</code></pre>
+<h2 id="&#x4E09;&#x3001;-torch-&#x7684;&#x591A;&#x79CD;&#x6570;&#x5B66;&#x64CD;&#x4F5C;">&#x4E09;&#x3001; Torch &#x7684;&#x591A;&#x79CD;&#x6570;&#x5B66;&#x64CD;&#x4F5C;</h2>
+<h3 id="31-torch">3.1 Torch</h3>
+<p>&#x5305;<a href="https://pytorch-cn.readthedocs.io/zh/latest/package_references/torch/" target="_blank">torch</a>&#x5305;&#x542B;&#x4E86;&#x591A;&#x7EF4;&#x5F20;&#x91CF;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4EE5;&#x53CA;&#x57FA;&#x4E8E;&#x5176;&#x4E0A;&#x7684;&#x591A;&#x79CD;&#x6570;&#x5B66;&#x64CD;&#x4F5C;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x5B83;&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x591A;&#x79CD;&#x5DE5;&#x5177;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x4E9B;&#x53EF;&#x4EE5;&#x66F4;&#x6709;&#x6548;&#x5730;&#x5BF9;&#x5F20;&#x91CF;&#x548C;&#x4EFB;&#x610F;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x5E8F;&#x5217;&#x5316;&#x3002;</p>
+<p>&#x5B83;&#x6709;CUDA &#x7684;&#x5BF9;&#x5E94;&#x5B9E;&#x73B0;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;NVIDIA GPU&#x4E0A;&#x8FDB;&#x884C;&#x5F20;&#x91CF;&#x8FD0;&#x7B97;(&#x8BA1;&#x7B97;&#x80FD;&#x529B;&gt;=2.0)&#x3002;</p>
+<h3 id="32-&#x5F20;&#x91CF;-tensors">3.2 &#x5F20;&#x91CF; Tensors</h3>
+<h4 id="321-torchistensorsource">3.2.1 torch.is_tensor[source]</h4>
+<pre><code class="lang-Python">torch.is_tensor(obj)
+</code></pre>
+<p>&#x5982;&#x679C;obj &#x662F;&#x4E00;&#x4E2A;pytorch&#x5F20;&#x91CF;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;True</p>
+<blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A; obj (Object) &#x2013; &#x5224;&#x65AD;&#x5BF9;&#x8C61;</p>
+</blockquote>
+<h4 id="322-torchisstorage">3.2.2 torch.is_storage</h4>
+<pre><code class="lang-python">torch.is_storage(obj)
+</code></pre>
+<p>&#x5982;&#x4F55;obj &#x662F;&#x4E00;&#x4E2A;pytorch storage&#x5BF9;&#x8C61;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;True</p>
+<blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A; input (Object) &#x2013; &#x5224;&#x65AD;&#x5BF9;&#x8C61;</p>
+</blockquote>
+<h4 id="323-torchsetdefaulttensortypesource">3.2.3 torch.set_default_tensor_type[source]</h4>
+<pre><code class="lang-python">torch.set_default_tensor_type(t)
+</code></pre>
+<h4 id="324-torchnumel">3.2.4 torch.numel</h4>
+<pre><code class="lang-python">torch.numel(input)-&gt;int
+</code></pre>
+<p>&#x8FD4;&#x56DE;input &#x5F20;&#x91CF;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;</p>
+<p>&#x4F8B;&#x5B50;:</p>
+<pre><code class="lang-Python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = torch.randn(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>torch.numel(a)
+<span class="hljs-number">120</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>a = torch.zeros(<span class="hljs-number">4</span>,<span class="hljs-number">4</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>torch.numel(a)
+<span class="hljs-number">16</span>
+</code></pre>
+<h4 id="325-torchsetprintoptionssource">3.2.5 torch.set_printoptions[source]</h4>
+<pre><code class="lang-python">torch.set_printoptions(precision=<span class="hljs-keyword">None</span>, threshold=<span class="hljs-keyword">None</span>, edgeitems=<span class="hljs-keyword">None</span>, linewidth=<span class="hljs-keyword">None</span>, profile=<span class="hljs-keyword">None</span>)
+</code></pre>
+<p>&#x8BBE;&#x7F6E;&#x6253;&#x5370;&#x9009;&#x9879;&#x3002; &#x5B8C;&#x5168;&#x53C2;&#x8003;&#x81EA; Numpy&#x3002;</p>
+<h5 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;:</h5>
+<ul>
+<li>precision &#x2013; &#x6D6E;&#x70B9;&#x6570;&#x8F93;&#x51FA;&#x7684;&#x7CBE;&#x5EA6;&#x4F4D;&#x6570; (&#x9ED8;&#x8BA4;&#x4E3A;8 )</li>
+<li>threshold &#x2013; &#x9608;&#x503C;&#xFF0C;&#x89E6;&#x53D1;&#x6C47;&#x603B;&#x663E;&#x793A;&#x800C;&#x4E0D;&#x662F;&#x5B8C;&#x5168;&#x663E;&#x793A;(repr)&#x7684;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;&#x603B;&#x6570; &#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;1000&#xFF09;</li>
+<li>edgeitems &#x2013; &#x6C47;&#x603B;&#x663E;&#x793A;&#x4E2D;&#xFF0C;&#x6BCF;&#x7EF4;&#xFF08;&#x8F74;&#xFF09;&#x4E24;&#x7AEF;&#x663E;&#x793A;&#x7684;&#x9879;&#x6570;&#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;3&#xFF09;</li>
+<li>linewidth &#x2013; &#x7528;&#x4E8E;&#x63D2;&#x5165;&#x884C;&#x95F4;&#x9694;&#x7684;&#x6BCF;&#x884C;&#x5B57;&#x7B26;&#x6570;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;80&#xFF09;&#x3002;Thresholded matricies will ignore this parameter.</li>
+<li>profile &#x2013; pretty&#x6253;&#x5370;&#x7684;&#x5B8C;&#x5168;&#x9ED8;&#x8BA4;&#x503C;&#x3002; &#x53EF;&#x4EE5;&#x8986;&#x76D6;&#x4E0A;&#x8FF0;&#x6240;&#x6709;&#x9009;&#x9879; (&#x9ED8;&#x8BA4;&#x4E3A;short, full)</li>
+</ul>
+<h3 id="33-&#x521B;&#x5EFA;&#x64CD;&#x4F5C;-creation-ops">3.3 &#x521B;&#x5EFA;&#x64CD;&#x4F5C; Creation Ops</h3>
+<h4 id="331-torcheye">3.3.1 torch.eye</h4>
+<pre><code class="lang-python">torch.eye(n, m=<span class="hljs-keyword">None</span>, out=<span class="hljs-keyword">None</span>)
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;2&#x7EF4;&#x5F20;&#x91CF;&#xFF0C;&#x5BF9;&#x89D2;&#x7EBF;&#x4F4D;&#x7F6E;&#x5168;1&#xFF0C;&#x5176;&#x5B83;&#x4F4D;&#x7F6E;&#x5168;0</p>
+<h5 id="&#x53C2;&#x6570;">&#x53C2;&#x6570;:</h5>
+<ul>
+<li>n (int ) &#x2013; &#x884C;&#x6570;</li>
+<li>m (int, optional) &#x2013; &#x5217;&#x6570;.&#x5982;&#x679C;&#x4E3A;None,&#x5219;&#x9ED8;&#x8BA4;&#x4E3A;n</li>
+<li>out (Tensor, optinal) - Output tensor</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#x503C;: &#x5BF9;&#x89D2;&#x7EBF;&#x4F4D;&#x7F6E;&#x5168;1&#xFF0C;&#x5176;&#x5B83;&#x4F4D;&#x7F6E;&#x5168;0&#x7684;2&#x7EF4;&#x5F20;&#x91CF;</p>
+<p>&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;: Tensor</p>
+<p>&#x4F8B;&#x5B50;:</p>
+<pre><code class="lang-Python"><span class="hljs-meta">&gt;&gt;&gt; </span>torch.eye(<span class="hljs-number">3</span>)
+ <span class="hljs-number">1</span>  <span class="hljs-number">0</span>  <span class="hljs-number">0</span>
+ <span class="hljs-number">0</span>  <span class="hljs-number">1</span>  <span class="hljs-number">0</span>
+ <span class="hljs-number">0</span>  <span class="hljs-number">0</span>  <span class="hljs-number">1</span>
+[torch.FloatTensor of size <span class="hljs-number">3</span>x3]
+</code></pre>
+<p>&#x66F4;&#x591A;<a href="https://pytorch-cn.readthedocs.io/zh/latest/package_references/torch/" target="_blank">&#x53C2;&#x8003;Pytorch &#x6587;&#x6863;</a></p>
 
                                 
                                 </section>
@@ -712,7 +877,7 @@ print(gpu_tensor2)
                 </a>
                 
                 
-                <a href="../附录/index,md" class="navigation navigation-next " aria-label="Next page: 附录">
+                <a href="3.1.2 Pytorch 之MNIST手写字识别分类.html" class="navigation navigation-next " aria-label="Next page: 3.1.2 Pytorch 之MNIST手写字识别分类">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -723,7 +888,7 @@ print(gpu_tensor2)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.1 PyTorch 学习","categories":"Deep Learning","tags":["Deep Learning","PyTorch"],"date":"2018-11-10T22:55:03.000Z","level":"1.4.1","depth":2,"next":{"title":"附录","level":"1.5","depth":1,"path":"附录/index,md","ref":"./附录/index,md","articles":[{"title":"Python 相关笔记","level":"1.5.1","depth":2,"ref":"","articles":[{"title":"Python 帮助文档检索方法","level":"1.5.1.1","depth":3,"path":"附录/Python 帮助文档检索方法.md","ref":"./附录/Python 帮助文档检索方法.md","articles":[]},{"title":"Module篇使用future","level":"1.5.1.2","depth":3,"path":"附录/Module篇使用__future__.md","ref":"./附录/Module篇使用__future__.md","articles":[]}]}]},"previous":{"title":"第三章 深度学习框架学习","level":"1.4","depth":1,"path":"第三章 深度学习框架学习/index.md","ref":"./第三章 深度学习框架学习/index.md","articles":[{"title":"3.1 PyTorch 学习","level":"1.4.1","depth":2,"path":"第三章 深度学习框架学习/3.1 PyTorch 学习.md","ref":"./第三章 深度学习框架学习/3.1 PyTorch 学习.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chinese-video"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"shortName":"mygitbook-1"},"chinese-video":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"深度学习","language":"zh","gitbook":"*","description":"学习笔记"},"file":{"path":"第三章 深度学习框架学习/3.1 PyTorch 学习.md","mtime":"2019-02-21T08:05:53.525Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-23T01:43:05.535Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.1 PyTorch 学习","categories":"Deep Learning","tags":["Deep Learning","PyTorch"],"date":"2018-11-10T22:55:03.000Z","level":"1.4.1","depth":2,"next":{"title":"3.1.2 Pytorch 之MNIST手写字识别分类","level":"1.4.1.1","depth":3,"path":"第三章 深度学习框架学习/3.1.2 Pytorch 之MNIST手写字识别分类.md","ref":"./第三章 深度学习框架学习/3.1.2 Pytorch 之MNIST手写字识别分类.md","articles":[]},"previous":{"title":"第三章 深度学习框架学习","level":"1.4","depth":1,"path":"第三章 深度学习框架学习/index.md","ref":"./第三章 深度学习框架学习/index.md","articles":[{"title":"3.1 PyTorch 学习","level":"1.4.1","depth":2,"path":"第三章 深度学习框架学习/3.1 PyTorch 学习.md","ref":"./第三章 深度学习框架学习/3.1 PyTorch 学习.md","articles":[{"title":"3.1.2 Pytorch 之MNIST手写字识别分类","level":"1.4.1.1","depth":3,"path":"第三章 深度学习框架学习/3.1.2 Pytorch 之MNIST手写字识别分类.md","ref":"./第三章 深度学习框架学习/3.1.2 Pytorch 之MNIST手写字识别分类.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["chinese-video"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"shortName":"mygitbook-1"},"chinese-video":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"深度学习","language":"zh","gitbook":"*","description":"学习笔记"},"file":{"path":"第三章 深度学习框架学习/3.1 PyTorch 学习.md","mtime":"2019-02-25T00:40:04.619Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-01T01:37:35.723Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
