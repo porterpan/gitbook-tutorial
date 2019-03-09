@@ -24,6 +24,8 @@ date: 2017-1-4 22:55:03
     * [1.12 vsftpd.conf文件配置](./第一章 Linux学习环境相关配置/1.12 vsftpd.conf文件配置.md)
     * [1.13 mysql 笔记](./第一章 Linux学习环境相关配置/1.13 mysql 笔记.md)
     * [1.14 ubuntu16_18安装peek工具录制gif](./第一章 Linux学习环境相关配置/1.14 ubuntu16_18安装peek工具录制gif.md)
+    * [1.15 ubuntu下goldendict有道爬虫小程序](./第一章 Linux学习环境相关配置/1.15 ubuntu下goldendict有道爬虫小程序.md)
+    * [1.16 ubuntu18升级后部分应用不能中文输入的问题](./第一章 Linux学习环境相关配置/1.16 ubuntu18升级后部分应用不能中文输入的问题.md)
     
 * [第二章 深度学习相关基础算法](./第二章 深度学习相关基础算法/index.md)
     * [2.1 马尔科夫链](./第二章 深度学习相关基础算法/2.1 马尔科夫链.md)
