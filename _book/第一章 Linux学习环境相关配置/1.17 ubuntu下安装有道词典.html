@@ -1,0 +1,834 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.17 ubuntu下安装有道词典 · 深度学习</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../第二章 深度学习相关基础算法/" />
+    
+    
+    <link rel="prev" href="1.16 ubuntu18升级后部分应用不能中文输入的问题.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">date: 2017-1-4 22:55:03</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    深耕系列之深度学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第一章 Linux学习环境相关配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1.1 Ubuntu18下有道词典的配置.html">
+            
+                <a href="1.1 Ubuntu18下有道词典的配置.html">
+            
+                    
+                    1.1 Ubuntu18下有道词典的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="1.2 Ubuntu18安装Gitbook.html">
+            
+                <a href="1.2 Ubuntu18安装Gitbook.html">
+            
+                    
+                    1.2 Ubuntu18 安装Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="1.3 Ubuntu18 git命令使用总结.html">
+            
+                <a href="1.3 Ubuntu18 git命令使用总结.html">
+            
+                    
+                    1.3 Ubuntu18 git命令使用总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="1.4 Latex 排版使用笔记.html">
+            
+                <a href="1.4 Latex 排版使用笔记.html">
+            
+                    
+                    1.4 Latex 排版使用笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="1.5 Ubuntu下常用工具软件配置安装.html">
+            
+                <a href="1.5 Ubuntu下常用工具软件配置安装.html">
+            
+                    
+                    1.5 Ubuntu下常用工具软件配置安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="1.6 win10+ubuntu双系统修复ubuntu启动引导.html">
+            
+                <a href="1.6 win10+ubuntu双系统修复ubuntu启动引导.html">
+            
+                    
+                    1.6 win10+ubuntu双系统修复ubuntu启动引导
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="1.7 gitbook 插件等相关设置.html">
+            
+                <a href="1.7 gitbook 插件等相关设置.html">
+            
+                    
+                    1.7 gitbook 插件等相关设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="1.8 深度学习环境搭建.html">
+            
+                <a href="1.8 深度学习环境搭建.html">
+            
+                    
+                    1.8 深度学习环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="1.9 hexo 实现本地图片加载.html">
+            
+                <a href="1.9 hexo 实现本地图片加载.html">
+            
+                    
+                    1.9 hexo 实现本地图片加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="1.10 hexo网页定制.html">
+            
+                <a href="1.10 hexo网页定制.html">
+            
+                    
+                    1.10 hexo网页定制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="1.11 sublime text3插件介绍.html">
+            
+                <a href="1.11 sublime text3插件介绍.html">
+            
+                    
+                    1.11 sublime text3插件介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="1.12 vsftpd.conf文件配置.html">
+            
+                <a href="1.12 vsftpd.conf文件配置.html">
+            
+                    
+                    1.12 vsftpd.conf文件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="1.13 mysql 笔记.html">
+            
+                <a href="1.13 mysql 笔记.html">
+            
+                    
+                    1.13 mysql 笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="1.14 ubuntu16_18安装peek工具录制gif.html">
+            
+                <a href="1.14 ubuntu16_18安装peek工具录制gif.html">
+            
+                    
+                    1.14 ubuntu16_18安装peek工具录制gif
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="1.15 ubuntu下goldendict有道爬虫小程序.html">
+            
+                <a href="1.15 ubuntu下goldendict有道爬虫小程序.html">
+            
+                    
+                    1.15 ubuntu下goldendict有道爬虫小程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="1.16 ubuntu18升级后部分应用不能中文输入的问题.html">
+            
+                <a href="1.16 ubuntu18升级后部分应用不能中文输入的问题.html">
+            
+                    
+                    1.16 ubuntu18升级后部分应用不能中文输入的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.17" data-path="1.17 ubuntu下安装有道词典.html">
+            
+                <a href="1.17 ubuntu下安装有道词典.html">
+            
+                    
+                    1.17 ubuntu下安装有道词典
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第二章 深度学习相关基础算法/">
+            
+                <a href="../第二章 深度学习相关基础算法/">
+            
+                    
+                    第二章 深度学习相关基础算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第二章 深度学习相关基础算法/2.1 马尔科夫链.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1 马尔科夫链.html">
+            
+                    
+                    2.1 马尔科夫链
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../第二章 深度学习相关基础算法/2.1.1 马尔科夫简单模型预测实战笔记.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1.1 马尔科夫简单模型预测实战笔记.html">
+            
+                    
+                    2.1.1 马尔科夫简单模型预测实战笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../第二章 深度学习相关基础算法/2.1.2 最大熵模型.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1.2 最大熵模型.html">
+            
+                    
+                    2.1.2 最大熵模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../第二章 深度学习相关基础算法/2.1.3 隐马尔科夫HMM.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1.3 隐马尔科夫HMM.html">
+            
+                    
+                    2.1.3 隐马尔科夫HMM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第二章 深度学习相关基础算法/2.2 矩阵相关基础知识.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.2 矩阵相关基础知识.html">
+            
+                    
+                    2.2 矩阵相关基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第二章 深度学习相关基础算法/2.3 线性回归.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.3 线性回归.html">
+            
+                    
+                    2.3 线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第二章 深度学习相关基础算法/2.4  Decision tree.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.4  Decision tree.html">
+            
+                    
+                    2.4 决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../第二章 深度学习相关基础算法/2.5 梯度下降和最小二乘法.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.5 梯度下降和最小二乘法.html">
+            
+                    
+                    2.5 梯度下降和最小二乘法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../第二章 深度学习相关基础算法/2.6 递归算法与迭代算法.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.6 递归算法与迭代算法.html">
+            
+                    
+                    2.6 递归算法与迭代算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../第二章 深度学习相关基础算法/2.7 神经网络浅学笔记.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.7 神经网络浅学笔记.html">
+            
+                    
+                    2.7 神经网络浅学笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../第三章 深度学习框架学习/">
+            
+                <a href="../第三章 深度学习框架学习/">
+            
+                    
+                    第三章 深度学习框架学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../第三章 深度学习框架学习/3.1 PyTorch 学习.html">
+            
+                <a href="../第三章 深度学习框架学习/3.1 PyTorch 学习.html">
+            
+                    
+                    3.1 PyTorch 学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../第三章 深度学习框架学习/3.1.2 Pytorch 之MNIST手写字识别分类.html">
+            
+                <a href="../第三章 深度学习框架学习/3.1.2 Pytorch 之MNIST手写字识别分类.html">
+            
+                    
+                    3.1.2 Pytorch 之MNIST手写字识别分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    项目开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../library_seat_selection/">
+            
+                <a href="../library_seat_selection/">
+            
+                    
+                    某某图书馆座位预约项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../附录/index,md">
+            
+                <span>
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    Python 相关笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../附录/Python 帮助文档检索方法.html">
+            
+                <a href="../附录/Python 帮助文档检索方法.html">
+            
+                    
+                    Python 帮助文档检索方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../附录/Module篇使用__future__.html">
+            
+                <a href="../附录/Module篇使用__future__.html">
+            
+                    
+                    Module篇使用future
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.17 ubuntu下安装有道词典</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6458;&#x8981;">&#x6458;&#x8981;</h1>
+<h2 id="&#x89E3;&#x51B3;ubuntu16&#x5B89;&#x88C5;&#x6709;&#x9053;&#x8BCD;&#x5178;&#x5B89;&#x88C5;&#x540E;&#x6C34;&#x571F;&#x4E0D;&#x670D;&#x7684;&#x4E00;&#x4E9B;&#x95EE;&#x9898;">&#x89E3;&#x51B3;ubuntu16&#x5B89;&#x88C5;&#x6709;&#x9053;&#x8BCD;&#x5178;&#x5B89;&#x88C5;&#x540E;&#x201D;&#x6C34;&#x571F;&#x4E0D;&#x670D;&#x201C;&#x7684;&#x4E00;&#x4E9B;&#x95EE;&#x9898;</h2>
+<ul>
+<li>&#x4E0D;&#x80FD;&#x53D6;&#x8BCD;</li>
+<li>&#x4E0D;&#x80FD;&#x53D1;&#x97F3;&#x95EE;&#x9898;</li>
+</ul>
+<p>&#x5177;&#x4F53;&#x6B65;&#x9AA4;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<!-- TOC -->
+<ul>
+<li><a href="#&#x6458;&#x8981;">&#x6458;&#x8981;</a><ul>
+<li><a href="#&#x89E3;&#x51B3;ubuntu16&#x5B89;&#x88C5;&#x6709;&#x9053;&#x8BCD;&#x5178;&#x5B89;&#x88C5;&#x540E;&#x6C34;&#x571F;&#x4E0D;&#x670D;&#x7684;&#x4E00;&#x4E9B;&#x95EE;&#x9898;">&#x89E3;&#x51B3;ubuntu16&#x5B89;&#x88C5;&#x6709;&#x9053;&#x8BCD;&#x5178;&#x5B89;&#x88C5;&#x540E;&#x201D;&#x6C34;&#x571F;&#x4E0D;&#x670D;&#x201C;&#x7684;&#x4E00;&#x4E9B;&#x95EE;&#x9898;</a></li>
+</ul>
+</li>
+<li><a href="#&#x4E0B;&#x8F7D;&#x6709;&#x9053;&#x8BCD;&#x5178;&#x7684;&#x5B98;&#x65B9;&#x6700;&#x65B0;&#x5B89;&#x88C5;&#x5305;">&#x4E0B;&#x8F7D;&#x6709;&#x9053;&#x8BCD;&#x5178;&#x7684;&#x5B98;&#x65B9;&#x6700;&#x65B0;&#x5B89;&#x88C5;&#x5305;</a></li>
+<li><a href="#cd-&#x5230;&#x4E0B;&#x8F7D;&#x4FDD;&#x5B58;&#x7684;&#x76EE;&#x5F55;&#x6267;&#x884C;&#x89E3;&#x5305;&#x4FEE;&#x6539;&#x6253;&#x5305;&#x7B49;httpswwwcnblogscomlibrenap8074758html">cd &#x5230;&#x4E0B;&#x8F7D;&#x4FDD;&#x5B58;&#x7684;&#x76EE;&#x5F55;&#x6267;&#x884C;<a href="https://www.cnblogs.com/librena/p/8074758.html" target="_blank">&#x89E3;&#x5305;,&#x4FEE;&#x6539;&#xFF0C;&#x6253;&#x5305;&#x7B49;</a></a><ul>
+<li><a href="#&#x521B;&#x5EFA;youdao-dict&#x76EE;&#x5F55;&#x628A;&#x8BE5;deb&#x5305;&#x89E3;&#x538B;&#x5230;youdao-dict&#x76EE;&#x5F55;">&#x521B;&#x5EFA;youdao-dict&#x76EE;&#x5F55;&#xFF0C;&#x628A;&#x8BE5;deb&#x5305;&#x89E3;&#x538B;&#x5230;youdao-dict&#x76EE;&#x5F55;</a></li>
+<li><a href="#&#x89E3;&#x538B;deb&#x5305;&#x4E2D;&#x7684;control&#x4FE1;&#x606F;&#x5305;&#x7684;&#x4F9D;&#x8D56;&#x5C31;&#x5199;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#x9762;">&#x89E3;&#x538B;deb&#x5305;&#x4E2D;&#x7684;control&#x4FE1;&#x606F;&#xFF08;&#x5305;&#x7684;&#x4F9D;&#x8D56;&#x5C31;&#x5199;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#x9762;&#xFF09;</a></li>
+<li><a href="#&#x7F16;&#x8F91;control&#x6587;&#x4EF6;&#x5220;&#x9664;depends&#x91CC;&#x9762;&#x7684;gstreamer010-plugins-ugly&#x6DFB;&#x52A0;gstreamer10-libav">&#x7F16;&#x8F91;control&#x6587;&#x4EF6;&#xFF0C;&#x5220;&#x9664;Depends&#x91CC;&#x9762;&#x7684;gstreamer0.10-plugins-ugly,&#x6DFB;&#x52A0;gstreamer1.0-libav</a></li>
+<li><a href="#&#x7F16;&#x8F91;&#x540E;&#x7684;control&#x6587;&#x4EF6;&#x7684;&#x4F9D;&#x8D56;&#x5305;&#x5185;&#x76EE;&#x5982;&#x4E0B;">&#x7F16;&#x8F91;&#x540E;&#x7684;control&#x6587;&#x4EF6;&#x7684;&#x4F9D;&#x8D56;&#x5305;&#x5185;&#x76EE;&#x5982;&#x4E0B;</a></li>
+</ul>
+</li>
+<li><a href="#&#x91CD;&#x65B0;&#x6253;&#x5305;&#x5B89;&#x88C5;">&#x91CD;&#x65B0;&#x6253;&#x5305;&#xFF0C;&#x5B89;&#x88C5;</a></li>
+</ul>
+<!-- /TOC -->
+<ul>
+<li>[x] Edit By Porter, &#x79EF;&#x6C34;&#x6210;&#x6E0A;,&#x86DF;&#x9F99;&#x751F;&#x7109;&#x3002;</li>
+</ul>
+<!-- more -->
+<h1 id="&#x4E0B;&#x8F7D;&#x6709;&#x9053;&#x8BCD;&#x5178;&#x7684;&#x5B98;&#x65B9;&#x6700;&#x65B0;&#x5B89;&#x88C5;&#x5305;">&#x4E0B;&#x8F7D;&#x6709;&#x9053;&#x8BCD;&#x5178;&#x7684;&#x5B98;&#x65B9;&#x6700;&#x65B0;&#x5B89;&#x88C5;&#x5305;</h1>
+<p><a href="http://codown.youdao.com/cidian/linux/youdao-dict_1.1.0-0-ubuntu_amd64.deb" target="_blank">youdao-dict_1.1.0-0-ubuntu_amd64.deb</a></p>
+<h1 id="cd-&#x5230;&#x4E0B;&#x8F7D;&#x4FDD;&#x5B58;&#x7684;&#x76EE;&#x5F55;&#x6267;&#x884C;&#x89E3;&#x5305;&#x4FEE;&#x6539;&#xFF0C;&#x6253;&#x5305;&#x7B49;">cd &#x5230;&#x4E0B;&#x8F7D;&#x4FDD;&#x5B58;&#x7684;&#x76EE;&#x5F55;&#x6267;&#x884C;<a href="https://www.cnblogs.com/librena/p/8074758.html" target="_blank">&#x89E3;&#x5305;,&#x4FEE;&#x6539;&#xFF0C;&#x6253;&#x5305;&#x7B49;</a></h1>
+<h2 id="&#x521B;&#x5EFA;youdao-dict&#x76EE;&#x5F55;&#xFF0C;&#x628A;&#x8BE5;deb&#x5305;&#x89E3;&#x538B;&#x5230;youdao-dict&#x76EE;&#x5F55;">&#x521B;&#x5EFA;youdao-dict&#x76EE;&#x5F55;&#xFF0C;&#x628A;&#x8BE5;deb&#x5305;&#x89E3;&#x538B;&#x5230;youdao-dict&#x76EE;&#x5F55;</h2>
+<pre><code class="lang-shell">sudo dpkg -X ./youdao-dict_1.1.0-0-ubuntu_amd64.deb youdao-dict
+</code></pre>
+<h2 id="&#x89E3;&#x538B;deb&#x5305;&#x4E2D;&#x7684;control&#x4FE1;&#x606F;&#xFF08;&#x5305;&#x7684;&#x4F9D;&#x8D56;&#x5C31;&#x5199;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#x9762;&#xFF09;">&#x89E3;&#x538B;deb&#x5305;&#x4E2D;&#x7684;control&#x4FE1;&#x606F;&#xFF08;&#x5305;&#x7684;&#x4F9D;&#x8D56;&#x5C31;&#x5199;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#x9762;&#xFF09;</h2>
+<pre><code class="lang-shell">sudo dpkg -e ./youdao-dict_1.1.0-0-ubuntu_amd64.deb youdao-dict/DEBIAN
+</code></pre>
+<h2 id="&#x7F16;&#x8F91;control&#x6587;&#x4EF6;&#xFF0C;&#x5220;&#x9664;depends&#x91CC;&#x9762;&#x7684;gstreamer010-plugins-ugly&#x6DFB;&#x52A0;gstreamer10-libav">&#x7F16;&#x8F91;control&#x6587;&#x4EF6;&#xFF0C;&#x5220;&#x9664;Depends&#x91CC;&#x9762;&#x7684;gstreamer0.10-plugins-ugly,&#x6DFB;&#x52A0;gstreamer1.0-libav</h2>
+<pre><code class="lang-shell">sudo vi ./youdao-dict/DEBIAN/control
+</code></pre>
+<ul>
+<li>&#x6CE8;&#x610F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5148;&#x5B89;&#x88C5;&#x597D;<a href="https://xuexiyuan.cn/article/detail/215.html" target="_blank">&#x6709;&#x9053;&#x8BCD;&#x5178;&#x5355;&#x8BCD;&#x53D1;&#x97F3;&#x7684;&#x8BED;&#x97F3;&#x5305;&#x4FEE;&#x590D;</a>&#x5982;&#x4E0B;</li>
+</ul>
+<pre><code class="lang-shell"># &#x5B89;&#x88C5;&#x5355;&#x8BCD;&#x53D1;&#x97F3;&#x8BED;&#x97F3;&#x5305;
+# &#x641C;&#x7D22; gstreamer1 &#x76F8;&#x5173;&#x7684;&#x5305;
+sudo apt-cache search gstreamer1
+
+# &#x5B89;&#x88C5;&#x627E;&#x5230;&#x7684; gstreamer1.0-libav &#x5305;
+sudo apt-get install gstreamer1.0-libav
+</code></pre>
+<h2 id="&#x7F16;&#x8F91;&#x540E;&#x7684;control&#x6587;&#x4EF6;&#x7684;&#x4F9D;&#x8D56;&#x5305;&#x5185;&#x76EE;&#x5982;&#x4E0B;">&#x7F16;&#x8F91;&#x540E;&#x7684;control&#x6587;&#x4EF6;&#x7684;&#x4F9D;&#x8D56;&#x5305;&#x5185;&#x76EE;&#x5982;&#x4E0B;</h2>
+<pre><code class="lang-shell">Depends: python3, python3-pyqt5, python3-requests, python3-xlib, tesseract-ocr, tesseract-ocr-eng, tesseract-ocr-chi-sim, tesseract-ocr-chi-tra, python3-pil, ttf-wqy-microhei, python3-lxml, python3-xdg, python3-pyqt5.qtmultimedia, python3-pyqt5.qtquick, python3-pyqt5.qtwebkit, gir1.2-appindicator3-0.1, python3-dbus, qtdeclarative5-controls-plugin, libqt5multimedia5-plugins, gstreamer1.0-libav
+</code></pre>
+<h1 id="&#x91CD;&#x65B0;&#x6253;&#x5305;&#xFF0C;&#x5B89;&#x88C5;">&#x91CD;&#x65B0;&#x6253;&#x5305;&#xFF0C;&#x5B89;&#x88C5;</h1>
+<p>sudo dpkg-deb -b youdao-dict youdaobuild.deb</p>
+<pre><code class="lang-shell">sudo dpkg -i youdaobuild.deb
+&#x51FA;&#x73B0;&#x7F3A;&#x5C11;&#x7684;&#x4F9D;&#x8D56;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x5B89;&#x88C5;&#x6240;&#x9700;&#x4F9D;&#x8D56;
+sudo apt install -f
+&#x4F9D;&#x8D56;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#x518D;&#x6B21;&#x952E;&#x5165;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x5B89;&#x88C5;
+sudo dpkg -i youdaobuild.deb
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1.16 ubuntu18升级后部分应用不能中文输入的问题.html" class="navigation navigation-prev " aria-label="Previous page: 1.16 ubuntu18升级后部分应用不能中文输入的问题">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../第二章 深度学习相关基础算法/" class="navigation navigation-next " aria-label="Next page: 第二章 深度学习相关基础算法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.17 ubuntu下安装有道词典","categories":"summary","tags":["有道词典"],"date":"2019-03-16T17:55:03.000Z","level":"1.2.17","depth":2,"next":{"title":"第二章 深度学习相关基础算法","level":"1.3","depth":1,"path":"第二章 深度学习相关基础算法/index.md","ref":"./第二章 深度学习相关基础算法/index.md","articles":[{"title":"2.1 马尔科夫链","level":"1.3.1","depth":2,"path":"第二章 深度学习相关基础算法/2.1 马尔科夫链.md","ref":"./第二章 深度学习相关基础算法/2.1 马尔科夫链.md","articles":[{"title":"2.1.1 马尔科夫简单模型预测实战笔记","level":"1.3.1.1","depth":3,"path":"第二章 深度学习相关基础算法/2.1.1 马尔科夫简单模型预测实战笔记.md","ref":"./第二章 深度学习相关基础算法/2.1.1 马尔科夫简单模型预测实战笔记.md","articles":[]},{"title":"2.1.2 最大熵模型","level":"1.3.1.2","depth":3,"path":"第二章 深度学习相关基础算法/2.1.2 最大熵模型.md","ref":"./第二章 深度学习相关基础算法/2.1.2 最大熵模型.md","articles":[]},{"title":"2.1.3 隐马尔科夫HMM","level":"1.3.1.3","depth":3,"path":"第二章 深度学习相关基础算法/2.1.3 隐马尔科夫HMM.md","ref":"./第二章 深度学习相关基础算法/2.1.3 隐马尔科夫HMM.md","articles":[]}]},{"title":"2.2 矩阵相关基础知识","level":"1.3.2","depth":2,"path":"第二章 深度学习相关基础算法/2.2 矩阵相关基础知识.md","ref":"./第二章 深度学习相关基础算法/2.2 矩阵相关基础知识.md","articles":[]},{"title":"2.3 线性回归","level":"1.3.3","depth":2,"path":"第二章 深度学习相关基础算法/2.3 线性回归.md","ref":"./第二章 深度学习相关基础算法/2.3 线性回归.md","articles":[]},{"title":"2.4 决策树","level":"1.3.4","depth":2,"path":"第二章 深度学习相关基础算法/2.4  Decision tree.md","ref":"./第二章 深度学习相关基础算法/2.4  Decision tree.md","articles":[]},{"title":"2.5 梯度下降和最小二乘法","level":"1.3.5","depth":2,"path":"第二章 深度学习相关基础算法/2.5 梯度下降和最小二乘法.md","ref":"./第二章 深度学习相关基础算法/2.5 梯度下降和最小二乘法.md","articles":[]},{"title":"2.6 递归算法与迭代算法","level":"1.3.6","depth":2,"path":"第二章 深度学习相关基础算法/2.6 递归算法与迭代算法.md","ref":"./第二章 深度学习相关基础算法/2.6 递归算法与迭代算法.md","articles":[]},{"title":"2.7 神经网络浅学笔记","level":"1.3.7","depth":2,"path":"第二章 深度学习相关基础算法/2.7 神经网络浅学笔记.md","ref":"./第二章 深度学习相关基础算法/2.7 神经网络浅学笔记.md","articles":[]}]},"previous":{"title":"1.16 ubuntu18升级后部分应用不能中文输入的问题","level":"1.2.16","depth":2,"path":"第一章 Linux学习环境相关配置/1.16 ubuntu18升级后部分应用不能中文输入的问题.md","ref":"./第一章 Linux学习环境相关配置/1.16 ubuntu18升级后部分应用不能中文输入的问题.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chinese-video"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"shortName":"mygitbook-1"},"chinese-video":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"深度学习","language":"zh","gitbook":"*","description":"学习笔记"},"file":{"path":"第一章 Linux学习环境相关配置/1.17 ubuntu下安装有道词典.md","mtime":"2019-03-16T12:59:18.625Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-23T13:48:15.070Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

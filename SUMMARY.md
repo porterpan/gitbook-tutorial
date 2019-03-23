@@ -26,6 +26,7 @@ date: 2017-1-4 22:55:03
     * [1.14 ubuntu16_18安装peek工具录制gif](./第一章 Linux学习环境相关配置/1.14 ubuntu16_18安装peek工具录制gif.md)
     * [1.15 ubuntu下goldendict有道爬虫小程序](./第一章 Linux学习环境相关配置/1.15 ubuntu下goldendict有道爬虫小程序.md)
     * [1.16 ubuntu18升级后部分应用不能中文输入的问题](./第一章 Linux学习环境相关配置/1.16 ubuntu18升级后部分应用不能中文输入的问题.md)
+    * [1.17 ubuntu下安装有道词典](./第一章 Linux学习环境相关配置/1.17 ubuntu下安装有道词典.md)
     
 * [第二章 深度学习相关基础算法](./第二章 深度学习相关基础算法/index.md)
     * [2.1 马尔科夫链](./第二章 深度学习相关基础算法/2.1 马尔科夫链.md)
@@ -43,6 +44,8 @@ date: 2017-1-4 22:55:03
     * [3.1 PyTorch 学习](./第三章 深度学习框架学习/3.1 PyTorch 学习.md)
         * [3.1.2 Pytorch 之MNIST手写字识别分类](./第三章 深度学习框架学习/3.1.2 Pytorch 之MNIST手写字识别分类.md)
 
+* [项目开发]()
+    * [某某图书馆座位预约项目](./library_seat_selection/README.md)
 * [附录](./附录/index,md)
     * Python 相关笔记
         * [Python 帮助文档检索方法](./附录/Python 帮助文档检索方法.md)
