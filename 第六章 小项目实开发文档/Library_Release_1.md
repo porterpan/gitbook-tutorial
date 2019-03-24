@@ -1,8 +1,19 @@
 # ptqt_Library_select_seat
 
+---
+title: 图书馆占座小工具使用手册
+categories:     
+    Library Project    
+tags: [Library Project,Pythton,qt5]
+date: 2019-3-20 22:55:03
+---
+
+# 摘要
+
 <!-- TOC -->
 
 - [ptqt_Library_select_seat](#ptqt_library_select_seat)
+- [摘要](#摘要)
 - [使用说明](#使用说明)
     - [房间情况查询操作帮助说明](#房间情况查询操作帮助说明)
         - [查询功能描述](#查询功能描述)
@@ -22,9 +33,13 @@
 
 <!-- /TOC -->
 
+- [x] Edit By Porter, 积水成渊,蛟龙生焉。
+
+<!-- more -->
+
 帮网友做的图书馆抢座和查学生信息的GUI操作界面
 
-![软件整体界面](Library_Release_1.png)
+![软件整体界面](./image6/Library_Release_1.png)
 
 # 使用说明
 
@@ -53,7 +68,7 @@
 > 如果输入信息出错将会有相应错误信息提示，按照错误信息操作即可解决
 
 
-![软件查询功能](Library_Release_1.gif)
+![软件查询功能](./image6/Library_Release_1.gif)
 
 ## 选座操作帮助说明
 
@@ -80,7 +95,7 @@
 
 > 如果输入信息出错将会有相应错误信息提示，按照错误信息操作即可解决，成功预约会返回成功的相应信息。如“您已成功预约”等字样
 
-![软件手动选座功能](Library_Release_2.gif)
+![软件手动选座功能](./image6/Library_Release_2.gif)
 
 ## 自动选座操作帮助说明
 
@@ -109,9 +124,9 @@
 
 > 如果输入信息出错将会有相应错误信息提示，按照错误信息操作即可解决，成功预约会返回成功的相应信息。如“您已成功预约”等字样
 
-![软件自动选座功能](Library_Release_3.gif)
+![软件自动选座功能](./image6/Library_Release_3.gif)
 
-![软件自动选座功能演示](Library_Release_4.gif)
+![软件自动选座功能演示](./image6/Library_Release_4.gif)
 
 ## 关于软件打包成exe方案
 
@@ -141,7 +156,8 @@ pip install pyinstaller
 - 生成的exe文件相对较小，而且可以不用安装运行环境
 
 ```python
-pyinstaller -w -F 
+cd 到name.py脚本的目录中
+pyinstaller -w -F name.py
 ```
 
 这条指令后会生成一个exe，并且占用空间小，占内存和你代码写的有关系，一般占用内存也不大
