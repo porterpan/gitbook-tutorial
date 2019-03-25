@@ -50,4 +50,23 @@ date: 2017-1-4 22:55:03
     * Python 相关笔记
         * [Python 帮助文档检索方法](./附录/Python 帮助文档检索方法.md)
         * [Module篇使用__future__](./附录/Module篇使用__future__.md)
+    * Git 相关配置
+        * [git-推送新的文章到github其他分支上](./附录/git-推送新的文章到github其他分支上.md)
+        * [gitignre 配置](./附录/gitignre 配置.md)
+        * [gitignre 配置](./附录/gitignre 配置.md)
+        * [Hexo 每次写好后deploy博客](./附录/Hexo 每次写好后deploy博客.md)
+        * [MFC  Socket 通信](./附录/MFC  Socket 通信.md)
+        * [python之tkinter入坑Pack](./附录/python之tkinter入坑Pack.md)
+        * [ubuntu 中安装sublime_text3](./附录/ubuntu 中安装sublime_text3.md)
+        * [ubuntu18-正确-安装ShadowSocket](./附录/ubuntu18-正确-安装ShadowSocket.md)
+        * [vultr+freenom实现主机域名的绑定.md](./附录/vultr+freenom实现主机域名的绑定.md)
+        * [值得收藏的网站](./附录/值得收藏的网站.md)
+        * [搜索技巧](./附录/搜索技巧.md)
+        * [第一篇博文](./附录/第一篇博文.md)
+        * [简单的方法，越过付费获取在线的log设计.md](./附录/简单的方法，越过付费获取在线的log设计.md)
+        * [网页设计基础笔记.md](./附录/网页设计基础笔记.md)
+        * [解决Chrome67版本以后不能离线安装插件的情况.md](./附录/解决Chrome67版本以后不能离线安装插件的情况.md)
+    * 嵌入式相关笔记
+        * [STM32串口通信配置](./附录/STM32串口通信配置.md)
+        * [STM32复位及通过函数判断是何种条件出发的复位](./附录/STM32复位及通过函数判断是何种条件出发的复位.md)
         
