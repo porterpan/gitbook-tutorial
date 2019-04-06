@@ -1,0 +1,1690 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>STM32串口通信配置 · 深度学习</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="STM32复位及通过函数判断是何种条件出发的复位.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">date: 2017-1-4 22:55:03</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    深耕系列之深度学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../第一章 Linux学习环境相关配置/">
+            
+                <a href="../第一章 Linux学习环境相关配置/">
+            
+                    
+                    第一章 Linux学习环境相关配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../第一章 Linux学习环境相关配置/1.1 Ubuntu18下有道词典的配置.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.1 Ubuntu18下有道词典的配置.html">
+            
+                    
+                    1.1 Ubuntu18下有道词典的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../第一章 Linux学习环境相关配置/1.2 Ubuntu18安装Gitbook.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.2 Ubuntu18安装Gitbook.html">
+            
+                    
+                    1.2 Ubuntu18 安装Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../第一章 Linux学习环境相关配置/1.3 Ubuntu18 git命令使用总结.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.3 Ubuntu18 git命令使用总结.html">
+            
+                    
+                    1.3 Ubuntu18 git命令使用总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../第一章 Linux学习环境相关配置/1.4 Latex 排版使用笔记.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.4 Latex 排版使用笔记.html">
+            
+                    
+                    1.4 Latex 排版使用笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../第一章 Linux学习环境相关配置/1.5 Ubuntu下常用工具软件配置安装.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.5 Ubuntu下常用工具软件配置安装.html">
+            
+                    
+                    1.5 Ubuntu下常用工具软件配置安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../第一章 Linux学习环境相关配置/1.6 win10+ubuntu双系统修复ubuntu启动引导.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.6 win10+ubuntu双系统修复ubuntu启动引导.html">
+            
+                    
+                    1.6 win10+ubuntu双系统修复ubuntu启动引导
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../第一章 Linux学习环境相关配置/1.7 gitbook 插件等相关设置.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.7 gitbook 插件等相关设置.html">
+            
+                    
+                    1.7 gitbook 插件等相关设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../第一章 Linux学习环境相关配置/1.8 深度学习环境搭建.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.8 深度学习环境搭建.html">
+            
+                    
+                    1.8 深度学习环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../第一章 Linux学习环境相关配置/1.9 hexo 实现本地图片加载.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.9 hexo 实现本地图片加载.html">
+            
+                    
+                    1.9 hexo 实现本地图片加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../第一章 Linux学习环境相关配置/1.10 hexo网页定制.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.10 hexo网页定制.html">
+            
+                    
+                    1.10 hexo网页定制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../第一章 Linux学习环境相关配置/1.11 sublime text3插件介绍.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.11 sublime text3插件介绍.html">
+            
+                    
+                    1.11 sublime text3插件介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../第一章 Linux学习环境相关配置/1.12 vsftpd.conf文件配置.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.12 vsftpd.conf文件配置.html">
+            
+                    
+                    1.12 vsftpd.conf文件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../第一章 Linux学习环境相关配置/1.13 mysql 笔记.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.13 mysql 笔记.html">
+            
+                    
+                    1.13 mysql 笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../第一章 Linux学习环境相关配置/1.14 ubuntu16_18安装peek工具录制gif.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.14 ubuntu16_18安装peek工具录制gif.html">
+            
+                    
+                    1.14 ubuntu16_18安装peek工具录制gif
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../第一章 Linux学习环境相关配置/1.15 ubuntu下goldendict有道爬虫小程序.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.15 ubuntu下goldendict有道爬虫小程序.html">
+            
+                    
+                    1.15 ubuntu下goldendict有道爬虫小程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../第一章 Linux学习环境相关配置/1.16 ubuntu18升级后部分应用不能中文输入的问题.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.16 ubuntu18升级后部分应用不能中文输入的问题.html">
+            
+                    
+                    1.16 ubuntu18升级后部分应用不能中文输入的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../第一章 Linux学习环境相关配置/1.17 ubuntu下安装有道词典.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.17 ubuntu下安装有道词典.html">
+            
+                    
+                    1.17 ubuntu下安装有道词典
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第二章 深度学习相关基础算法/">
+            
+                <a href="../第二章 深度学习相关基础算法/">
+            
+                    
+                    第二章 深度学习相关基础算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第二章 深度学习相关基础算法/2.1 马尔科夫链.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1 马尔科夫链.html">
+            
+                    
+                    2.1 马尔科夫链
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../第二章 深度学习相关基础算法/2.1.1 马尔科夫简单模型预测实战笔记.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1.1 马尔科夫简单模型预测实战笔记.html">
+            
+                    
+                    2.1.1 马尔科夫简单模型预测实战笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../第二章 深度学习相关基础算法/2.1.2 最大熵模型.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1.2 最大熵模型.html">
+            
+                    
+                    2.1.2 最大熵模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../第二章 深度学习相关基础算法/2.1.3 隐马尔科夫HMM.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1.3 隐马尔科夫HMM.html">
+            
+                    
+                    2.1.3 隐马尔科夫HMM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第二章 深度学习相关基础算法/2.2 矩阵相关基础知识.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.2 矩阵相关基础知识.html">
+            
+                    
+                    2.2 矩阵相关基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第二章 深度学习相关基础算法/2.3 线性回归.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.3 线性回归.html">
+            
+                    
+                    2.3 线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第二章 深度学习相关基础算法/2.4  Decision tree.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.4  Decision tree.html">
+            
+                    
+                    2.4 决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../第二章 深度学习相关基础算法/2.5 梯度下降和最小二乘法.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.5 梯度下降和最小二乘法.html">
+            
+                    
+                    2.5 梯度下降和最小二乘法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../第二章 深度学习相关基础算法/2.6 递归算法与迭代算法.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.6 递归算法与迭代算法.html">
+            
+                    
+                    2.6 递归算法与迭代算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../第二章 深度学习相关基础算法/2.7 神经网络浅学笔记.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.7 神经网络浅学笔记.html">
+            
+                    
+                    2.7 神经网络浅学笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../第三章 深度学习框架学习/">
+            
+                <a href="../第三章 深度学习框架学习/">
+            
+                    
+                    第三章 深度学习框架学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../第三章 深度学习框架学习/3.1 PyTorch 学习.html">
+            
+                <a href="../第三章 深度学习框架学习/3.1 PyTorch 学习.html">
+            
+                    
+                    3.1 PyTorch 学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../第三章 深度学习框架学习/3.1.2 Pytorch 之MNIST手写字识别分类.html">
+            
+                <a href="../第三章 深度学习框架学习/3.1.2 Pytorch 之MNIST手写字识别分类.html">
+            
+                    
+                    3.1.2 Pytorch 之MNIST手写字识别分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    项目开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../第六章 小项目实开发文档/-Library-占座小工具使用手册.html">
+            
+                <a href="../第六章 小项目实开发文档/-Library-占座小工具使用手册.html">
+            
+                    
+                    Library占座小工具使用手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="index,md">
+            
+                <span>
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    Python 相关笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="Python 帮助文档检索方法.html">
+            
+                <a href="Python 帮助文档检索方法.html">
+            
+                    
+                    Python 帮助文档检索方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="Module篇使用__future__.html">
+            
+                <a href="Module篇使用__future__.html">
+            
+                    
+                    Module篇使用future
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    Git 相关配置
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="git-推送新的文章到github其他分支上.html">
+            
+                <a href="git-推送新的文章到github其他分支上.html">
+            
+                    
+                    git-推送新的文章到github其他分支上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="gitignre 配置.html">
+            
+                <a href="gitignre 配置.html">
+            
+                    
+                    gitignre 配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="gitignre 配置.html">
+            
+                <a href="gitignre 配置.html">
+            
+                    
+                    gitignre 配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.4" data-path="Hexo 每次写好后deploy博客.html">
+            
+                <a href="Hexo 每次写好后deploy博客.html">
+            
+                    
+                    Hexo 每次写好后deploy博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.5" data-path="MFC  Socket 通信.html">
+            
+                <a href="MFC  Socket 通信.html">
+            
+                    
+                    MFC  Socket 通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.6" data-path="python之tkinter入坑Pack.html">
+            
+                <a href="python之tkinter入坑Pack.html">
+            
+                    
+                    python之tkinter入坑Pack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.7" data-path="ubuntu 中安装sublime_text3.html">
+            
+                <a href="ubuntu 中安装sublime_text3.html">
+            
+                    
+                    ubuntu 中安装sublime_text3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.8" data-path="ubuntu18-正确-安装ShadowSocket.html">
+            
+                <a href="ubuntu18-正确-安装ShadowSocket.html">
+            
+                    
+                    ubuntu18-正确-安装ShadowSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.9" data-path="vultr+freenom实现主机域名的绑定.html">
+            
+                <a href="vultr+freenom实现主机域名的绑定.html">
+            
+                    
+                    vultr+freenom实现主机域名的绑定.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.10" data-path="值得收藏的网站.html">
+            
+                <a href="值得收藏的网站.html">
+            
+                    
+                    值得收藏的网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.11" data-path="搜索技巧.html">
+            
+                <a href="搜索技巧.html">
+            
+                    
+                    搜索技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.12" data-path="第一篇博文.html">
+            
+                <a href="第一篇博文.html">
+            
+                    
+                    第一篇博文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.13" data-path="简单的方法，越过付费获取在线的log设计.html">
+            
+                <a href="简单的方法，越过付费获取在线的log设计.html">
+            
+                    
+                    简单的方法，越过付费获取在线的log设计.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.14" data-path="网页设计基础笔记.html">
+            
+                <a href="网页设计基础笔记.html">
+            
+                    
+                    网页设计基础笔记.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.15" data-path="解决Chrome67版本以后不能离线安装插件的情况.html">
+            
+                <a href="解决Chrome67版本以后不能离线安装插件的情况.html">
+            
+                    
+                    解决Chrome67版本以后不能离线安装插件的情况.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" >
+            
+                <span>
+            
+                    
+                    嵌入式相关笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.3.1" data-path="STM32串口通信配置.html">
+            
+                <a href="STM32串口通信配置.html">
+            
+                    
+                    STM32串口通信配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="STM32复位及通过函数判断是何种条件出发的复位.html">
+            
+                <a href="STM32复位及通过函数判断是何种条件出发的复位.html">
+            
+                    
+                    STM32复位及通过函数判断是何种条件出发的复位
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >STM32串口通信配置</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6458;&#x8981;&#xFF1A;">&#x6458;&#x8981;&#xFF1A;</h1>
+<p>&#x672C;&#x6587;&#x662F;&#x901A;&#x8FC7;&#x5206;&#x4EAB;&#x51E0;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x4E32;&#x53E3;&#x51FD;&#x6570;&#xFF0C;&#x5B9E;&#x73B0;&#x5BF9;STM32&#x82AF;&#x7247;&#x7684;&#x591A;&#x4E2A;&#x4E32;&#x53E3;&#x64CD;&#x4F5C;&#x548C;&#x591A;&#x79CD;&#x6536;&#x53D1;&#x6570;&#x636E;&#x65B9;&#x5F0F;&#xFF0C;&#x5B9E;&#x73B0;&#x4E32;&#x53E3;&#x901A;&#x4FE1;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x672C;&#x6587;&#x7684;&#x5404;&#x4E2A;&#x9A71;&#x52A8;&#x4EE3;&#x7801;&#x7ECF;&#x6D4B;&#x8BD5;&#x90FD;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#xFF0C;&#x672C;&#x4EBA;&#x5199;&#x7684;&#x8FD9;&#x90E8;&#x5206;&#x4EE3;&#x7801;&#x5F00;&#x6E90; (&#x3002;<em>^_^</em>&#x3002;)</p>
+<!-- more -->
+<h2 id="&#x4E00;&#x3001;&#x4E32;&#x53E3;&#x4E00;&#x7684;&#x914D;&#x7F6E;">&#x4E00;&#x3001;&#x4E32;&#x53E3;&#x4E00;&#x7684;&#x914D;&#x7F6E;</h2>
+<ul>
+<li>&#xFF08;&#x521D;&#x59CB;&#x5316;+&#x4E2D;&#x65AD;&#x914D;&#x7F6E;+&#x4E2D;&#x65AD;&#x63A5;&#x6536;&#x51FD;&#x6570;&#xFF09;</li>
+</ul>
+<pre><code class="lang-C"><span class="hljs-comment">/*===============================================================================
+Copyright:
+Version:
+Author:    
+Date: 2017/11/3
+Description:
+    &#x914D;&#x7F6E;&#x72EC;&#x7ACB;&#x770B;&#x95E8;&#x72D7;&#x521D;&#x59CB;&#x5316;&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x4E3B;&#x51FD;&#x6570;&#x4E2D;&#x8FD0;&#x884C;IWDG_ReloadCounter&#x8FDB;&#x884C;&#x5582;&#x72D7;&#x4E3B;&#x51FD;&#x6570;&#x5FC5;&#x987B;&#x5728;4s&#x5185;&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x5582;&#x72D7;&#x4E0D;&#x7136;&#x7CFB;&#x7EDF;&#x4F1A;&#x590D;&#x4F4D;&#xFF1B;
+    &#x51FD;&#x6570;&#x529F;&#x80FD;&#x662F;&#x5C06;&#x63A5;&#x6536;&#x56FA;&#x5B9A;&#x957F;&#x5EA6;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E76;&#x5C06;&#x63A5;&#x6536;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x901A;&#x8FC7;&#x4E32;&#x53E3;&#x53D1;&#x9001;&#x51FA;&#x53BB;
+revise Description:
+===============================================================================*/</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;stm32f10x_usart.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;stm32f10x.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;stm32f10x_iwdg.h&quot;</span></span>
+
+u8 USART1_RX_BUF[<span class="hljs-number">21</span>]; 
+u8 USART1_RX_CNT=<span class="hljs-number">0</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">IWDG_Configuration</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>; 
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Usart1_Init</span><span class="hljs-params">(u32 bound)</span>
+</span>{
+    <span class="hljs-comment">//GPIO&#x7AEF;&#x53E3;&#x8BBE;&#x7F6E;</span>
+    GPIO_InitTypeDef GPIO_InitStructure;
+    USART_InitTypeDef USART_InitStructure;
+    NVIC_InitTypeDef NVIC_InitStructure;
+
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1|RCC_APB2Periph_GPIOA|RCC_APB2Periph_GPIOC, ENABLE);<span class="hljs-comment">//&#x4F7F;&#x80FD;USART1,GPIOA,C&#x65F6;&#x949F;</span>
+
+    <span class="hljs-comment">//USART1_TX   GPIOA.9</span>
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9; <span class="hljs-comment">//PA.9</span>
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;    <span class="hljs-comment">//&#x590D;&#x7528;&#x63A8;&#x633D;&#x8F93;&#x51FA;</span>
+    GPIO_Init(GPIOA, &amp;GPIO_InitStructure);<span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;GPIOA.9</span>
+
+    <span class="hljs-comment">//USART1_RX      GPIOA.10&#x521D;&#x59CB;&#x5316;</span>
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;<span class="hljs-comment">//PA10</span>
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;<span class="hljs-comment">//&#x6D6E;&#x7A7A;&#x8F93;&#x5165;</span>
+    GPIO_Init(GPIOA, &amp;GPIO_InitStructure);<span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;GPIOA.10  </span>
+
+    <span class="hljs-comment">//Usart1 NVIC &#x914D;&#x7F6E;</span>
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);    <span class="hljs-comment">//&#x8BBE;&#x7F6E;NVIC&#x4E2D;&#x65AD;&#x5206;&#x7EC4;2:2&#x4F4D;&#x62A2;&#x5360;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;2&#x4F4D;&#x54CD;&#x5E94;&#x4F18;&#x5148;&#x7EA7;   0-3;</span>
+
+    NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=<span class="hljs-number">3</span> ;<span class="hljs-comment">//&#x62A2;&#x5360;&#x4F18;&#x5148;&#x7EA7;3</span>
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = <span class="hljs-number">3</span>;        <span class="hljs-comment">//&#x5B50;&#x4F18;&#x5148;&#x7EA7;3</span>
+    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;            <span class="hljs-comment">//IRQ&#x901A;&#x9053;&#x4F7F;&#x80FD;</span>
+    NVIC_Init(&amp;NVIC_InitStructure);    <span class="hljs-comment">//&#x6839;&#x636E;&#x6307;&#x5B9A;&#x7684;&#x53C2;&#x6570;&#x521D;&#x59CB;&#x5316;VIC&#x5BC4;&#x5B58;&#x5668;</span>
+
+   <span class="hljs-comment">//USART &#x521D;&#x59CB;&#x5316;&#x8BBE;&#x7F6E;</span>
+
+    USART_InitStructure.USART_BaudRate = bound;<span class="hljs-comment">//&#x4E32;&#x53E3;&#x6CE2;&#x7279;&#x7387;</span>
+    USART_InitStructure.USART_WordLength = USART_WordLength_8b;<span class="hljs-comment">//&#x5B57;&#x957F;&#x4E3A;8&#x4F4D;&#x6570;&#x636E;&#x683C;&#x5F0F;</span>
+    USART_InitStructure.USART_StopBits = USART_StopBits_1;<span class="hljs-comment">//&#x4E00;&#x4E2A;&#x505C;&#x6B62;&#x4F4D;</span>
+    USART_InitStructure.USART_Parity = USART_Parity_No;<span class="hljs-comment">//&#x65E0;&#x5947;&#x5076;&#x6821;&#x9A8C;&#x4F4D;</span>
+    USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;<span class="hljs-comment">//&#x65E0;&#x786C;&#x4EF6;&#x6570;&#x636E;&#x6D41;&#x63A7;&#x5236;</span>
+    USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;    <span class="hljs-comment">//&#x6536;&#x53D1;&#x6A21;&#x5F0F;</span>
+
+    USART_Init(USART1, &amp;USART_InitStructure); <span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;&#x4E32;&#x53E3;1</span>
+    USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);<span class="hljs-comment">//&#x5F00;&#x542F;&#x4E32;&#x53E3;&#x63A5;&#x53D7;&#x4E2D;&#x65AD;</span>
+    USART_Cmd(USART1, ENABLE);                    <span class="hljs-comment">//&#x4F7F;&#x80FD;&#x4E32;&#x53E3;1 </span>
+}
+<span class="hljs-comment">/**
+* USART1&#x53D1;&#x9001;len&#x4E2A;&#x5B57;&#x8282;.
+* buf:&#x53D1;&#x9001;&#x533A;&#x9996;&#x5730;&#x5740;
+* len:&#x53D1;&#x9001;&#x7684;&#x5B57;&#x8282;&#x6570;(&#x4E3A;&#x4E86;&#x548C;&#x672C;&#x4EE3;&#x7801;&#x7684;&#x63A5;&#x6536;&#x5339;&#x914D;,&#x8FD9;&#x91CC;&#x5EFA;&#x8BAE;&#x4E0D;&#x8981;&#x8D85;&#x8FC7;64&#x4E2A;&#x5B57;&#x8282;)
+**/</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">USART1_Send_Data</span><span class="hljs-params">(u8 *buf,u16 len)</span>
+</span>{
+    u16 t;
+    GPIO_SetBits(GPIOC,GPIO_Pin_9);
+<span class="hljs-comment">//  RS485_TX_EN=1;            //&#x8BBE;&#x7F6E;&#x4E3A;&#x53D1;&#x9001;&#x6A21;&#x5F0F;</span>
+    <span class="hljs-keyword">for</span>(t=<span class="hljs-number">0</span>;t&lt;len;t++)        <span class="hljs-comment">//&#x5FAA;&#x73AF;&#x53D1;&#x9001;&#x6570;&#x636E;</span>
+    {           
+        <span class="hljs-keyword">while</span>(USART_GetFlagStatus(USART1,USART_FLAG_TC)==RESET); <span class="hljs-comment">//&#x5FAA;&#x73AF;&#x53D1;&#x9001;,&#x76F4;&#x5230;&#x53D1;&#x9001;&#x5B8C;&#x6BD5;   </span>
+        USART_SendData(USART1,buf[t]); 
+    }     
+    <span class="hljs-keyword">while</span>(USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);        
+    GPIO_ResetBits(GPIOC,GPIO_Pin_9);
+<span class="hljs-comment">//    RS485_TX_EN=0;                //&#x8BBE;&#x7F6E;&#x4E3A;&#x63A5;&#x6536;&#x6A21;&#x5F0F;    </span>
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    Usart1_Init(<span class="hljs-number">9600</span>);<span class="hljs-comment">//&#x4E32;&#x53E3;1&#x6CE2;&#x7279;&#x7387;&#x8BBE;&#x7F6E;&#x4E3A;9600</span>
+    IWDG_Configuration();
+    <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>)
+    {
+        IWDG_ReloadCounter();<span class="hljs-comment">//4s&#x5185;&#x5FC5;&#x987B;&#x5582;&#x72D7;&#x4E0D;&#x7136;&#x590D;&#x4F4D;</span>
+        <span class="hljs-keyword">if</span>(USART1_RX_CNT==<span class="hljs-number">21</span>)<span class="hljs-comment">//&#x6570;&#x636E;&#x63A5;&#x6536;&#x5B8C;&#x6210;</span>
+        {
+            USART1_RX_CNT=<span class="hljs-number">0</span>;<span class="hljs-comment">//&#x6307;&#x9488;&#x590D;&#x4F4D;</span>
+            <span class="hljs-comment">//&#x5C06;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6570;&#x636E;&#x53D1;&#x9001;&#x51FA;&#x53BB;</span>
+            USART1_Send_Data(USART1_RX_BUF,<span class="hljs-number">21</span>);<span class="hljs-comment">//&#x901A;&#x8FC7;&#x4E32;&#x53E3;1&#x5C06;&#x63A5;&#x6536;&#x5230;&#x7684;&#x56FA;&#x5B9A;&#x957F;&#x5EA6;&#x5B57;&#x7B26;&#x53D1;&#x9001;&#x51FA;&#x53BB;            </span>
+        }
+    }
+
+}
+<span class="hljs-comment">/**
+* &#x63A5;&#x6536;&#x6307;&#x5B9A;&#x957F;&#x5EA6;&#x7684;&#x5B57;&#x7B26;&#x4E32;
+* &#x6BD4;&#x5982;&#x63A5;&#x6536;&#x56FA;&#x5B9A;&#x5927;&#x5C0F;&#x4E3A;21&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x5B57;&#x7B26;&#x4E32;
+**/</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">USART1_IRQHandler</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>                    <span class="hljs-comment">//&#x4E32;&#x53E3;1&#x4E2D;&#x65AD;&#x670D;&#x52A1;&#x7A0B;&#x5E8F;</span>
+</span>{
+    u8 Res;
+    <span class="hljs-keyword">if</span>(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET) 
+        {
+            Res =USART_ReceiveData(USART1);    <span class="hljs-comment">//&#x8BFB;&#x53D6;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6570;&#x636E;     </span>
+            <span class="hljs-keyword">if</span>(USART1_RX_CNT&lt;<span class="hljs-number">21</span>)<span class="hljs-comment">//&#x5BF9;&#x4E8E;&#x63A5;&#x6536;&#x6307;&#x5B9A;&#x957F;&#x5EA6;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span>
+            {
+                USART1_RX_BUF[USART1_RX_CNT]=Res;        <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x63A5;&#x6536;&#x5230;&#x7684;&#x503C;    </span>
+                USART1_RX_CNT++;                                        <span class="hljs-comment">//&#x63A5;&#x6536;&#x6570;&#x636E;&#x589E;&#x52A0;1 </span>
+            }             
+     }
+         <span class="hljs-comment">//&#x6EA2;&#x51FA;-&#x5982;&#x679C;&#x53D1;&#x751F;&#x6EA2;&#x51FA;&#x9700;&#x8981;&#x5148;&#x8BFB;SR,&#x518D;&#x8BFB;DR&#x5BC4;&#x5B58;&#x5668;&#x5219;&#x53EF;&#x6E05;&#x9664;&#x4E0D;&#x65AD;&#x5165;&#x4E2D;&#x65AD;&#x7684;&#x95EE;&#x9898;</span>
+    <span class="hljs-keyword">if</span>(USART_GetFlagStatus(USART1,USART_FLAG_ORE) == SET)
+    {
+        USART_ReceiveData(USART1);
+        USART_ClearFlag(USART1,USART_FLAG_ORE);
+    }
+     USART_ClearFlag(UART1,USART_IT_RXNE); <span class="hljs-comment">//&#x4E00;&#x5B9A;&#x8981;&#x6E05;&#x9664;&#x63A5;&#x6536;&#x4E2D;&#x65AD;</span>
+}
+<span class="hljs-comment">/*===============================================================================
+Copyright:
+Version:
+Author:    
+Date: 2017/11/3
+Description:&#x914D;&#x7F6E;&#x72EC;&#x7ACB;&#x770B;&#x95E8;&#x72D7;&#x521D;&#x59CB;&#x5316;&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x4E3B;&#x51FD;&#x6570;&#x4E2D;&#x8FD0;&#x884C;IWDG_ReloadCounter&#x8FDB;&#x884C;&#x5582;&#x72D7;
+    &#x4E3B;&#x51FD;&#x6570;&#x5FC5;&#x987B;&#x5728;4s&#x5185;&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x5582;&#x72D7;&#x4E0D;&#x7136;&#x7CFB;&#x7EDF;&#x4F1A;&#x590D;&#x4F4D;
+revise Description:
+===============================================================================*/</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">IWDG_Configuration</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> 
+</span>{
+     <span class="hljs-comment">/* &#x5199;&#x5165;0x5555,&#x7528;&#x4E8E;&#x5141;&#x8BB8;&#x72D7;&#x72D7;&#x5BC4;&#x5B58;&#x5668;&#x5199;&#x5165;&#x529F;&#x80FD; */</span>
+    IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable); 
+     <span class="hljs-comment">/* &#x72D7;&#x72D7;&#x65F6;&#x949F;&#x5206;&#x9891;,40K/256=156HZ(6.4ms)*/</span>  
+    IWDG_SetPrescaler(IWDG_Prescaler_256);    <span class="hljs-comment">/* &#x5582;&#x72D7;&#x65F6;&#x95F4; 5s/6.4MS=781 .&#x6CE8;&#x610F;&#x4E0D;&#x80FD;&#x5927;&#x4E8E;0xfff*/</span>  
+    IWDG_SetReload(<span class="hljs-number">781</span>);<span class="hljs-comment">//781&#xFF08;5s&#x65F6;&#x95F4;&#xFF09;</span>
+    IWDG_SetReload(<span class="hljs-number">3125</span>);<span class="hljs-comment">//781&#xFF08;20s&#x65F6;&#x95F4;&#xFF09;</span>
+    IWDG_Enable();<span class="hljs-comment">//&#x542F;&#x7528;&#x5B9A;&#x65F6;&#x5668;</span>
+    IWDG_ReloadCounter();
+}
+</code></pre>
+<h2 id="&#x4E8C;&#x3001;&#x4E32;&#x53E3;&#x4E8C;&#x7684;&#x914D;&#x7F6E;">&#x4E8C;&#x3001;&#x4E32;&#x53E3;&#x4E8C;&#x7684;&#x914D;&#x7F6E;</h2>
+<ul>
+<li>&#xFF08;&#x521D;&#x59CB;&#x5316;+&#x4E2D;&#x65AD;&#x914D;&#x7F6E;+&#x4E2D;&#x65AD;&#x63A5;&#x6536;&#x51FD;&#x6570;&#xFF09;</li>
+</ul>
+<pre><code class="lang-C"><span class="hljs-comment">/*===============================================================================
+Copyright:
+Version:
+Author:    
+Date: 2017/11/3
+Description:
+    &#x51FD;&#x6570;&#x529F;&#x80FD;&#x662F;&#x5C06;&#x63A5;&#x6536;&#x56FA;&#x5B9A;&#x957F;&#x5EA6;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E76;&#x5C06;&#x63A5;&#x6536;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x901A;&#x8FC7;&#x4E32;&#x53E3;&#x53D1;&#x9001;&#x51FA;&#x53BB;
+revise Description:
+===============================================================================*/</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;stm32f10x_usart.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;stm32f10x.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;stm32f10x_iwdg.h&quot;</span></span>
+
+
+u8 USART2_RX_BUF[<span class="hljs-number">250</span>]; 
+u8 USART2_RX_CNT=<span class="hljs-number">0</span>;
+u16 USART2_RX_STA=<span class="hljs-number">0</span>;       <span class="hljs-comment">//&#x63A5;&#x6536;&#x72B6;&#x6001;&#x6807;&#x8BB0;    </span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Usart2_Init</span><span class="hljs-params">(u32 bound)</span>
+</span>{  
+    GPIO_InitTypeDef GPIO_InitStructure;
+    USART_InitTypeDef USART_InitStructure;
+    NVIC_InitTypeDef NVIC_InitStructure;
+    <span class="hljs-comment">//|RCC_APB2Periph_AFIO</span>
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);<span class="hljs-comment">//&#x4F7F;&#x80FD;GPIOA&#x65F6;&#x949F;</span>
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2,ENABLE);<span class="hljs-comment">//&#x4F7F;&#x80FD;USART2&#x65F6;&#x949F;</span>
+
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;    <span class="hljs-comment">//PA2</span>
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;    <span class="hljs-comment">//&#x590D;&#x7528;&#x63A8;&#x633D;</span>
+    GPIO_Init(GPIOA, &amp;GPIO_InitStructure);
+
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;<span class="hljs-comment">//PA3</span>
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING; <span class="hljs-comment">//&#x6D6E;&#x7A7A;&#x8F93;&#x5165;</span>
+    GPIO_Init(GPIOA, &amp;GPIO_InitStructure);  
+
+    RCC_APB1PeriphResetCmd(RCC_APB1Periph_USART2,ENABLE);<span class="hljs-comment">//&#x590D;&#x4F4D;&#x4E32;&#x53E3;2</span>
+    RCC_APB1PeriphResetCmd(RCC_APB1Periph_USART2,DISABLE);<span class="hljs-comment">//&#x505C;&#x6B62;&#x590D;&#x4F4D;</span>
+
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);    <span class="hljs-comment">//&#x8BBE;&#x7F6E;NVIC&#x4E2D;&#x65AD;&#x5206;&#x7EC4;2:2&#x4F4D;&#x62A2;&#x5360;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;2&#x4F4D;&#x54CD;&#x5E94;&#x4F18;&#x5148;&#x7EA7;   0-3;</span>
+    NVIC_InitStructure.NVIC_IRQChannel = USART2_IRQn; <span class="hljs-comment">//&#x4F7F;&#x80FD;&#x4E32;&#x53E3;2&#x4E2D;&#x65AD;</span>
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = <span class="hljs-number">3</span>; <span class="hljs-comment">//&#x5148;&#x5360;&#x4F18;&#x5148;&#x7EA7;2&#x7EA7;</span>
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = <span class="hljs-number">3</span>; <span class="hljs-comment">//&#x4ECE;&#x4F18;&#x5148;&#x7EA7;2&#x7EA7;</span>
+    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE; <span class="hljs-comment">//&#x4F7F;&#x80FD;&#x5916;&#x90E8;&#x4E2D;&#x65AD;&#x901A;&#x9053;</span>
+    NVIC_Init(&amp;NVIC_InitStructure); <span class="hljs-comment">//&#x6839;&#x636E;NVIC_InitStruct&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x53C2;&#x6570;&#x521D;&#x59CB;&#x5316;&#x5916;&#x8BBE;NVIC&#x5BC4;&#x5B58;&#x5668;</span>
+
+    USART_InitStructure.USART_BaudRate = bound;<span class="hljs-comment">//&#x6CE2;&#x7279;&#x7387;&#x8BBE;&#x7F6E;</span>
+    USART_InitStructure.USART_WordLength = USART_WordLength_8b;<span class="hljs-comment">//8&#x4F4D;&#x6570;&#x636E;&#x957F;&#x5EA6;</span>
+    USART_InitStructure.USART_StopBits = USART_StopBits_1;<span class="hljs-comment">//&#x4E00;&#x4E2A;&#x505C;&#x6B62;&#x4F4D;</span>
+    USART_InitStructure.USART_Parity = USART_Parity_No;<span class="hljs-comment">///&#x5947;&#x5076;&#x6821;&#x9A8C;&#x4F4D;</span>
+    USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;<span class="hljs-comment">//&#x65E0;&#x786C;&#x4EF6;&#x6570;&#x636E;&#x6D41;&#x63A7;&#x5236;</span>
+    USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;<span class="hljs-comment">//&#x6536;&#x53D1;&#x6A21;&#x5F0F;</span>
+
+    USART_Init(USART2, &amp;USART_InitStructure); ; <span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;&#x4E32;&#x53E3;</span>
+    USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);<span class="hljs-comment">//&#x5F00;&#x542F;&#x4E2D;&#x65AD;</span>
+    USART_Cmd(USART2, ENABLE);                    <span class="hljs-comment">//&#x4F7F;&#x80FD;&#x4E32;&#x53E3; </span>
+
+}
+<span class="hljs-comment">/**
+* USART2&#x53D1;&#x9001;len&#x4E2A;&#x5B57;&#x8282;.
+* buf:&#x53D1;&#x9001;&#x533A;&#x9996;&#x5730;&#x5740;
+* len:&#x53D1;&#x9001;&#x7684;&#x5B57;&#x8282;&#x6570;(&#x4E3A;&#x4E86;&#x548C;&#x672C;&#x4EE3;&#x7801;&#x7684;&#x63A5;&#x6536;&#x5339;&#x914D;,&#x8FD9;&#x91CC;&#x5EFA;&#x8BAE;&#x4E0D;&#x8981;&#x8D85;&#x8FC7;64&#x4E2A;&#x5B57;&#x8282;)
+**/</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">USART2_Send_Data</span><span class="hljs-params">(u8 *buf,u16 len)</span>
+</span>{
+    u16 t;
+      <span class="hljs-keyword">for</span>(t=<span class="hljs-number">0</span>;t&lt;len;t++)        <span class="hljs-comment">//&#x5FAA;&#x73AF;&#x53D1;&#x9001;&#x6570;&#x636E;</span>
+    {           
+        <span class="hljs-keyword">while</span>(USART_GetFlagStatus(USART2, USART_FLAG_TC) == RESET);      
+        USART_SendData(USART2,buf[t]);
+    }     
+    <span class="hljs-keyword">while</span>(USART_GetFlagStatus(USART2, USART_FLAG_TC) == RESET);          
+}
+<span class="hljs-comment">/**
+* &#x8FD9;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x63A5;&#x6536;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4E0B;&#x9762;main&#x51FD;&#x6570;&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x7528;
+* USART2&#x67E5;&#x8BE2;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6570;&#x636E;
+* buf:&#x63A5;&#x6536;&#x7F13;&#x5B58;&#x9996;&#x5730;&#x5740;
+* len:&#x8BFB;&#x5230;&#x7684;&#x6570;&#x636E;&#x957F;&#x5EA6;
+**/</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">USART2_Receive_Data</span><span class="hljs-params">(u8 *buf)</span>
+</span>{
+    u8 rxlen=USART2_RX_CNT;
+    u8 i=<span class="hljs-number">0</span>;
+    delay_ms(<span class="hljs-number">10</span>);        <span class="hljs-comment">//&#x7B49;&#x5F85;10ms,&#x8FDE;&#x7EED;&#x8D85;&#x8FC7;10ms&#x6CA1;&#x6709;&#x63A5;&#x6536;&#x5230;&#x4E00;&#x4E2A;&#x6570;&#x636E;,&#x5219;&#x8BA4;&#x4E3A;&#x63A5;&#x6536;&#x7ED3;&#x675F;</span>
+    <span class="hljs-keyword">while</span>(rxlen!=USART2_RX_CNT)
+    {
+        rxlen=USART2_RX_CNT;
+        delay_ms(<span class="hljs-number">10</span>);
+    }
+        <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;(USART2_RX_CNT);i++)
+        {
+            buf[i] = USART2_RX_BUF[i];    
+            USART2_RX_BUF[i] = <span class="hljs-number">0</span>;
+        }        
+        USART2_RX_CNT=<span class="hljs-number">0</span>;        <span class="hljs-comment">//&#x6E05;&#x96F6;</span>
+
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    Usart2_Init(<span class="hljs-number">9600</span>);<span class="hljs-comment">//&#x4E32;&#x53E3;1&#x6CE2;&#x7279;&#x7387;&#x8BBE;&#x7F6E;&#x4E3A;9600</span>
+    <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>)
+    {
+        <span class="hljs-keyword">if</span>(USART2_RX_STA)<span class="hljs-comment">//&#x6570;&#x636E;&#x63A5;&#x6536;&#x5B8C;&#x6210;</span>
+        {
+            USART2_RX_STA=<span class="hljs-number">0</span>;            
+            <span class="hljs-comment">//&#x5C06;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6570;&#x636E;&#x53D1;&#x9001;&#x51FA;&#x53BB;</span>
+            USART2_Send_Data(USART2_RX_BUF,USART2_RX_CNT);<span class="hljs-comment">//&#x901A;&#x8FC7;&#x4E32;&#x53E3;1&#x5C06;&#x63A5;&#x6536;&#x5230;&#x7684;&#x56FA;&#x5B9A;&#x957F;&#x5EA6;&#x5B57;&#x7B26;&#x53D1;&#x9001;&#x51FA;&#x53BB;    </span>
+            USART2_RX_CNT=<span class="hljs-number">0</span>;<span class="hljs-comment">//&#x6307;&#x9488;&#x590D;&#x4F4D;</span>
+        }
+    }    
+}
+
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">USART2_IRQHandler</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    u8 res;        
+     <span class="hljs-keyword">if</span>(USART_GetITStatus(USART2, USART_IT_RXNE) != RESET) <span class="hljs-comment">//&#x63A5;&#x6536;&#x5230;&#x6570;&#x636E;</span>
+    {          
+        res =USART_ReceiveData(USART2);     <span class="hljs-comment">//&#x8BFB;&#x53D6;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6570;&#x636E;        </span>
+        <span class="hljs-keyword">if</span>(USART2_RX_STA==<span class="hljs-number">0</span>)
+        {
+            USART2_RX_BUF[USART2_RX_CNT] = res;        <span class="hljs-comment">//&#x8BB0;&#x5F55;&#x63A5;&#x6536;&#x5230;&#x7684;&#x503C;    </span>
+            <span class="hljs-comment">//&#x5F53;&#x6570;&#x636E;&#x7ED3;&#x5C3E;&#x6536;&#x5230;0xA0&#x548C;0xA1&#x4EE3;&#x8868;&#x6570;&#x636E;&#x63A5;&#x6536;&#x5B8C;&#x6210;&#xFF0C;&#x662F;&#x4E00;&#x4E32;&#x5B8C;&#x6574;&#x7684;&#x6570;&#x636E;</span>
+            <span class="hljs-keyword">if</span>(USART2_RX_BUF[USART2_RX_CNT<span class="hljs-number">-1</span>]==<span class="hljs-number">0xA0</span>&amp;&amp;USART2_RX_BUF[USART2_RX_CNT]==<span class="hljs-number">0xA1</span>)
+                USART2_RX_STA=<span class="hljs-number">1</span>;<span class="hljs-comment">//&#x8868;&#x793A;&#x63A5;&#x6536;&#x6570;&#x636E;&#x7ED3;&#x675F;</span>
+            USART2_RX_CNT++;                        <span class="hljs-comment">//&#x63A5;&#x6536;&#x6570;&#x636E;&#x589E;&#x52A0;1 </span>
+        }
+        } 
+    }  
+    <span class="hljs-comment">//&#x6EA2;&#x51FA;-&#x5982;&#x679C;&#x53D1;&#x751F;&#x6EA2;&#x51FA;&#x9700;&#x8981;&#x5148;&#x8BFB;SR,&#x518D;&#x8BFB;DR&#x5BC4;&#x5B58;&#x5668;&#x5219;&#x53EF;&#x6E05;&#x9664;&#x4E0D;&#x65AD;&#x5165;&#x4E2D;&#x65AD;&#x7684;&#x95EE;&#x9898;</span>
+    <span class="hljs-keyword">if</span>(USART_GetFlagStatus(USART2,USART_FLAG_ORE) == SET)
+    {
+        USART_ReceiveData(USART2);
+        USART_ClearFlag(USART2,USART_FLAG_ORE);
+    }
+     USART_ClearFlag(UART2,USART_IT_RXNE); <span class="hljs-comment">//&#x4E00;&#x5B9A;&#x8981;&#x6E05;&#x9664;&#x63A5;&#x6536;&#x4E2D;&#x65AD;    </span>
+}
+</code></pre>
+<h2 id="&#x4E09;&#x3001;&#x4E32;&#x53E3;&#x4E09;&#x7684;&#x914D;&#x7F6E;">&#x4E09;&#x3001;&#x4E32;&#x53E3;&#x4E09;&#x7684;&#x914D;&#x7F6E;</h2>
+<ul>
+<li>&#xFF08;&#x521D;&#x59CB;&#x5316;+&#x4E2D;&#x65AD;&#x914D;&#x7F6E;+&#x4E2D;&#x65AD;&#x63A5;&#x6536;&#x51FD;&#x6570;&#xFF09;</li>
+</ul>
+<pre><code class="lang-C"><span class="hljs-comment">/*===============================================================================
+Copyright:
+Version:
+Author:    
+Date: 2017/11/3
+Description:
+    &#x51FD;&#x6570;&#x529F;&#x80FD;&#x662F;&#x5C06;&#x63A5;&#x6536;&#x56FA;&#x5B9A;&#x957F;&#x5EA6;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E76;&#x5C06;&#x63A5;&#x6536;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x901A;&#x8FC7;&#x4E32;&#x53E3;&#x53D1;&#x9001;&#x51FA;&#x53BB;
+    &#x901A;&#x8FC7;&#x6EF4;&#x7B54;&#x5B9A;&#x65F6;&#x5668;&#x65B9;&#x5F0F;&#x83B7;&#x53D6;&#x6570;&#x636E;
+revise Description:
+===============================================================================*/</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;stm32f10x_usart.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;stm32f10x.h&quot;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> USART3_TIMEOUT_Setting 800  <span class="hljs-comment">//(ms)</span></span>
+
+u8 USART3_RX_BUF[<span class="hljs-number">250</span>]; 
+u16 USART3_RX_CNT=<span class="hljs-number">0</span>;
+u16 USART3_RX_TIMEOUT=<span class="hljs-number">0</span>;       <span class="hljs-comment">//&#x63A5;&#x6536;&#x72B6;&#x6001;&#x6807;&#x8BB0;    </span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Timer1CountInitial</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">USART3_Init</span><span class="hljs-params">(u32 baud)</span>   
+</span>{  
+    USART_InitTypeDef USART_InitStructure;  
+    NVIC_InitTypeDef NVIC_InitStructure;   
+    GPIO_InitTypeDef GPIO_InitStructure;    <span class="hljs-comment">//&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x7ED3;&#x6784;&#x4F53;&#x53D8;&#x91CF;&#xFF0C;&#x7528;&#x6765;&#x521D;&#x59CB;&#x5316;GPIO  </span>
+    <span class="hljs-comment">//&#x4F7F;&#x80FD;&#x4E32;&#x53E3;&#x7684;RCC&#x65F6;&#x949F;  </span>
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB , ENABLE); <span class="hljs-comment">//&#x4F7F;&#x80FD;UART3&#x6240;&#x5728;GPIOB&#x7684;&#x65F6;&#x949F;  </span>
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);  
+
+    <span class="hljs-comment">//&#x4E32;&#x53E3;&#x4F7F;&#x7528;&#x7684;GPIO&#x53E3;&#x914D;&#x7F6E;  </span>
+    <span class="hljs-comment">// Configure USART3 Rx (PB.11) as input floating    </span>
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_11;  
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;  
+    GPIO_Init(GPIOB, &amp;GPIO_InitStructure);  
+
+    <span class="hljs-comment">// Configure USART3 Tx (PB.10) as alternate function push-pull  </span>
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;  
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;  
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;  
+    GPIO_Init(GPIOB, &amp;GPIO_InitStructure);  
+
+    <span class="hljs-comment">//&#x914D;&#x7F6E;&#x4E32;&#x53E3;  </span>
+    USART_InitStructure.USART_BaudRate = baud;  
+    USART_InitStructure.USART_WordLength = USART_WordLength_8b;  
+    USART_InitStructure.USART_StopBits = USART_StopBits_1;  
+    USART_InitStructure.USART_Parity = USART_Parity_No;  
+    USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;  
+    USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;  
+
+
+    <span class="hljs-comment">// Configure USART3   </span>
+    USART_Init(USART3, &amp;USART_InitStructure);<span class="hljs-comment">//&#x914D;&#x7F6E;&#x4E32;&#x53E3;3 </span>
+    <span class="hljs-comment">// Enable USART3 Receive interrupts &#x4F7F;&#x80FD;&#x4E32;&#x53E3;&#x63A5;&#x6536;&#x4E2D;&#x65AD;  </span>
+    USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);  
+    <span class="hljs-comment">// Enable the USART3   </span>
+    USART_Cmd(USART3, ENABLE);<span class="hljs-comment">//&#x4F7F;&#x80FD;&#x4E32;&#x53E3;3  </span>
+
+    <span class="hljs-comment">//&#x4E32;&#x53E3;&#x4E2D;&#x65AD;&#x914D;&#x7F6E;  </span>
+    <span class="hljs-comment">//Configure the NVIC Preemption Priority Bits     </span>
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);  
+
+    <span class="hljs-comment">// Enable the USART3 Interrupt   </span>
+    NVIC_InitStructure.NVIC_IRQChannel = USART3_IRQn;   
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=<span class="hljs-number">3</span> ;<span class="hljs-comment">//&#x62A2;&#x5360;&#x4F18;&#x5148;&#x7EA7;3</span>
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = <span class="hljs-number">2</span>;        <span class="hljs-comment">//&#x5B50;&#x4F18;&#x5148;&#x7EA7;3</span>
+    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;  
+    NVIC_Init(&amp;NVIC_InitStructure);       
+
+} 
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">USART3_Sned_Char</span><span class="hljs-params">(u8 temp)</span>        
+</span>{  
+    USART_SendData(USART3,(u8)temp);      
+    <span class="hljs-keyword">while</span>(USART_GetFlagStatus(USART3,USART_FLAG_TXE)==RESET);  
+
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">USART3_Sned_Char_Buff</span><span class="hljs-params">(u8 buf[],u32 len)</span>  
+</span>{  
+    u32 i;  
+    <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;len;i++)  
+    USART3_Sned_Char(buf[i]);  
+
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    Timer1CountInitial();
+    Usart3_Init(<span class="hljs-number">9600</span>);<span class="hljs-comment">//&#x4E32;&#x53E3;1&#x6CE2;&#x7279;&#x7387;&#x8BBE;&#x7F6E;&#x4E3A;9600</span>
+    <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>)
+    {
+        <span class="hljs-keyword">if</span>(USART3_RX_TIMEOUT==USART3_TIMEOUT_Setting)
+        {            
+            USART3_RX_TIMEOUT=<span class="hljs-number">0</span>;
+            USART3_Sned_Char_Buff(USART3_RX_BUF,USART3_RX_CNT);<span class="hljs-comment">//&#x5C06;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6570;&#x636E;&#x53D1;&#x9001;&#x51FA;&#x53BB;</span>
+            USART3_RX_CNT=<span class="hljs-number">0</span>;
+        }
+
+    }    
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">USART3_IRQHandler</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>                    <span class="hljs-comment">//&#x4E32;&#x53E3;3&#x4E2D;&#x65AD;&#x670D;&#x52A1;&#x7A0B;&#x5E8F;</span>
+</span>{
+    u8 Res;
+    <span class="hljs-keyword">if</span>(USART_GetITStatus(USART3, USART_IT_RXNE) != RESET)  
+    {    
+        USART3_RX_TIMEOUT=<span class="hljs-number">0</span>;
+        USART3_RX_BUF[USART3_RX_CNT++] = USART_ReceiveData(USART3);    <span class="hljs-comment">//&#x8BFB;&#x53D6;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6570;&#x636E;        </span>
+    }
+    <span class="hljs-comment">//&#x6EA2;&#x51FA;-&#x5982;&#x679C;&#x53D1;&#x751F;&#x6EA2;&#x51FA;&#x9700;&#x8981;&#x5148;&#x8BFB;SR,&#x518D;&#x8BFB;DR&#x5BC4;&#x5B58;&#x5668;&#x5219;&#x53EF;&#x6E05;&#x9664;&#x4E0D;&#x65AD;&#x5165;&#x4E2D;&#x65AD;&#x7684;&#x95EE;&#x9898;</span>
+    <span class="hljs-keyword">if</span>(USART_GetFlagStatus(USART3,USART_FLAG_ORE) == SET)
+    {
+        USART_ReceiveData(USART3);
+        USART_ClearFlag(USART3,USART_FLAG_ORE);
+    }
+    USART_ClearITPendingBit(USART3, USART_IT_RXNE);
+
+}
+
+<span class="hljs-comment">//&#x653E;&#x5230;&#x4E3B;&#x51FD;&#x6570;&#x7684;&#x521D;&#x59CB;&#x5316;&#x4E2D;&#x521D;&#x59CB;&#x5316;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Timer1CountInitial</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    <span class="hljs-comment">//&#x5B9A;&#x65F6;=36000/72000x2=0.001s=1ms;</span>
+        TIM_TimeBaseInitTypeDef    TIM_TimeBaseStructure;
+        <span class="hljs-comment">///////////////////////////////////////////////////////////////</span>
+        RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM1, ENABLE);
+
+        TIM_TimeBaseStructure.TIM_Period = <span class="hljs-number">100</span><span class="hljs-number">-1</span>;<span class="hljs-comment">//&#x81EA;&#x52A8;&#x91CD;&#x88C5;&#x503C;&#xFF08;&#x6B64;&#x65F6;&#x6539;&#x4E3A;10ms&#xFF09;</span>
+        TIM_TimeBaseStructure.TIM_Prescaler = <span class="hljs-number">7200</span><span class="hljs-number">-1</span>;<span class="hljs-comment">//&#x65F6;&#x949F;&#x9884;&#x5206;&#x9891;</span>
+        TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;<span class="hljs-comment">//&#x5411;&#x4E0A;&#x8BA1;&#x6570;</span>
+        TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;        <span class="hljs-comment">//&#x65F6;&#x949F;&#x5206;&#x9891;1</span>
+        TIM_TimeBaseStructure.TIM_RepetitionCounter = <span class="hljs-number">0</span>;            
+        TIM_TimeBaseInit(TIM1,&amp;TIM_TimeBaseStructure);
+
+        TIM_ClearFlag(TIM1,TIM_FLAG_Update);
+        TIM_ITConfig(TIM1,TIM_IT_Update,ENABLE);  
+        TIM_Cmd(TIM1, ENABLE);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">TIM1_UP_IRQHandler</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{        
+    <span class="hljs-comment">//TIM_TimeBaseStructure.TIM_Period = 100-1;//&#x81EA;&#x52A8;&#x91CD;&#x88C5;&#x503C;&#xFF08;&#x6B64;&#x65F6;&#x6539;&#x4E3A;10ms&#xFF09;</span>
+    <span class="hljs-keyword">if</span> (TIM_GetITStatus(TIM1, TIM_IT_Update) != RESET)
+    {  
+        <span class="hljs-keyword">if</span>(USART3_RX_TIMEOUT&lt;USART3_TIMEOUT_Setting)
+                USART3_RX_TIMEOUT++;        
+    }
+    TIM_ClearITPendingBit(TIM1,TIM_IT_Update);
+}
+</code></pre>
+<h2 id="&#x56DB;&#x3001;&#x4E32;&#x53E3;&#x56DB;&#x7684;&#x914D;&#x7F6E;">&#x56DB;&#x3001;&#x4E32;&#x53E3;&#x56DB;&#x7684;&#x914D;&#x7F6E;</h2>
+<ul>
+<li>&#xFF08;&#x521D;&#x59CB;&#x5316;+&#x4E2D;&#x65AD;&#x914D;&#x7F6E;+&#x4E2D;&#x65AD;&#x63A5;&#x6536;&#x51FD;&#x6570;&#xFF09;</li>
+</ul>
+<blockquote>
+<p> &#x6CE8;&#x610F;&#x4E32;&#x53E3;&#x56DB;&#x7684;&#x4E2D;&#x65AD;&#x4F18;&#x5148;&#x7EA7;&#x6CA1;&#x6709;&#x8D34;&#x51FA;&#x6765;&#xFF0C;&#x548C;&#x524D;&#x9762;&#x7684;&#x4E09;&#x4E2A;&#x4E00;&#x6837;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x4E3A;&#x4E86;&#x4E0D;&#x5360;&#x7528;&#x8FC7;&#x591A;&#x7684;&#x7BC7;&#x5E45;&#x5C31;&#x4E0D;&#x8D34;&#x4E2D;&#x65AD;&#x4F18;&#x5148;&#x7EA7;&#x914D;&#x7F6E;&#x4E86;</p>
+</blockquote>
+<pre><code class="lang-C"><span class="hljs-comment">/*===============================================================================
+Copyright:
+Version:
+Author:    
+Date: 2017/11/3
+Description:
+    &#x51FD;&#x6570;&#x529F;&#x80FD;&#x662F;&#x5C06;&#x63A5;&#x6536;&#x56FA;&#x5B9A;&#x957F;&#x5EA6;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E76;&#x5C06;&#x63A5;&#x6536;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x901A;&#x8FC7;&#x4E32;&#x53E3;&#x53D1;&#x9001;&#x51FA;&#x53BB;
+    &#x901A;&#x8FC7;&#x6EF4;&#x7B54;&#x5B9A;&#x65F6;&#x5668;&#x65B9;&#x5F0F;&#x83B7;&#x53D6;&#x6570;&#x636E;
+revise Description:
+===============================================================================*/</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;stm32f10x_usart.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;stm32f10x.h&quot;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> USART4_TIMEOUT_Setting 800  <span class="hljs-comment">//(ms)</span></span>
+
+u8 USART4_RX_BUF[<span class="hljs-number">250</span>]; 
+u16 USART4_RX_CNT=<span class="hljs-number">0</span>;
+u16 USART2_RX_STA=<span class="hljs-number">0</span>;       <span class="hljs-comment">//&#x63A5;&#x6536;&#x72B6;&#x6001;&#x6807;&#x8BB0;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Systick_delay_init</span><span class="hljs-params">(u8 SYSCLK)</span></span>;
+<span class="hljs-function">u8 <span class="hljs-title">virtual_delay</span><span class="hljs-params">(u32 num,u8 unit)</span></span>;
+
+<span class="hljs-comment">//&#x901A;&#x7528;&#x5F02;&#x6B65;&#x6536;&#x53D1;&#x5668;UART4</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">UART4_Init</span><span class="hljs-params">(u32 bound)</span>
+</span>{
+    USART_InitTypeDef USART_InitStructure;
+    GPIO_InitTypeDef GPIO_InitStructure;
+
+    <span class="hljs-comment">//used for USART3 full remap</span>
+    <span class="hljs-comment">//GPIO_PinRemapConfig(GPIO_FullRemap_USART3, ENABLE);</span>
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB | RCC_APB2Periph_GPIOC | RCC_APB2Periph_AFIO, ENABLE);
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_UART4, ENABLE);<span class="hljs-comment">//for UART4</span>
+
+    <span class="hljs-comment">//Configure RS485_TX_EN PIN</span>
+    GPIO_InitStructure.GPIO_Pin = RS485_TX_EN_PIN;                 <span class="hljs-comment">//PC9&#x7AEF;&#x53E3;&#x914D;&#x7F6E;</span>
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;          <span class="hljs-comment">//&#x63A8;&#x633D;&#x8F93;&#x51FA;</span>
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(RS485_TX_EN_PORT, &amp;GPIO_InitStructure);
+
+    RS485_TX_EN=<span class="hljs-number">0</span>;            <span class="hljs-comment">//&#x8BBE;&#x7F6E;485&#x9ED8;&#x8BA4;&#x4E3A;&#x63A5;&#x6536;&#x6A21;&#x5F0F;</span>
+
+    <span class="hljs-comment">/* Configure USART Tx as alternate function push-pull */</span>
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+    GPIO_Init(GPIOC, &amp;GPIO_InitStructure);
+
+    <span class="hljs-comment">/* Configure USART Rx as input floating */</span>
+    GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_11;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+    GPIO_Init(GPIOC, &amp;GPIO_InitStructure);
+
+
+    USART_InitStructure.USART_BaudRate = bound;
+    USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+    USART_InitStructure.USART_StopBits = USART_StopBits_1;
+    USART_InitStructure.USART_Parity = USART_Parity_No ;
+    USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+    USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
+
+    USART_Init(UART4, &amp;USART_InitStructure);
+    <span class="hljs-comment">//USART_Init(USART3, &amp;USART_InitStructure);</span>
+    <span class="hljs-comment">/* Enable the USART */</span>
+    USART_Cmd(UART4, ENABLE);
+    USART_ITConfig(UART4, USART_IT_RXNE, ENABLE);<span class="hljs-comment">//&#x5F00;&#x542F;&#x4E32;&#x53E3;&#x63A5;&#x53D7;&#x4E2D;&#x65AD;</span>
+    USART_ClearFlag(UART4,USART_FLAG_TC);    
+}
+<span class="hljs-comment">//USART1&#x67E5;&#x8BE2;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6570;&#x636E;</span>
+<span class="hljs-comment">//buf:&#x63A5;&#x6536;&#x7F13;&#x5B58;&#x9996;&#x5730;&#x5740;</span>
+<span class="hljs-comment">//len:&#x8BFB;&#x5230;&#x7684;&#x6570;&#x636E;&#x957F;&#x5EA6;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">UART4_Receive_Data</span><span class="hljs-params">(u8 *buf)</span>
+</span>{
+    u8 rxlen=<span class="hljs-number">21</span>;
+    u8 i=<span class="hljs-number">0</span>;
+    delay_ms(<span class="hljs-number">10</span>);        <span class="hljs-comment">//&#x7B49;&#x5F85;10ms,&#x8FDE;&#x7EED;&#x8D85;&#x8FC7;10ms&#x6CA1;&#x6709;&#x63A5;&#x6536;&#x5230;&#x4E00;&#x4E2A;&#x6570;&#x636E;,&#x5219;&#x8BA4;&#x4E3A;&#x63A5;&#x6536;&#x7ED3;&#x675F;</span>
+
+    RS485_RX_FLAG = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">if</span>((UART4_RX_BUF[<span class="hljs-number">0</span>]==<span class="hljs-number">0x01</span>)&amp;&amp;(UART4_RX_BUF[<span class="hljs-number">1</span>]==<span class="hljs-number">0x03</span>))
+    {
+        <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;rxlen;i++)
+        {
+            buf[i]=UART4_RX_BUF[i];    
+            UART4_RX_BUF[i] = <span class="hljs-number">0</span>;
+        }    
+        RS485_RX_FLAG = <span class="hljs-number">1</span>;
+    }
+        UART4_RX_CNT=<span class="hljs-number">0</span>;        <span class="hljs-comment">//&#x6E05;&#x96F6;</span>
+}
+
+
+<span class="hljs-comment">//USART1&#x53D1;&#x9001;len&#x4E2A;&#x5B57;&#x8282;.</span>
+<span class="hljs-comment">//buf:&#x53D1;&#x9001;&#x533A;&#x9996;&#x5730;&#x5740;</span>
+<span class="hljs-comment">//len:&#x53D1;&#x9001;&#x7684;&#x5B57;&#x8282;&#x6570;(&#x4E3A;&#x4E86;&#x548C;&#x672C;&#x4EE3;&#x7801;&#x7684;&#x63A5;&#x6536;&#x5339;&#x914D;,&#x8FD9;&#x91CC;&#x5EFA;&#x8BAE;&#x4E0D;&#x8981;&#x8D85;&#x8FC7;64&#x4E2A;&#x5B57;&#x8282;)</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">UART4_Send_Data</span><span class="hljs-params">(u8 *buf,u16 len)</span>
+</span>{
+    u16 t;
+    RS485_TX_EN=<span class="hljs-number">1</span>;            <span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x4E3A;&#x53D1;&#x9001;&#x6A21;&#x5F0F;</span>
+    <span class="hljs-keyword">for</span>(t=<span class="hljs-number">0</span>;t&lt;len;t++)        <span class="hljs-comment">//&#x5FAA;&#x73AF;&#x53D1;&#x9001;&#x6570;&#x636E;</span>
+    {           
+        <span class="hljs-keyword">while</span>(USART_GetFlagStatus(UART4,USART_FLAG_TC)==RESET); <span class="hljs-comment">//&#x5FAA;&#x73AF;&#x53D1;&#x9001;,&#x76F4;&#x5230;&#x53D1;&#x9001;&#x5B8C;&#x6BD5;   </span>
+        USART_SendData(UART4,buf[t]); 
+    }     
+    <span class="hljs-keyword">while</span>(USART_GetFlagStatus(UART4, USART_FLAG_TC) == RESET);        
+    RS485_TX_EN=<span class="hljs-number">0</span>;                <span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x4E3A;&#x63A5;&#x6536;&#x6A21;&#x5F0F;    </span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    Systick_delay_init(<span class="hljs-number">72</span>);
+    Usart4_Init(<span class="hljs-number">9600</span>);<span class="hljs-comment">//&#x4E32;&#x53E3;1&#x6CE2;&#x7279;&#x7387;&#x8BBE;&#x7F6E;&#x4E3A;9600</span>
+    <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>)
+    {
+        <span class="hljs-keyword">if</span>(USART2_RX_STA)
+        {
+            <span class="hljs-keyword">if</span>(virtual_delay(USART4_TIMEOUT_Setting,MS))<span class="hljs-comment">//&#x8D85;&#x8FC7;800ms&#x7A7A;&#x95F2;&#x5219;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x6570;&#x636E;</span>
+            {
+                UART4_Send_Data(UART4_RX_BUF,UART4_RX_CNT);
+                USART2_RX_STA=<span class="hljs-number">0</span>;
+                UART4_RX_CNT=<span class="hljs-number">0</span>;                
+            }
+
+        }
+
+    }    
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">UART4_IRQHandler</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>                    <span class="hljs-comment">//UART4 Receive Interrupt </span>
+</span>{
+    u8 Res;
+
+    <span class="hljs-keyword">if</span>(USART_GetITStatus(UART4, USART_IT_RXNE) != RESET)  <span class="hljs-comment">//&#x63A5;&#x6536;&#x4E2D;&#x65AD;(&#x63A5;&#x6536;&#x5230;&#x7684;&#x6570;&#x636E;&#x5FC5;&#x987B;&#x662F;0x0d 0x0a&#x7ED3;&#x5C3E;)</span>
+    {    
+        Res =USART_ReceiveData(UART4);<span class="hljs-comment">//(USART1-&gt;DR);    //&#x8BFB;&#x53D6;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6570;&#x636E;    </span>
+        UART4_RX_BUF[UART4_RX_CNT&amp;<span class="hljs-number">0XFF</span>]=Res;        <span class="hljs-comment">//&#x56DE;&#x4F20;&#x7684;&#x6570;&#x636E;&#x5B58;&#x5165;&#x6570;&#x7EC4;,0X3F&#x9650;&#x5236;&#x4E3A;64&#x4E2A;&#x6570;&#x503C;</span>
+            UART4_RX_CNT++;
+        USART2_RX_STA=<span class="hljs-number">1</span>;    
+    }
+
+    <span class="hljs-keyword">if</span>( USART_GetITStatus(UART4, USART_IT_TC) == SET )
+    {
+        USART_ClearFlag(UART4, USART_FLAG_TC);
+    }    
+    <span class="hljs-comment">//&#x6EA2;&#x51FA;-&#x5982;&#x679C;&#x53D1;&#x751F;&#x6EA2;&#x51FA;&#x9700;&#x8981;&#x5148;&#x8BFB;SR,&#x518D;&#x8BFB;DR&#x5BC4;&#x5B58;&#x5668;&#x5219;&#x53EF;&#x6E05;&#x9664;&#x4E0D;&#x65AD;&#x5165;&#x4E2D;&#x65AD;&#x7684;&#x95EE;&#x9898;</span>
+    <span class="hljs-keyword">if</span>(USART_GetFlagStatus(UART4,USART_FLAG_ORE) == SET)
+    {
+        USART_ReceiveData(UART4);
+        USART_ClearFlag(UART4,USART_FLAG_ORE);
+    }
+<span class="hljs-comment">//    USART_ITConfig(UART4, USART_IT_RXNE, DISABLE);//&#x4E34;&#x65F6;&#x5173;&#x95ED;&#x63A5;&#x6536;&#x4E2D;&#x65AD;</span>
+    USART_ClearFlag(UART4,USART_IT_RXNE); <span class="hljs-comment">//&#x4E00;&#x5B9A;&#x8981;&#x6E05;&#x9664;&#x63A5;&#x6536;&#x4E2D;&#x65AD;</span>
+
+} 
+
+<span class="hljs-comment">//&#x521D;&#x59CB;&#x5316;&#x5EF6;&#x8FDF;&#x51FD;&#x6570;</span>
+<span class="hljs-comment">//SYSTICK&#x7684;&#x65F6;&#x949F;&#x56FA;&#x5B9A;&#x4E3A;HCLK&#x65F6;&#x949F;&#x7684;1/8</span>
+<span class="hljs-comment">//SYSCLK:&#x7CFB;&#x7EDF;&#x65F6;&#x949F;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Systick_delay_init</span><span class="hljs-params">(u8 SYSCLK)</span>
+</span>{
+    SysTick-&gt;CTRL&amp;=<span class="hljs-number">0xfffffffb</span>;<span class="hljs-comment">//bit2&#x6E05;&#x7A7A;,&#x9009;&#x62E9;&#x5916;&#x90E8;&#x65F6;&#x949F;  HCLK/8</span>
+<span class="hljs-comment">//    SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK_Div8);    //&#x9009;&#x62E9;&#x5916;&#x90E8;&#x65F6;&#x949F;  HCLK/8</span>
+    fac_us=SYSCLK/<span class="hljs-number">8</span>;            
+    fac_ms=(u16)fac_us*<span class="hljs-number">1000</span>;
+}
+<span class="hljs-comment">/*===============================================================================
+Author:peter pan
+Date: 
+Description: &#x67E5;&#x8BE2;&#x5F0F;&#x5206;&#x65F6;&#x6216;&#x53EB;&#x505A;&#x8F6E;&#x8BE2;&#x5F0F;&#xFF08;&#x8FD1;&#x4F3C;&#x5EF6;&#x65F6;&#xFF09;&#x3002;&#x672C;&#x51FD;&#x6570;&#x662F;&#x7528;&#x4E8E;&#x6267;&#x884C;&#x9AD8;&#x6548;&#x7387;&#x573A;&#x5408;&#x7684;&#x67E5;&#x8BE2;&#x5EF6;&#x65F6;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x4E2A;for or while &#x5FAA;&#x73AF;&#x4E2D;&#x53EA;&#x80FD;&#x7528;&#x4E00;&#x6B21;&#x3002;
+revise Description:  
+@ num :    //&#x5206;&#x65F6;&#x67E5;&#x8BE2;&#x7684;&#x5468;&#x671F;&#x8BA1;&#x6570;&#x503C;    
+@ unit :    //&#x5206;&#x65F6;&#x67E5;&#x8BE2;&#x7684;&#x5468;&#x671F;&#x5355;&#x4F4D; 
+    @@ParaValue &#xFF1A; 
+        MS    //&#x5468;&#x671F;&#x5355;&#x4F4D;&#x4E3A;MS&#x6BEB;&#x79D2;&#x7EA7;
+        US    //&#x5468;&#x671F;&#x5355;&#x4F4D;&#x4E3A;US&#x5FAE;&#x79D2;&#x7EA7;
+@ virtual_delay_status :    //&#x9759;&#x6001;&#x53D8;&#x91CF;
+    @@ParaValue &#xFF1A; 
+        SET    //SYSTICK&#x6B63;&#x5728;&#x5360;&#x7528;&#x4E2D;&#xFF0C;&#x8BF7;&#x52FF;&#x7528;
+        RESET  //SYSTICK&#x7A7A;&#x95F2;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;
+@ReValue :
+    with zero mean Time non-arrive ,one representative Time arrived ,you can do task;
+##example             if(virtual_delay(1000,MS)) LedFlash();    //1000ms LED&#x95EA;&#x70C1;&#x4E00;&#x4E0B;
+===============================================================================*/</span>
+<span class="hljs-function">u8 <span class="hljs-title">virtual_delay</span><span class="hljs-params">(u32 num,u8 unit)</span>
+</span>{
+    u32 temp;           
+    <span class="hljs-keyword">if</span>(virtual_delay_status==RESET)    <span class="hljs-comment">//  SYSTICK&#x7A7A;&#x95F2;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;</span>
+      {
+          <span class="hljs-keyword">if</span>(unit==MS)
+          {
+                SysTick-&gt;LOAD=(u32)num*Delay_SYSCLK*<span class="hljs-number">125</span>;<span class="hljs-comment">//&#x65F6;&#x95F4;&#x52A0;&#x8F7D;(SysTick-&gt;LOAD&#x4E3A;24bit)</span>
+                SysTick-&gt;VAL =<span class="hljs-number">0x00</span>;           <span class="hljs-comment">//&#x6E05;&#x7A7A;&#x8BA1;&#x6570;&#x5668;</span>
+                SysTick-&gt;CTRL=<span class="hljs-number">0x01</span> ;          <span class="hljs-comment">//&#x5F00;&#x59CB;&#x5012;&#x6570;  </span>
+          }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(unit==US) 
+          {
+                SysTick-&gt;LOAD=num*Delay_SYSCLK/<span class="hljs-number">8</span>; <span class="hljs-comment">//&#x65F6;&#x95F4;&#x52A0;&#x8F7D;               </span>
+                SysTick-&gt;VAL=<span class="hljs-number">0x00</span>;        <span class="hljs-comment">//&#x6E05;&#x7A7A;&#x8BA1;&#x6570;&#x5668;</span>
+                SysTick-&gt;CTRL=<span class="hljs-number">0x01</span> ;      <span class="hljs-comment">//&#x5F00;&#x59CB;&#x5012;&#x6570;     </span>
+          }
+          virtual_delay_status=SET;
+          <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+    <span class="hljs-keyword">else</span> 
+        {        <span class="hljs-comment">//virtual_delay_status==SET SYSTICK&#x88AB;&#x5360;&#x7528;</span>
+
+            temp=SysTick-&gt;CTRL;
+            <span class="hljs-keyword">if</span>(!(temp&amp;<span class="hljs-number">0x01</span>&amp;&amp;!(temp&amp;(<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">16</span>))))<span class="hljs-comment">//&#x7B49;&#x5F85;&#x65F6;&#x95F4;&#x5230;&#x8FBE;   </span>
+            {
+                SysTick-&gt;CTRL=<span class="hljs-number">0x00</span>;       <span class="hljs-comment">//&#x5173;&#x95ED;&#x8BA1;&#x6570;&#x5668;</span>
+                SysTick-&gt;VAL =<span class="hljs-number">0X00</span>;       <span class="hljs-comment">//&#x6E05;&#x7A7A;&#x8BA1;&#x6570;&#x5668;    </span>
+                virtual_delay_status=RESET;    
+                <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+            }<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+}
+</code></pre>
+<p>&#x9644;&#x4E0A;<a href="&#x672C;&#x6587;&#x5730;&#x5740;&#xFF1A;https:/www.cnblogs.com/pertor/p/9488446.html">&#x672C;&#x4EBA;&#x8FD9;&#x7BC7;&#x535A;&#x5BA2;&#x5730;&#x5740;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="STM32复位及通过函数判断是何种条件出发的复位.html" class="navigation navigation-next navigation-unique" aria-label="Next page: STM32复位及通过函数判断是何种条件出发的复位">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"STM32串口通信配置","date":"2018-11-11T17:22:27.000Z","categories":"skill","tags":["C语言","嵌入式"],"level":"1.6.3.1","depth":3,"next":{"title":"STM32复位及通过函数判断是何种条件出发的复位","level":"1.6.3.2","depth":3,"path":"附录/STM32复位及通过函数判断是何种条件出发的复位.md","ref":"./附录/STM32复位及通过函数判断是何种条件出发的复位.md","articles":[]},"previous":{"title":"嵌入式相关笔记","level":"1.6.3","depth":2,"ref":"","articles":[{"title":"STM32串口通信配置","level":"1.6.3.1","depth":3,"path":"附录/STM32串口通信配置.md","ref":"./附录/STM32串口通信配置.md","articles":[]},{"title":"STM32复位及通过函数判断是何种条件出发的复位","level":"1.6.3.2","depth":3,"path":"附录/STM32复位及通过函数判断是何种条件出发的复位.md","ref":"./附录/STM32复位及通过函数判断是何种条件出发的复位.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chinese-video"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"shortName":"mygitbook-1"},"chinese-video":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"深度学习","language":"zh","gitbook":"*","description":"学习笔记"},"file":{"path":"附录/STM32串口通信配置.md","mtime":"2019-03-24T12:37:25.457Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-06T11:42:57.325Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
