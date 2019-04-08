@@ -1,11 +1,3 @@
----
-title: gitbook Introduction
-categories:      
-    gitbook    
-tags: [Introduction]
-date: 2017-1-4 22:55:03
----
-
 # Introduction
 
 $$These$$ articles, Editing by Porter, Focus on DQN, are basically some Learnning notes about study skills and so on. 
