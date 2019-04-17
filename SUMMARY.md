@@ -40,6 +40,7 @@
 * [第三章 深度学习框架学习](./第三章 深度学习框架学习/index.md)
     * [3.1 PyTorch 学习](./第三章 深度学习框架学习/3.1 PyTorch 学习.md)
         * [3.1.2 Pytorch 之MNIST手写字识别分类](./第三章 深度学习框架学习/3.1.2 Pytorch 之MNIST手写字识别分类.md)
+    * [3.2 tensorflow学习笔记.md](./第三章 深度学习框架学习/3.2 tensorflow学习笔记.md)
 
 * [项目开发]()
     * [Library占座小工具使用手册](./第六章 小项目实开发文档/-Library-占座小工具使用手册.md)
