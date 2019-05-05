@@ -19,6 +19,8 @@
     * [1.15 ubuntu下goldendict有道爬虫小程序](./第一章 Linux学习环境相关配置/1.15 ubuntu下goldendict有道爬虫小程序.md)
     * [1.16 ubuntu18升级后部分应用不能中文输入的问题](./第一章 Linux学习环境相关配置/1.16 ubuntu18升级后部分应用不能中文输入的问题.md)
     * [1.17 ubuntu下安装有道词典](./第一章 Linux学习环境相关配置/1.17 ubuntu下安装有道词典.md)
+    * [1.18 opencv 安装](./第一章 Linux学习环境相关配置/1.18 opencv 安装.md)
+    * [1.19 gym_gazabe安装配置](第一章 Linux学习环境相关配置/1.19 gym_gazabe安装配置.md)
     
 * [第二章 深度学习相关基础算法](./第二章 深度学习相关基础算法/index.md)
     * [2.1 马尔科夫链](./第二章 深度学习相关基础算法/2.1 马尔科夫链.md)
@@ -44,6 +46,7 @@
 
 * [第四章 ROS机器人]()
     * [ROS室内仿真环境.md](./第四章 ROS机器人/ROS室内仿真环境.md)
+    * [ros and gazebo and gym_gazebo安装](第四章 ROS机器人/ros and gazebo and gym_gazebo安装.md)
 
 * [项目开发]()
     * [Library占座小工具使用手册](./第六章 小项目实开发文档/-Library-占座小工具使用手册.md)

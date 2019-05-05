@@ -65,6 +65,23 @@ $ git clone https://github.com/DroidAITech/ROS-Academy-for-Beginners.git
 $ cd ~/catkin_ws
 $ rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
 ```
+如果安装失败,出现如下的错误信息：
+
+
+```shell
+ERROR: the following packages/stacks could not have their rosdep keys resolved to system dependencies:
+slam_sim_demo: No definition of [hector_mapping] for OS [debian]
+navigation_sim_demo: No definition of [dwa_local_planner] for OS [debian]
+robot_sim_demo: No definition of [yocs_cmd_vel_mux] for OS [debian]
+```
+
+
+可以执行如下的命令(在ubuntu16下对应-xenial)
+
+```shell
+rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO} -y --os=ubuntu:xenial
+```
+
 
 3. 编译并刷新环境
 ```sh
