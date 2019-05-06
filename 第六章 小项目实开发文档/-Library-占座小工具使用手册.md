@@ -155,3 +155,7 @@ pyinstaller -w -F name.py
 
 这条指令后会生成一个exe，并且占用空间小，占内存和你代码写的有关系，一般占用内存也不大
 
+### 界面升级
+
+![操作界面升级](./image6/Library_Release_1.jpg)
+
