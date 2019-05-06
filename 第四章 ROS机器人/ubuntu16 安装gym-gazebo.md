@@ -58,6 +58,7 @@ git clone -b master https://github.com/porterpan/gym-gazebo
         - [问题2](#问题2)
         - [问题3：](#问题3)
     - [gazebo.repos　内容修改](#gazeborepos　内容修改)
+- [安装结束效果](#安装结束效果)
 
 <!-- /TOC -->
 
@@ -505,3 +506,20 @@ repositories:
     url: https://github.com/yujinrobot/yujin_ocs
     version: kinetic
 ```
+
+## 安装结束效果
+
+```bash
+vim ~/.bashrc
+# 最后几行的环境应该是这样的
+source /home/porter/gym-gazebo/gym_gazebo/envs/installation/catkin_ws/devel/setup.bash
+export GAZEBO_MODEL_PATH=/home/porter/gym-gazebo/gym_gazebo/envs/installation/../assets/models
+export GYM_GAZEBO_WORLD_MAZE=/home/porter/gym-gazebo/gym_gazebo/envs/installation/../assets/worlds/maze.world
+export GYM_GAZEBO_WORLD_CIRCUIT=/home/porter/gym-gazebo/gym_gazebo/envs/installation/../assets/worlds/circuit.world
+export GYM_GAZEBO_WORLD_CIRCUIT2=/home/porter/gym-gazebo/gym_gazebo/envs/installation/../assets/worlds/circuit2.world
+export GYM_GAZEBO_WORLD_CIRCUIT2C=/home/porter/gym-gazebo/gym_gazebo/envs/installation/../assets/worlds/circuit2c.world
+export GYM_GAZEBO_WORLD_ROUND=/home/porter/gym-gazebo/gym_gazebo/envs/installation/../assets/worlds/round.world
+```
+打开终端执行的效果如下图
+
+![gym_gazebo_success](./image4/gym_gazebo_success.png)
