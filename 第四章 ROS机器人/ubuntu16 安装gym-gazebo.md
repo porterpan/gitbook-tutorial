@@ -56,6 +56,7 @@ git clone -b master https://github.com/porterpan/gym-gazebo
         - [安装错误解决](#安装错误解决)
             - [错误一：](#错误一)
             - [问题2](#问题2)
+            - [问题3：](#问题3)
         - [gazebo.repos　内容修改](#gazeborepos　内容修改)
 
 <!-- /TOC -->
@@ -331,6 +332,50 @@ porter@porter-Aspire:~/gym-gazebo/gym_gazebo/envs/installation$
 ```
 
 ![tf2_geometry_msg_resolved.png](./image4/tf2_geometry_msg_resolved.png)
+---
+
+#### 问题3：
+
+- 问题3：错误提示
+
+CMake Error at /opt/ros/kinetic/share/catkin/cmake/catkin_workspace.cmake:95 (message):
+
+```bash
+WARNING: Metapackage "ecl_tools" must buildtool_depend on catkin.
+WARNING: Metapackage "ecl_tools" should not have other dependencies besides a buildtool_depend on catkin and run_depends.
+WARNING: Metapackage "ecl_lite" must buildtool_depend on catkin.
+WARNING: Metapackage "ecl_lite" should not have other dependencies besides a buildtool_depend on catkin and run_depends.
+Packages "mav_msgs" not found in the workspace
+
+```
+
+- 问题3：解决
+
+出现这个错误的原因是ecl升级，或这和你当前安装的ros版本不对应。造成了cmake版本比配。出错，方法是
+
+打开gazebo.repos,修改如下部分：
+```bash
+ecl_lite: 
+type: git 
+url: https://github.com/stonier/ecl_lite 
+version: release/0.61-indigo-kinetic 
+ecl_navigation: 
+type: git 
+url: https://github.com/stonier/ecl_navigation 
+version: devel 
+ecl_tools: 
+type: git 
+url: https://github.com/stonier/ecl_tools 
+version: release/0.61-indigo-kinetic 
+```
+(将ecl_core、 ecl_lite 和ecl_tools 的版本号（version）改成： release/0.61-indigo-kinetic）
+
+**不过最终解决还是建议你如果也是安装ros kenitic 直接复制我后面附录的gazebo.repos内容替换掉之前的**
+
+路径：
+
+vim ~/gym-gazebo/gym_gazebo/envs/installation/gazebo.repos 
+
 ---
 
 ### gazebo.repos　内容修改
