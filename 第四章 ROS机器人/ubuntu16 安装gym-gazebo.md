@@ -6,7 +6,7 @@ tags: [gym-gazebo,Machine Learning,Algorithm]
 date: 2019-4-6 22:55:03
 ---
 
-# 摘要
+## 目录
 
 本节会安装以下内容
 
@@ -36,28 +36,28 @@ git clone -b master https://github.com/porterpan/gym-gazebo
 
 <!-- TOC -->
 
-- [摘要](#摘要)
-    - [第一部分安装gym-gazebo](#第一部分安装gym-gazebo)
-        - [下载安装文件](#下载安装文件)
-        - [安装依赖环境](#安装依赖环境)
-            - [Basic requirements:](#basic-requirements)
-            - [[Install Sophus](https://github.com/stonier/sophus/tree/release/0.9.1-kinetic)](#install-sophushttpsgithubcomstoniersophustreerelease091-kinetic)
-        - [安装gym-gazebo](#安装gym-gazebo)
-            - [Dependencies and libraries](#dependencies-and-libraries)
-            - [install Theano](#install-theano)
-            - [install Keras](#install-keras)
-        - [Try it out (turtlebot simple env)](#try-it-out-turtlebot-simple-env)
-            - [Agent dependencies:](#agent-dependencies)
-        - [Run the environment with a sample agent:](#run-the-environment-with-a-sample-agent)
-    - [第二部分：附录](#第二部分附录)
-        - [ROS 中功能包的安装与查询](#ros-中功能包的安装与查询)
-            - [1.查询当前安装完成的所有包文件](#1查询当前安装完成的所有包文件)
-            - [2.查询ros的所有功能包](#2查询ros的所有功能包)
-        - [安装错误解决](#安装错误解决)
-            - [错误1：](#错误1)
-            - [问题2](#问题2)
-            - [问题3：](#问题3)
-        - [gazebo.repos　内容修改](#gazeborepos　内容修改)
+- [目录](#目录)
+- [第一部分安装gym-gazebo](#第一部分安装gym-gazebo)
+    - [下载安装文件](#下载安装文件)
+    - [安装依赖环境](#安装依赖环境)
+        - [Basic requirements:](#basic-requirements)
+        - [[Install Sophus](https://github.com/stonier/sophus/tree/release/0.9.1-kinetic)](#install-sophushttpsgithubcomstoniersophustreerelease091-kinetic)
+    - [安装gym-gazebo](#安装gym-gazebo)
+        - [Dependencies and libraries](#dependencies-and-libraries)
+        - [install Theano](#install-theano)
+        - [install Keras](#install-keras)
+    - [Try it out (turtlebot simple env)](#try-it-out-turtlebot-simple-env)
+        - [Agent dependencies:](#agent-dependencies)
+    - [Run the environment with a sample agent:](#run-the-environment-with-a-sample-agent)
+- [第二部分：附录](#第二部分附录)
+    - [ROS 中功能包的安装与查询](#ros-中功能包的安装与查询)
+        - [1.查询当前安装完成的所有包文件](#1查询当前安装完成的所有包文件)
+        - [2.查询ros的所有功能包](#2查询ros的所有功能包)
+    - [安装错误解决](#安装错误解决)
+        - [错误1：](#错误1)
+        - [问题2](#问题2)
+        - [问题3：](#问题3)
+    - [gazebo.repos　内容修改](#gazeborepos　内容修改)
 
 <!-- /TOC -->
 
