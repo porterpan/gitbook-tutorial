@@ -54,7 +54,7 @@ git clone -b master https://github.com/porterpan/gym-gazebo
             - [1.查询当前安装完成的所有包文件](#1查询当前安装完成的所有包文件)
             - [2.查询ros的所有功能包](#2查询ros的所有功能包)
         - [安装错误解决](#安装错误解决)
-            - [错误一：](#错误一)
+            - [错误1：](#错误1)
             - [问题2](#问题2)
             - [问题3：](#问题3)
         - [gazebo.repos　内容修改](#gazeborepos　内容修改)
@@ -251,9 +251,9 @@ sudo apt-get install ros-kinetic-rqt-
 ---
 ### 安装错误解决
 
-#### 错误一：
+#### 错误1：
 
-- 错误一：错误提示：
+- 错误1：错误提示：
 > 在moveit编译时找不到manipulation_msgsConfig.cmake manipulation_msgs-config.cmake文件
 ```bash
 Could not find the required component 'manipulation_msgs'. The following CMake error indicates that you either need to install the package with the same name or change your environment so that it can be found.
@@ -271,7 +271,7 @@ CMake Error at /opt/ros/kinetic/share/catkin/cmake/catkinConfig.cmake:83 (find_p
 ```
 ![manipulation_msgsconfig.cmake](./image4/manipulation_msgsconfig.cmake)
 
-- 错误一：解决：
+- 错误1：解决：
 
 搜索这个功能包
 
