@@ -58,7 +58,7 @@ git clone -b master https://github.com/porterpan/gym-gazebo
         - [错误1：](#错误1)
         - [问题2](#问题2)
         - [问题3：](#问题3)
-    - [gazebo.repos　内容修改](#gazeborepos　内容修改)
+- [gazebo.repos　内容修改](#gazeborepos　内容修改)
 - [安装结束效果](#安装结束效果)
 - [gym-gazebo 测试](#gym-gazebo-测试)
 
@@ -343,7 +343,6 @@ porter@porter-Aspire:~/gym-gazebo/gym_gazebo/envs/installation$
 ```
 
 ![tf2_geometry_msg_resolved.png](./image4/tf2_geometry_msg_resolved.png)
----
 
 #### 问题3：
 
@@ -389,7 +388,7 @@ vim ~/gym-gazebo/gym_gazebo/envs/installation/gazebo.repos
 
 ---
 
-### gazebo.repos　内容修改
+## gazebo.repos　内容修改
 
 gazebo.repos 修改后的文件内容，使适应kinetic环境，进行安装。
 
