@@ -18,6 +18,7 @@ date: 2019-4-6 22:55:03
 - opencv3
 - 安装 gazebo_ros_pkgs
 - gym-gazebo
+- gym-gazebo 测试
 
 本节笔记主要记录ubuntu16 下安装gym-gazebo，包括其依赖的软件包安装。
 
@@ -59,6 +60,7 @@ git clone -b master https://github.com/porterpan/gym-gazebo
         - [问题3：](#问题3)
     - [gazebo.repos　内容修改](#gazeborepos　内容修改)
 - [安装结束效果](#安装结束效果)
+- [gym-gazebo 测试](#gym-gazebo-测试)
 
 <!-- /TOC -->
 
@@ -100,7 +102,7 @@ git clone -b master https://github.com/porterpan/gym-gazebo
 
 ---
 
-- [OpenCV3, installed from sources for Python 3， pip3](https://pypi.org/project/opencv-python/3.3.0.10/#history) 或者手动安装(git clone https://github.com/Itseez/opencv.git)
+- [OpenCV3, installed from sources for Python 3， pip3](https://pypi.org/project/opencv-python/3.4.3.18/#history) 或者手动安装(git clone https://github.com/Itseez/opencv.git)
 
 ---
 
@@ -523,3 +525,7 @@ export GYM_GAZEBO_WORLD_ROUND=/home/porter/gym-gazebo/gym_gazebo/envs/installati
 打开终端执行的效果如下图
 
 ![gym_gazebo_success](./image4/gym_gazebo_success.png)
+
+## gym-gazebo 测试
+
+参见我的另一篇文章[gym-gazebo安装后的测试](./gym-gazebo安装后的测试.md)

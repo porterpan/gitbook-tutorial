@@ -48,6 +48,7 @@
     * [ROS室内仿真环境.md](./第四章 ROS机器人/ROS室内仿真环境.md)
     * [ros and gazebo and gym_gazebo安装](第四章 ROS机器人/ros and gazebo and gym_gazebo安装.md)
     * [ubuntu16 安装gym-gazebo](第四章 ROS机器人/ubuntu16 安装gym-gazebo.md)
+    * [gym-gazebo安装后的测试](第四章 ROS机器人/gym-gazebo安装后的测试.md)
 
 * [项目开发]()
     * [Library占座小工具使用手册](./第六章 小项目实开发文档/-Library-占座小工具使用手册.md)
