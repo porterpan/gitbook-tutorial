@@ -96,7 +96,13 @@ git clone -b master https://github.com/porterpan/gym-gazebo
 
 - [Gazebo 8.1.1](http://gazebosim.org/tutorials?cat=install&tut=install_ubuntu&ver=8.0) , 进入选择手动安装，不要选择Default installation: one-liner安装方式，否则会给你安装默认最新版本的gazebo.
 - Python 3.5.2 (# I have yet to find out why though, because all the standard ROS stuff is in Python 2)
-- OpenCV3, installed from sources for Python 3 (git clone https://github.com/Itseez/opencv.git)
+
+---
+
+- [OpenCV3, installed from sources for Python 3， pip3](https://pypi.org/project/opencv-python/3.3.0.10/#history) 或者手动安装(git clone https://github.com/Itseez/opencv.git)
+
+---
+
 - 安装 gazebo_ros_pkgs
 
 ---
@@ -128,6 +134,8 @@ rosrun gazebo_ros gazebo  # 用 rosrun 方式启动 Gazebo
 ---
 
 - [OpenAI gym安装](http://gym.openai.com/docs/)
+
+---
 
 #### [Install Sophus](https://github.com/stonier/sophus/tree/release/0.9.1-kinetic)
 ```bash
