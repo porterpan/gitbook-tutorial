@@ -60,6 +60,8 @@ git clone -b master https://github.com/porterpan/gym-gazebo
         - [问题3：](#问题3)
 - [gazebo.repos　内容修改](#gazeborepos　内容修改)
 - [安装结束效果](#安装结束效果)
+        - [问题4：](#问题4)
+        - [问题5：](#问题5)
 - [gym-gazebo 测试](#gym-gazebo-测试)
 
 <!-- /TOC -->
@@ -524,6 +526,62 @@ export GYM_GAZEBO_WORLD_ROUND=/home/porter/gym-gazebo/gym_gazebo/envs/installati
 打开终端执行的效果如下图
 
 ![gym_gazebo_success](./image4/gym_gazebo_success.png)
+
+#### 问题4：
+
+- 问题4：错误提示
+
+Pycharm 里面无法正常运行Gym_gazebo代码.
+
+[ubuntu下PyCharm导入ros库](https://blog.csdn.net/wuguangbin1230/article/details/79300578)
+
+porter@porter-Aspire:~$ gedit /usr/share/applications/Pycharm.desktop
+```bash
+[Desktop Entry]
+Type=Application
+Name=Pycharm
+GenericName=Pycharm3
+Comment=Pycharm3:The Python IDE
+Exec=sh /home/porter/pycharm-2018.3.5/bin/pycharm.sh
+Icon=/home/porter/pycharm-2018.3.5/bin/pycharm.png
+Terminal=pycharm
+Categories=Pycharm;
+```
+
+- 问题4：错误提示
+
+```bash
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pycharm
+GenericName=Pycharm3
+Icon=/home/porter/pycharm-2018.3.5/bin/pycharm.png
+Exec=bash -i -c "/home/porter/pycharm-2018.3.5/bin/pycharm.sh" %f
+Comment=Pycharm3:The Python IDE
+Categories=Development;IDE;
+Terminal=false
+```
+
+#### 问题5：
+
+[在终端中正常运行，在pycharm中运行出错](https://blog.csdn.net/Dawn__Z/article/details/82454717)
+
+- 问题5：错误提示
+
+```bash
+entry = _cache.get(encoding, _unknown) 
+AttributeError: ‘NoneType’ object has no attribute ‘get’
+```
+运行pycharm报错，内容如下：
+
+![no attribute ‘get’](./image4/gym_gazebo_err2.png)
+
+- 问题5：解决方式：
+
+settings -> tools ->Python Scientific ->Show plots in toolwindow(取消勾选)
+
+![plots in toolwindow](./image4/gym_gazebo_err3.png)
 
 ## gym-gazebo 测试
 
