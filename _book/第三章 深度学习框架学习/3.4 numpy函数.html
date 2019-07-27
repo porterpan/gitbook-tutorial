@@ -1,0 +1,1407 @@
+
+<!DOCTYPE HTML>
+<html lang="zh" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.4 numpy函数 · 深度学习</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="3.3 matplotlib函数.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    深耕系列之深度学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../第一章 Linux学习环境相关配置/">
+            
+                <a href="../第一章 Linux学习环境相关配置/">
+            
+                    
+                    第一章 Linux学习环境相关配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../第一章 Linux学习环境相关配置/1.1 Ubuntu18下有道词典的配置.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.1 Ubuntu18下有道词典的配置.html">
+            
+                    
+                    1.1 Ubuntu18下有道词典的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../第一章 Linux学习环境相关配置/1.2 Ubuntu18安装Gitbook.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.2 Ubuntu18安装Gitbook.html">
+            
+                    
+                    1.2 Ubuntu18 安装Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../第一章 Linux学习环境相关配置/1.3 Ubuntu18 git命令使用总结.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.3 Ubuntu18 git命令使用总结.html">
+            
+                    
+                    1.3 Ubuntu18 git命令使用总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../第一章 Linux学习环境相关配置/1.4 Latex 排版使用笔记.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.4 Latex 排版使用笔记.html">
+            
+                    
+                    1.4 Latex 排版使用笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../第一章 Linux学习环境相关配置/1.5 Ubuntu下常用工具软件配置安装.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.5 Ubuntu下常用工具软件配置安装.html">
+            
+                    
+                    1.5 Ubuntu下常用工具软件配置安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../第一章 Linux学习环境相关配置/1.6 win10+ubuntu双系统修复ubuntu启动引导.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.6 win10+ubuntu双系统修复ubuntu启动引导.html">
+            
+                    
+                    1.6 win10+ubuntu双系统修复ubuntu启动引导
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../第一章 Linux学习环境相关配置/1.7 gitbook 插件等相关设置.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.7 gitbook 插件等相关设置.html">
+            
+                    
+                    1.7 gitbook 插件等相关设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../第一章 Linux学习环境相关配置/1.8 深度学习环境搭建.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.8 深度学习环境搭建.html">
+            
+                    
+                    1.8 深度学习环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../第一章 Linux学习环境相关配置/1.9 hexo 实现本地图片加载.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.9 hexo 实现本地图片加载.html">
+            
+                    
+                    1.9 hexo 实现本地图片加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../第一章 Linux学习环境相关配置/1.10 hexo网页定制.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.10 hexo网页定制.html">
+            
+                    
+                    1.10 hexo网页定制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../第一章 Linux学习环境相关配置/1.11 sublime text3插件介绍.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.11 sublime text3插件介绍.html">
+            
+                    
+                    1.11 sublime text3插件介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../第一章 Linux学习环境相关配置/1.12 vsftpd.conf文件配置.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.12 vsftpd.conf文件配置.html">
+            
+                    
+                    1.12 vsftpd.conf文件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../第一章 Linux学习环境相关配置/1.13 mysql 笔记.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.13 mysql 笔记.html">
+            
+                    
+                    1.13 mysql 笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../第一章 Linux学习环境相关配置/1.14 ubuntu16_18安装peek工具录制gif.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.14 ubuntu16_18安装peek工具录制gif.html">
+            
+                    
+                    1.14 ubuntu16_18安装peek工具录制gif
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../第一章 Linux学习环境相关配置/1.15 ubuntu下goldendict有道爬虫小程序.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.15 ubuntu下goldendict有道爬虫小程序.html">
+            
+                    
+                    1.15 ubuntu下goldendict有道爬虫小程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../第一章 Linux学习环境相关配置/1.16 ubuntu18升级后部分应用不能中文输入的问题.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.16 ubuntu18升级后部分应用不能中文输入的问题.html">
+            
+                    
+                    1.16 ubuntu18升级后部分应用不能中文输入的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../第一章 Linux学习环境相关配置/1.17 ubuntu下安装有道词典.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.17 ubuntu下安装有道词典.html">
+            
+                    
+                    1.17 ubuntu下安装有道词典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../第一章 Linux学习环境相关配置/1.18 opencv_安装.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.18 opencv_安装.html">
+            
+                    
+                    1.18 opencv 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../第一章 Linux学习环境相关配置/1.19 gym_gazabe安装配置.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.19 gym_gazabe安装配置.html">
+            
+                    
+                    1.19 gym_gazabe安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../第一章 Linux学习环境相关配置/1.20 docker_基础.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.20 docker_基础.html">
+            
+                    
+                    1.20 docker 基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="../第一章 Linux学习环境相关配置/1.21 docker_配置权限问题.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.21 docker_配置权限问题.html">
+            
+                    
+                    1.21 docker_配置权限问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="../第一章 Linux学习环境相关配置/1.22 jupyter_notebook_使用.html">
+            
+                <a href="../第一章 Linux学习环境相关配置/1.22 jupyter_notebook_使用.html">
+            
+                    
+                    1.22 jupyternotebook使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第二章 深度学习相关基础算法/">
+            
+                <a href="../第二章 深度学习相关基础算法/">
+            
+                    
+                    第二章 深度学习相关基础算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第二章 深度学习相关基础算法/2.1 马尔科夫链.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1 马尔科夫链.html">
+            
+                    
+                    2.1 马尔科夫链
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../第二章 深度学习相关基础算法/2.1.1 马尔科夫简单模型预测实战笔记.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1.1 马尔科夫简单模型预测实战笔记.html">
+            
+                    
+                    2.1.1 马尔科夫简单模型预测实战笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../第二章 深度学习相关基础算法/2.1.2 最大熵模型.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1.2 最大熵模型.html">
+            
+                    
+                    2.1.2 最大熵模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../第二章 深度学习相关基础算法/2.1.3 隐马尔科夫HMM.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.1.3 隐马尔科夫HMM.html">
+            
+                    
+                    2.1.3 隐马尔科夫HMM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../第二章 深度学习相关基础算法/2.2 矩阵相关基础知识.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.2 矩阵相关基础知识.html">
+            
+                    
+                    2.2 矩阵相关基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../第二章 深度学习相关基础算法/2.3 线性回归.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.3 线性回归.html">
+            
+                    
+                    2.3 线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../第二章 深度学习相关基础算法/2.4  Decision tree.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.4  Decision tree.html">
+            
+                    
+                    2.4 决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../第二章 深度学习相关基础算法/2.5 梯度下降和最小二乘法.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.5 梯度下降和最小二乘法.html">
+            
+                    
+                    2.5 梯度下降和最小二乘法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../第二章 深度学习相关基础算法/2.6 递归算法与迭代算法.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.6 递归算法与迭代算法.html">
+            
+                    
+                    2.6 递归算法与迭代算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../第二章 深度学习相关基础算法/2.7 神经网络浅学笔记.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.7 神经网络浅学笔记.html">
+            
+                    
+                    2.7 神经网络浅学笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../第二章 深度学习相关基础算法/2.8 强化学习经验回放.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.8 强化学习经验回放.html">
+            
+                    
+                    2.8 强化学习经验回放
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../第二章 深度学习相关基础算法/2.9 K近邻算法.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.9 K近邻算法.html">
+            
+                    
+                    2.9 K近邻算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../第二章 深度学习相关基础算法/2.10 朴素贝叶斯法.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.10 朴素贝叶斯法.html">
+            
+                    
+                    2.10 朴素贝叶斯法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../第二章 深度学习相关基础算法/2.11 极大似然估计.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.11 极大似然估计.html">
+            
+                    
+                    2.11 极大似然估计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../第二章 深度学习相关基础算法/2.12 logistic regression.html">
+            
+                <a href="../第二章 深度学习相关基础算法/2.12 logistic regression.html">
+            
+                    
+                    2.12 logistic regression
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第三章 深度学习框架学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="3.1 PyTorch 学习.html">
+            
+                <a href="3.1 PyTorch 学习.html">
+            
+                    
+                    3.1 PyTorch 学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="3.1.2 Pytorch 之MNIST手写字识别分类.html">
+            
+                <a href="3.1.2 Pytorch 之MNIST手写字识别分类.html">
+            
+                    
+                    3.1.2 Pytorch 之MNIST手写字识别分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="3.2 tensorflow学习笔记.md">
+            
+                <span>
+            
+                    
+                    3.2 tensorflow学习笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="3.2.1 tensorflow之MNIST.html">
+            
+                <a href="3.2.1 tensorflow之MNIST.html">
+            
+                    
+                    3.2.1 tensorflow之MNIST
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="3.3 matplotlib函数.html">
+            
+                <a href="3.3 matplotlib函数.html">
+            
+                    
+                    3.3 matplotlib函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="3.4 numpy函数.html">
+            
+                <a href="3.4 numpy函数.html">
+            
+                    
+                    3.4 numpy函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    第四章 ROS机器人
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../第四章 ROS机器人/ROS室内仿真环境.html">
+            
+                <a href="../第四章 ROS机器人/ROS室内仿真环境.html">
+            
+                    
+                    ROS室内仿真环境.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../第四章 ROS机器人/ros and gazebo and gym_gazebo安装.html">
+            
+                <a href="../第四章 ROS机器人/ros and gazebo and gym_gazebo安装.html">
+            
+                    
+                    ros and gazebo and gym_gazebo安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../第四章 ROS机器人/ubuntu16 安装gym-gazebo.html">
+            
+                <a href="../第四章 ROS机器人/ubuntu16 安装gym-gazebo.html">
+            
+                    
+                    ubuntu16 安装gym-gazebo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../第四章 ROS机器人/gym-gazebo安装后的测试.html">
+            
+                <a href="../第四章 ROS机器人/gym-gazebo安装后的测试.html">
+            
+                    
+                    gym-gazebo安装后的测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../第四章 ROS机器人/基于DQN的gym_gazebo运行代码演示.html">
+            
+                <a href="../第四章 ROS机器人/基于DQN的gym_gazebo运行代码演示.html">
+            
+                    
+                    基于DQN的gym_gazebo运行代码演示
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    项目开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../第六章 小项目实开发文档/-Library-占座小工具使用手册.html">
+            
+                <a href="../第六章 小项目实开发文档/-Library-占座小工具使用手册.html">
+            
+                    
+                    Library占座小工具使用手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../附录/index,md">
+            
+                <span>
+            
+                    
+                    附录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" >
+            
+                <span>
+            
+                    
+                    Python 相关笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../附录/Python 帮助文档检索方法.html">
+            
+                <a href="../附录/Python 帮助文档检索方法.html">
+            
+                    
+                    Python 帮助文档检索方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../附录/Module篇使用__future__.html">
+            
+                <a href="../附录/Module篇使用__future__.html">
+            
+                    
+                    Module篇使用future
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" >
+            
+                <span>
+            
+                    
+                    Git 相关配置
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../附录/git-推送新的文章到github其他分支上.html">
+            
+                <a href="../附录/git-推送新的文章到github其他分支上.html">
+            
+                    
+                    git-推送新的文章到github其他分支上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../附录/gitignre 配置.html">
+            
+                <a href="../附录/gitignre 配置.html">
+            
+                    
+                    gitignre 配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="../附录/gitignre 配置.html">
+            
+                <a href="../附录/gitignre 配置.html">
+            
+                    
+                    gitignre 配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.4" data-path="../附录/Hexo 每次写好后deploy博客.html">
+            
+                <a href="../附录/Hexo 每次写好后deploy博客.html">
+            
+                    
+                    Hexo 每次写好后deploy博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.5" data-path="../附录/MFC  Socket 通信.html">
+            
+                <a href="../附录/MFC  Socket 通信.html">
+            
+                    
+                    MFC  Socket 通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.6" data-path="../附录/python之tkinter入坑Pack.html">
+            
+                <a href="../附录/python之tkinter入坑Pack.html">
+            
+                    
+                    python之tkinter入坑Pack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.7" data-path="../附录/ubuntu 中安装sublime_text3.html">
+            
+                <a href="../附录/ubuntu 中安装sublime_text3.html">
+            
+                    
+                    ubuntu 中安装sublime_text3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.8" data-path="../附录/ubuntu18-正确-安装ShadowSocket.html">
+            
+                <a href="../附录/ubuntu18-正确-安装ShadowSocket.html">
+            
+                    
+                    ubuntu18-正确-安装ShadowSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.9" data-path="../附录/vultr+freenom实现主机域名的绑定.html">
+            
+                <a href="../附录/vultr+freenom实现主机域名的绑定.html">
+            
+                    
+                    vultr+freenom实现主机域名的绑定.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.10" data-path="../附录/值得收藏的网站.html">
+            
+                <a href="../附录/值得收藏的网站.html">
+            
+                    
+                    值得收藏的网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.11" data-path="../附录/搜索技巧.html">
+            
+                <a href="../附录/搜索技巧.html">
+            
+                    
+                    搜索技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.12" data-path="../附录/第一篇博文.html">
+            
+                <a href="../附录/第一篇博文.html">
+            
+                    
+                    第一篇博文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.13" data-path="../附录/简单的方法，越过付费获取在线的log设计.html">
+            
+                <a href="../附录/简单的方法，越过付费获取在线的log设计.html">
+            
+                    
+                    简单的方法，越过付费获取在线的log设计.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.14" data-path="../附录/网页设计基础笔记.html">
+            
+                <a href="../附录/网页设计基础笔记.html">
+            
+                    
+                    网页设计基础笔记.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.15" data-path="../附录/解决Chrome67版本以后不能离线安装插件的情况.html">
+            
+                <a href="../附录/解决Chrome67版本以后不能离线安装插件的情况.html">
+            
+                    
+                    解决Chrome67版本以后不能离线安装插件的情况.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" >
+            
+                <span>
+            
+                    
+                    嵌入式相关笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.3.1" data-path="../附录/STM32串口通信配置.html">
+            
+                <a href="../附录/STM32串口通信配置.html">
+            
+                    
+                    STM32串口通信配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.2" data-path="../附录/STM32复位及通过函数判断是何种条件出发的复位.html">
+            
+                <a href="../附录/STM32复位及通过函数判断是何种条件出发的复位.html">
+            
+                    
+                    STM32复位及通过函数判断是何种条件出发的复位
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.4 numpy函数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6458;&#x8981;">&#x6458;&#x8981;</h1>
+<p>&#x672C;&#x8282;&#x4E3B;&#x8981;&#x662F;&#x5B66;&#x4E60;numpy&#x7684;&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x57FA;&#x7840;&#x7684;&#x5B66;&#x4E60;&#x8DEF;&#x7EBF;&#xFF0C;&#x5305;&#x62EC;&#x7B80;&#x5355;&#x7684;&#x5B9E;&#x4F8B;&#x7B14;&#x8BB0;&#x7B49;&#x3002;</p>
+<!-- TOC -->
+<ul>
+<li><a href="#&#x6458;&#x8981;">&#x6458;&#x8981;</a><pre><code>  - [np.random.rand()&#x51FD;&#x6570;](#nprandomrand&#x51FD;&#x6570;)
+      - [&#x8BED;&#x6CD5;&#xFF1A;](#&#x8BED;&#x6CD5;)
+  - [np.random.randn()&#x51FD;&#x6570;](#nprandomrandn&#x51FD;&#x6570;)
+      - [&#x8BED;&#x6CD5;&#xFF1A;](#&#x8BED;&#x6CD5;-1)
+  - [np.random.randint()&#x51FD;&#x6570;](#nprandomrandint&#x51FD;&#x6570;)
+      - [&#x8BED;&#x6CD5;&#xFF1A;](#&#x8BED;&#x6CD5;-2)
+</code></pre><ul>
+<li><a href="#np&#x5806;&#x53E0;&#x6570;&#x7EC4;">np&#x5806;&#x53E0;&#x6570;&#x7EC4;</a><ul>
+<li><a href="#numpyvstacktup">numpy.vstack(tup)</a><ul>
+<li><a href="#&#x8BED;&#x6CD5;-3">&#x8BED;&#x6CD5;&#xFF1A;</a></li>
+</ul>
+</li>
+<li><a href="#numpystack">numpy.stack()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<ul>
+<li>[x] Edit By Porter, &#x79EF;&#x6C34;&#x6210;&#x6E0A;,&#x86DF;&#x9F99;&#x751F;&#x7109;&#x3002;</li>
+</ul>
+<!-- more -->
+<h3 id="nprandomrand&#x51FD;&#x6570;">np.random.rand()&#x51FD;&#x6570;</h3>
+<h4 id="&#x8BED;&#x6CD5;&#xFF1A;">&#x8BED;&#x6CD5;&#xFF1A;</h4>
+<ul>
+<li>np.random.rand(d0,d1,d2&#x2026;&#x2026;dn)</li>
+</ul>
+<blockquote>
+<p>&#x6CE8;&#xFF1A;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x4E0E;np.random.randn()&#x51FD;&#x6570;&#x76F8;&#x540C; </p>
+</blockquote>
+<ul>
+<li>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</li>
+</ul>
+<p>&#x901A;&#x8FC7;&#x672C;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6216;&#x4E00;&#x7EC4;&#x670D;&#x4ECE;&#x201C;0~1&#x201D;&#x5747;&#x5300;&#x5206;&#x5E03;&#x7684;&#x968F;&#x673A;&#x6837;&#x672C;&#x503C;&#x3002;&#x968F;&#x673A;&#x6837;&#x672C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x662F;[0,1)&#xFF0C;&#x4E0D;&#x5305;&#x62EC;1&#x3002; </p>
+<p><img src="image3/np.random.rand_1.png" alt="random.rand"></p>
+<h3 id="nprandomrandn&#x51FD;&#x6570;">np.random.randn()&#x51FD;&#x6570;</h3>
+<h4 id="&#x8BED;&#x6CD5;&#xFF1A;">&#x8BED;&#x6CD5;&#xFF1A;</h4>
+<ul>
+<li>np.random.randn(d0,d1,d2&#x2026;&#x2026;dn) </li>
+</ul>
+<p>1) &#x5F53;&#x51FD;&#x6570;&#x62EC;&#x53F7;&#x5185;&#x6CA1;&#x6709;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6D6E;&#x70B9;&#x6570;&#xFF1B; </p>
+<p>2) &#x5F53;&#x51FD;&#x6570;&#x62EC;&#x53F7;&#x5185;&#x6709;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x79E9;&#x4E3A;1&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x4E0D;&#x80FD;&#x8868;&#x793A;&#x5411;&#x91CF;&#x548C;&#x77E9;&#x9635;&#xFF1B; </p>
+<p>3) &#x5F53;&#x51FD;&#x6570;&#x62EC;&#x53F7;&#x5185;&#x6709;&#x4E24;&#x4E2A;&#x53CA;&#x4EE5;&#x4E0A;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x7EF4;&#x5EA6;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x80FD;&#x8868;&#x793A;&#x5411;&#x91CF;&#x6216;&#x77E9;&#x9635;&#xFF1B; </p>
+<p>4) np.random.standard_normal&#xFF08;&#xFF09;&#x51FD;&#x6570;&#x4E0E;np.random.randn()&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x662F;np.random.standard_normal&#xFF08;&#xFF09;
+&#x7684;&#x8F93;&#x5165;&#x53C2;&#x6570;&#x4E3A;&#x5143;&#x7EC4;&#xFF08;tuple&#xFF09;. </p>
+<p>5) np.random.randn()&#x7684;&#x8F93;&#x5165;&#x901A;&#x5E38;&#x4E3A;&#x6574;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x4E3A;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x5219;&#x4F1A;&#x81EA;&#x52A8;&#x76F4;&#x63A5;&#x622A;&#x65AD;&#x8F6C;&#x6362;&#x4E3A;&#x6574;&#x6570;&#x3002;</p>
+<ul>
+<li>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</li>
+</ul>
+<p>&#x901A;&#x8FC7;&#x672C;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6216;&#x4E00;&#x7EC4;&#x670D;&#x4ECE;&#x6807;&#x51C6;&#x6B63;&#x6001;&#x5206;&#x5E03;&#x7684;&#x968F;&#x673A;&#x6837;&#x672C;&#x503C;&#x3002;</p>
+<ul>
+<li>&#x7279;&#x70B9;&#xFF1A;</li>
+</ul>
+<p>&#x6807;&#x51C6;&#x6B63;&#x6001;&#x5206;&#x5E03;&#x662F;&#x4EE5;0&#x4E3A;&#x5747;&#x503C;&#x3001;&#x4EE5;1&#x4E3A;&#x6807;&#x51C6;&#x5DEE;&#x7684;&#x6B63;&#x6001;&#x5206;&#x5E03;&#xFF0C;&#x8BB0;&#x4E3A;N($\mu, \sigma$)&#xFF5E;&#xFF08;0&#xFF0C;1&#xFF09;&#x3002;&#x5BF9;&#x5E94;&#x7684;&#x6B63;&#x6001;&#x5206;&#x5E03;&#x66F2;&#x7EBF;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF0C;&#x5373; </p>
+<p><img src="image3/np.random.randn_1.jpg" alt="&#x5747;&#x6570;&#x4E3A;0&#x65F6;"></p>
+<p>&#x66F4;&#x4E3A;&#x5177;&#x4F53;&#x7684;&#x793A;&#x610F;&#x56FE;&#x5982;&#x4E0B;</p>
+<p><img src="image3/np.random.randn_2.jpg" alt="&#x5747;&#x503C;&#x548C;&#x6807;&#x51C6;&#x5DEE;"></p>
+<p>&#x4EE3;&#x7801;&#x8F93;&#x51FA;&#x6548;&#x679C;&#x5982;&#x4E0B;</p>
+<p><img src="image3/np.random.randn_3.png" alt="&#x5747;&#x503C;&#x548C;&#x6807;&#x51C6;&#x5DEE;"></p>
+<h3 id="nprandomrandint&#x51FD;&#x6570;">np.random.randint()&#x51FD;&#x6570;</h3>
+<h4 id="&#x8BED;&#x6CD5;&#xFF1A;">&#x8BED;&#x6CD5;&#xFF1A;</h4>
+<ul>
+<li><p>numpy.random.randint(low, high=None, size=None, dtype=&#x2019;l&#x2019;) </p>
+</li>
+<li><p>&#x8F93;&#x5165;&#xFF1A; </p>
+</li>
+</ul>
+<p>low&#x2014;&#x2013;&#x4E3A;&#x6700;&#x5C0F;&#x503C; </p>
+<p>high&#x2014;-&#x4E3A;&#x6700;&#x5927;&#x503C; </p>
+<p>size&#x2014;&#x2013;&#x4E3A;&#x6570;&#x7EC4;&#x7EF4;&#x5EA6;&#x5927;&#x5C0F; </p>
+<p>dtype&#x2014;&#x4E3A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F;np.int&#x3002; </p>
+<ul>
+<li>&#x8FD4;&#x56DE;&#x503C;&#xFF1A; </li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#x968F;&#x673A;&#x6574;&#x6570;&#x6216;&#x6574;&#x578B;&#x6570;&#x7EC4;&#xFF0C;&#x8303;&#x56F4;&#x533A;&#x95F4;&#x4E3A;[low,high&#xFF09;&#xFF0C;&#x5305;&#x542B;low&#xFF0C;&#x4E0D;&#x5305;&#x542B;high&#xFF1B; </p>
+<p>high&#x6CA1;&#x6709;&#x586B;&#x5199;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x751F;&#x6210;&#x968F;&#x673A;&#x6570;&#x7684;&#x8303;&#x56F4;&#x662F;[0&#xFF0C;low&#xFF09;</p>
+<p><img src="image3/np.random.randint_1.png" alt="np.random.randint"></p>
+<hr>
+<h2 id="np&#x5806;&#x53E0;&#x6570;&#x7EC4;">np&#x5806;&#x53E0;&#x6570;&#x7EC4;</h2>
+<ul>
+<li>stack()&#xFF0C;hstack()&#xFF0C;vstack()&#x51FD;&#x6570;</li>
+</ul>
+<h3 id="numpyvstacktup">numpy.vstack(tup)</h3>
+<h4 id="&#x8BED;&#x6CD5;&#xFF1A;">&#x8BED;&#x6CD5;&#xFF1A;</h4>
+<p>np.vstack((a,b))</p>
+<ul>
+<li>Parameters:</li>
+</ul>
+<p>tup : sequence of ndarrays</p>
+<p>The arrays must have the same shape along all but the first axis. 1-D arrays must have the same length.</p>
+<ul>
+<li>Returns:    </li>
+</ul>
+<p>stacked : ndarray</p>
+<p>The array formed by stacking the given arrays, will be at least 2-D.</p>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = np.array([[<span class="hljs-number">1</span>], [<span class="hljs-number">2</span>], [<span class="hljs-number">3</span>]])
+<span class="hljs-meta">&gt;&gt;&gt; </span>b = np.array([[<span class="hljs-number">2</span>], [<span class="hljs-number">3</span>], [<span class="hljs-number">4</span>]])
+<span class="hljs-meta">&gt;&gt;&gt; </span>np.vstack((a,b))
+array([[<span class="hljs-number">1</span>],
+       [<span class="hljs-number">2</span>],
+       [<span class="hljs-number">3</span>],
+       [<span class="hljs-number">2</span>],
+       [<span class="hljs-number">3</span>],
+       [<span class="hljs-number">4</span>]])
+</code></pre>
+<h3 id="numpystack">numpy.stack()</h3>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3.3 matplotlib函数.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 3.3 matplotlib函数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.4 numpy函数","categories":"numpy","tags":["Deep Learning","numpy"],"date":"2018-11-10T22:55:03.000Z","level":"1.4.4","depth":2,"next":{"title":"第四章 ROS机器人","level":"1.5","depth":1,"ref":"","articles":[{"title":"ROS室内仿真环境.md","level":"1.5.1","depth":2,"path":"第四章 ROS机器人/ROS室内仿真环境.md","ref":"./第四章 ROS机器人/ROS室内仿真环境.md","articles":[]},{"title":"ros and gazebo and gym_gazebo安装","level":"1.5.2","depth":2,"path":"第四章 ROS机器人/ros and gazebo and gym_gazebo安装.md","ref":"第四章 ROS机器人/ros and gazebo and gym_gazebo安装.md","articles":[]},{"title":"ubuntu16 安装gym-gazebo","level":"1.5.3","depth":2,"path":"第四章 ROS机器人/ubuntu16 安装gym-gazebo.md","ref":"第四章 ROS机器人/ubuntu16 安装gym-gazebo.md","articles":[]},{"title":"gym-gazebo安装后的测试","level":"1.5.4","depth":2,"path":"第四章 ROS机器人/gym-gazebo安装后的测试.md","ref":"第四章 ROS机器人/gym-gazebo安装后的测试.md","articles":[]},{"title":"基于DQN的gym_gazebo运行代码演示","level":"1.5.5","depth":2,"path":"第四章 ROS机器人/基于DQN的gym_gazebo运行代码演示.md","ref":"第四章 ROS机器人/基于DQN的gym_gazebo运行代码演示.md","articles":[]}]},"previous":{"title":"3.3 matplotlib函数","level":"1.4.3","depth":2,"path":"第三章 深度学习框架学习/3.3 matplotlib函数.md","ref":"./第三章 深度学习框架学习/3.3 matplotlib函数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chinese-video"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"shortName":"mygitbook-1"},"chinese-video":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"深度学习","language":"zh","gitbook":"*","description":"学习笔记"},"file":{"path":"第三章 深度学习框架学习/3.4 numpy函数.md","mtime":"2019-06-03T06:21:23.523Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-27T06:27:12.415Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

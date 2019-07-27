@@ -19,9 +19,11 @@
     * [1.15 ubuntu下goldendict有道爬虫小程序](./第一章 Linux学习环境相关配置/1.15 ubuntu下goldendict有道爬虫小程序.md)
     * [1.16 ubuntu18升级后部分应用不能中文输入的问题](./第一章 Linux学习环境相关配置/1.16 ubuntu18升级后部分应用不能中文输入的问题.md)
     * [1.17 ubuntu下安装有道词典](./第一章 Linux学习环境相关配置/1.17 ubuntu下安装有道词典.md)
-    * [1.18 opencv 安装](./第一章 Linux学习环境相关配置/1.18 opencv 安装.md)
+    * [1.18 opencv 安装](./第一章 Linux学习环境相关配置/1.18 opencv_安装.md)
     * [1.19 gym_gazabe安装配置](第一章 Linux学习环境相关配置/1.19 gym_gazabe安装配置.md)
-    * [1.20 docker 基础](第一章 Linux学习环境相关配置/1.20 docker 基础.md)
+    * [1.20 docker 基础](第一章 Linux学习环境相关配置/1.20 docker_基础.md)
+    * [1.21 docker_配置权限问题](第一章 Linux学习环境相关配置/1.21 docker_配置权限问题.md)
+    * [1.22 jupyter_notebook_使用](第一章 Linux学习环境相关配置/1.22 jupyter_notebook_使用.md)
     
 * [第二章 深度学习相关基础算法](./第二章 深度学习相关基础算法/index.md)
     * [2.1 马尔科夫链](./第二章 深度学习相关基础算法/2.1 马尔科夫链.md)
@@ -44,6 +46,9 @@
     * [3.1 PyTorch 学习](./第三章 深度学习框架学习/3.1 PyTorch 学习.md)
         * [3.1.2 Pytorch 之MNIST手写字识别分类](./第三章 深度学习框架学习/3.1.2 Pytorch 之MNIST手写字识别分类.md)
     * [3.2 tensorflow学习笔记](./第三章 深度学习框架学习/3.2 tensorflow学习笔记.md)
+        * [3.2.1 tensorflow之MNIST](./第三章 深度学习框架学习/3.2.1 tensorflow之MNIST.md)
+    * [3.3 matplotlib函数](./第三章 深度学习框架学习/3.3 matplotlib函数.md)
+    * [3.4 numpy函数](./第三章 深度学习框架学习/3.4 numpy函数.md)
 
 * [第四章 ROS机器人]()
     * [ROS室内仿真环境.md](./第四章 ROS机器人/ROS室内仿真环境.md)
