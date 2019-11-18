@@ -1,5 +1,7 @@
 ---
 title: index
+localimage: image1
+urlname: im1Idex
 categories:      
     summary    
 tags: [System Conf]

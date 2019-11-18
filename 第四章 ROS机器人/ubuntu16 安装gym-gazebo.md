@@ -1,5 +1,7 @@
 ---
 title: ubuntu16 安装gym-gazebo
+localimage: image4
+urlname: ubuntu_install_gym_gazabo
 categories:      
     Machine Learning    
 tags: [gym-gazebo,Machine Learning,Algorithm]

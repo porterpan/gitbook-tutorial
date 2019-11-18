@@ -1,5 +1,7 @@
 ---
 title: ROS室内仿真环境
+localimage: image4
+urlname: ROS_indoor_simulation_environment
 categories:      
     Deep Learning    
 tags: [ROS,Deep Learning,Algorithm]

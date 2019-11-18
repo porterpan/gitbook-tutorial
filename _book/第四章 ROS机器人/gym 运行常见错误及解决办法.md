@@ -1,5 +1,7 @@
 ---
 title: gym 运行常见错误及解决办法
+localimage: image4
+urlname: gym_run_error
 categories:      
     gym    
 tags: [gym,Deep Learning,Algorithm]

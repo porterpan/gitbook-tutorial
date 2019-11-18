@@ -1,5 +1,7 @@
 ---
 title: ros and gazebo and gym_gazebo安装
+localimage: image4
+urlname: ros_gazabo_gym_gazabo_install
 categories:      
     ROS    
 tags: [ROS,Deep Learning,Algorithm]
